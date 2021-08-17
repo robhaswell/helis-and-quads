@@ -15,12 +15,12 @@ signature
 
 # resources
 resource BEEPER 1 B02
-resource MOTOR 1 B04
-resource MOTOR 2 B05
-resource SERVO 1 NONE
-resource SERVO 2 NONE
-resource SERVO 3 NONE
-resource SERVO 4 NONE
+resource MOTOR 1 A08
+resource MOTOR 2 NONE
+resource SERVO 1 B04
+resource SERVO 2 B05
+resource SERVO 3 B06
+resource SERVO 4 B07
 resource SERVO 5 NONE
 resource SERVO 6 NONE
 resource SERVO 7 NONE
@@ -36,7 +36,7 @@ resource PWM 7 NONE
 resource PWM 8 NONE
 resource SONAR_TRIGGER 1 NONE
 resource SONAR_ECHO 1 NONE
-resource LED_STRIP 1 A08
+resource LED_STRIP 1 NONE
 resource SERIAL_TX 1 A09
 resource SERIAL_TX 2 A02
 resource SERIAL_TX 3 NONE
