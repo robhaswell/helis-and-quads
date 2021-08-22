@@ -225,6 +225,7 @@ mixer rule 5 set SP S1 -1000 0
 mixer rule 6 set SP S2 500 0 
 mixer rule 7 set SP S3 500 0 
 mixer rule 8 set SY S4 1000 0 
+mixer rule 9 set ST M1 1000 0 
 
 # beeper
 beeper GYRO_CALIBRATED
