@@ -216,15 +216,15 @@ mixer input SY -1000 1000 500
 mixer input SC -1000 1000 500
 
 # mixer rule
-mixer rule 0 set SC S1 500 0 
-mixer rule 1 set SC S2 500 0 
-mixer rule 2 set SC S3 500 0 
-mixer rule 3 set SR S2 866 0 
-mixer rule 4 set SR S3 -866 0 
-mixer rule 5 set SP S1 -1000 0 
-mixer rule 6 set SP S2 500 0 
-mixer rule 7 set SP S3 500 0 
-mixer rule 8 set SY S4 1000 0 
+mixer rule 0 add SC S1 500 0 
+mixer rule 1 add SC S2 500 0 
+mixer rule 2 add SC S3 500 0 
+mixer rule 3 add SR S2 866 0 
+mixer rule 4 add SR S3 -866 0 
+mixer rule 5 add SP S1 -1000 0 
+mixer rule 6 add SP S2 500 0 
+mixer rule 7 add SP S3 500 0 
+mixer rule 8 add SY S4 1000 0 
 mixer rule 9 set ST M1 1000 0 
 
 # beeper
