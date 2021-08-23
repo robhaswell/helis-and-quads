@@ -5,7 +5,9 @@
 batch start
 
 board_name MATEKF411
-manufacturer_id 
+manufacturer_id
+mcu_id 0041004e3437510432383735
+signature
 
 # name: -
 
@@ -198,7 +200,6 @@ feature RX_SERIAL
 feature SOFTSERIAL
 feature TELEMETRY
 feature OSD
-feature GOVERNOR
 
 # servo
 servo 1 1520 -400 400 500 -80 0
@@ -214,16 +215,16 @@ mixer input SC -1000 1000 500
 mixer input ST 0 1000 1000
 
 # mixer rule
-mixer rule 0 add SC S1 500 0 
-mixer rule 1 add SC S2 500 0 
-mixer rule 2 add SC S3 500 0 
-mixer rule 3 add SR S2 866 0 
-mixer rule 4 add SR S3 -866 0 
-mixer rule 5 add SP S1 -1000 0 
-mixer rule 6 add SP S2 500 0 
-mixer rule 7 add SP S3 500 0 
-mixer rule 8 add SY S4 1000 0 
-mixer rule 9 set ST M1 1000 0 
+mixer rule 0 add SC S1 500 0
+mixer rule 1 add SC S2 500 0
+mixer rule 2 add SC S3 500 0
+mixer rule 3 add SR S2 866 0
+mixer rule 4 add SR S3 -866 0
+mixer rule 5 add SP S1 -1000 0
+mixer rule 6 add SP S2 500 0
+mixer rule 7 add SP S3 500 0
+mixer rule 8 add SY S4 1000 0
+mixer rule 9 set ST M1 1000 0
 
 # beeper
 beeper GYRO_CALIBRATED
@@ -348,8 +349,8 @@ mode_color 3 10 0
 mode_color 4 0 3
 
 # aux
-aux 0 0 2 1800 2050 0 0
-aux 1 0 0 900 900 0 0
+aux 0 0 2 1800 2100 0 0
+aux 1 1 0 900 1200 0 0
 aux 2 0 0 900 900 0 0
 aux 3 0 0 900 900 0 0
 aux 4 0 0 900 900 0 0
@@ -433,7 +434,7 @@ rxfail 1 a
 rxfail 2 a
 rxfail 3 a
 rxfail 4 a
-rxfail 5 h
+rxfail 5 s 1000
 rxfail 6 h
 rxfail 7 h
 rxfail 8 h
@@ -481,7 +482,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -278,-18,-9,1
+set acc_calibration = -305,-164,-65,1
 set baro_bustype = I2C
 set baro_spi_device = 0
 set baro_i2c_device = 1
@@ -493,7 +494,7 @@ set baro_cf_vel = 985
 set mid_rc = 1500
 set min_check = 1050
 set max_check = 1900
-set rssi_channel = 0
+set rssi_channel = 16
 set rssi_src_frame_errors = OFF
 set rssi_scale = 100
 set rssi_offset = 0
@@ -595,7 +596,7 @@ set gov_d_gain = 0
 set gov_f_gain = 0
 set gov_cyclic_ff_weight = 40
 set gov_collective_ff_weight = 100
-set gov_spoolup_time = 100
+set gov_spoolup_time = 30
 set gov_tracking_time = 20
 set gov_recovery_time = 20
 set gov_autorotation_timeout = 0
@@ -942,6 +943,239 @@ set yaw_collective_ff_gain = 300
 set yaw_collective_ff_impulse_gain = 300
 set yaw_collective_ff_impulse_freq = 100
 
+profile 1
+
+# profile 1
+set profile_name = -
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_limit = 400
+set iterm_decay = 20
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 46
+set i_pitch = 90
+set d_pitch = 38
+set f_pitch = 95
+set p_roll = 42
+set i_roll = 85
+set d_roll = 35
+set f_roll = 90
+set p_yaw = 45
+set i_yaw = 90
+set d_yaw = 0
+set f_yaw = 90
+set angle_level_strength = 50
+set angle_level_limit = 55
+set horizon_level_strength = 50
+set horizon_transition = 75
+set horizon_tilt_effect = 75
+set horizon_tilt_expert_mode = OFF
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set ff_interpolate_sp = AVERAGED_2
+set ff_spike_limit = 60
+set ff_max_rate_limit = 100
+set ff_smooth_factor = 37
+set ff_boost = 15
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 300
+set yaw_collective_ff_impulse_gain = 300
+set yaw_collective_ff_impulse_freq = 100
+
+profile 2
+
+# profile 2
+set profile_name = -
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_limit = 400
+set iterm_decay = 20
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 46
+set i_pitch = 90
+set d_pitch = 38
+set f_pitch = 95
+set p_roll = 42
+set i_roll = 85
+set d_roll = 35
+set f_roll = 90
+set p_yaw = 45
+set i_yaw = 90
+set d_yaw = 0
+set f_yaw = 90
+set angle_level_strength = 50
+set angle_level_limit = 55
+set horizon_level_strength = 50
+set horizon_transition = 75
+set horizon_tilt_effect = 75
+set horizon_tilt_expert_mode = OFF
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set ff_interpolate_sp = AVERAGED_2
+set ff_spike_limit = 60
+set ff_max_rate_limit = 100
+set ff_smooth_factor = 37
+set ff_boost = 15
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 300
+set yaw_collective_ff_impulse_gain = 300
+set yaw_collective_ff_impulse_freq = 100
+
+profile 3
+
+# profile 3
+set profile_name = -
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_limit = 400
+set iterm_decay = 20
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 46
+set i_pitch = 90
+set d_pitch = 38
+set f_pitch = 95
+set p_roll = 42
+set i_roll = 85
+set d_roll = 35
+set f_roll = 90
+set p_yaw = 45
+set i_yaw = 90
+set d_yaw = 0
+set f_yaw = 90
+set angle_level_strength = 50
+set angle_level_limit = 55
+set horizon_level_strength = 50
+set horizon_transition = 75
+set horizon_tilt_effect = 75
+set horizon_tilt_expert_mode = OFF
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set ff_interpolate_sp = AVERAGED_2
+set ff_spike_limit = 60
+set ff_max_rate_limit = 100
+set ff_smooth_factor = 37
+set ff_boost = 15
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 300
+set yaw_collective_ff_impulse_gain = 300
+set yaw_collective_ff_impulse_freq = 100
+
+profile 4
+
+# profile 4
+set profile_name = -
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_limit = 400
+set iterm_decay = 20
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 46
+set i_pitch = 90
+set d_pitch = 38
+set f_pitch = 95
+set p_roll = 42
+set i_roll = 85
+set d_roll = 35
+set f_roll = 90
+set p_yaw = 45
+set i_yaw = 90
+set d_yaw = 0
+set f_yaw = 90
+set angle_level_strength = 50
+set angle_level_limit = 55
+set horizon_level_strength = 50
+set horizon_transition = 75
+set horizon_tilt_effect = 75
+set horizon_tilt_expert_mode = OFF
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set ff_interpolate_sp = AVERAGED_2
+set ff_spike_limit = 60
+set ff_max_rate_limit = 100
+set ff_smooth_factor = 37
+set ff_boost = 15
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 300
+set yaw_collective_ff_impulse_gain = 300
+set yaw_collective_ff_impulse_freq = 100
+
+profile 5
+
+# profile 5
+set profile_name = -
+set iterm_rotation = OFF
+set iterm_relax = RP
+set iterm_relax_type = SETPOINT
+set iterm_relax_cutoff = 15
+set iterm_limit = 400
+set iterm_decay = 20
+set acro_trainer_angle_limit = 20
+set acro_trainer_lookahead_ms = 50
+set acro_trainer_debug_axis = ROLL
+set acro_trainer_gain = 75
+set p_pitch = 46
+set i_pitch = 90
+set d_pitch = 38
+set f_pitch = 95
+set p_roll = 42
+set i_roll = 85
+set d_roll = 35
+set f_roll = 90
+set p_yaw = 45
+set i_yaw = 90
+set d_yaw = 0
+set f_yaw = 90
+set angle_level_strength = 50
+set angle_level_limit = 55
+set horizon_level_strength = 50
+set horizon_transition = 75
+set horizon_tilt_effect = 75
+set horizon_tilt_expert_mode = OFF
+set abs_control_gain = 0
+set abs_control_limit = 90
+set abs_control_error_limit = 20
+set abs_control_cutoff = 11
+set ff_interpolate_sp = AVERAGED_2
+set ff_spike_limit = 60
+set ff_max_rate_limit = 100
+set ff_smooth_factor = 37
+set ff_boost = 15
+set yaw_cyclic_ff_gain = 0
+set yaw_collective_ff_gain = 300
+set yaw_collective_ff_impulse_gain = 300
+set yaw_collective_ff_impulse_freq = 100
+
+# restore original profile selection
+profile 0
+
 rateprofile 0
 
 # rateprofile 0
@@ -961,3 +1195,109 @@ set throttle_limit_percent = 100
 set roll_rate_limit = 1998
 set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
+
+rateprofile 1
+
+# rateprofile 1
+set rateprofile_name = -
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set throttle_limit_type = OFF
+set throttle_limit_percent = 100
+set roll_rate_limit = 1998
+set pitch_rate_limit = 1998
+set yaw_rate_limit = 1998
+
+rateprofile 2
+
+# rateprofile 2
+set rateprofile_name = -
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set throttle_limit_type = OFF
+set throttle_limit_percent = 100
+set roll_rate_limit = 1998
+set pitch_rate_limit = 1998
+set yaw_rate_limit = 1998
+
+rateprofile 3
+
+# rateprofile 3
+set rateprofile_name = -
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set throttle_limit_type = OFF
+set throttle_limit_percent = 100
+set roll_rate_limit = 1998
+set pitch_rate_limit = 1998
+set yaw_rate_limit = 1998
+
+rateprofile 4
+
+# rateprofile 4
+set rateprofile_name = -
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set throttle_limit_type = OFF
+set throttle_limit_percent = 100
+set roll_rate_limit = 1998
+set pitch_rate_limit = 1998
+set yaw_rate_limit = 1998
+
+rateprofile 5
+
+# rateprofile 5
+set rateprofile_name = -
+set rates_type = BETAFLIGHT
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
+set roll_expo = 0
+set pitch_expo = 0
+set yaw_expo = 0
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
+set throttle_limit_type = OFF
+set throttle_limit_percent = 100
+set roll_rate_limit = 1998
+set pitch_rate_limit = 1998
+set yaw_rate_limit = 1998
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
