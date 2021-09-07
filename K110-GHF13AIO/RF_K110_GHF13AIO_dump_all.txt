@@ -220,7 +220,7 @@ servo 3 1500 -500 500 -500 -100 0
 # mixer input
 mixer input SR -1000 1000 1000
 mixer input SP -1000 1000 1000
-mixer input SY -1000 1000 1000
+mixer input SY -1000 1000 700
 mixer input SC -1000 1000 800
 mixer input ST 0 1000 1000
 
@@ -471,7 +471,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 27,-13,-15,1
+set acc_calibration = 41,5,-24,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -555,7 +555,7 @@ set failsafe_recovery_delay = 20
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
 set align_board_pitch = 0
-set align_board_yaw = 0
+set align_board_yaw = -90
 set bat_capacity = 0
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
@@ -703,7 +703,7 @@ set sdio_use_cache = OFF
 set sdio_use_4bit_width = OFF
 set system_hse_mhz = 0
 set task_statistics = ON
-set debug_mode = GOVERNOR
+set debug_mode = GYRO_FILTERED
 set rate_6pos_switch = OFF
 set cpu_overclock = 120MHZ
 set pwr_on_arm_grace = 5
@@ -750,11 +750,11 @@ set i2c3_pullup = OFF
 set i2c3_overclock = ON
 set mco2_on_pc9 = OFF
 set timezone_offset_minutes = 0
-set gyro_rpm_filter_bank_motor_index = 1,1,1,1,1,1,1,1,2,2,2,0,0,0,0,0
-set gyro_rpm_filter_bank_gear_ratio = 7960,8040,3975,4025,2667,2000,1600,1000,1000,500,333,0,0,0,0,0
-set gyro_rpm_filter_bank_notch_q = 200,200,200,200,200,200,200,200,200,200,200,0,0,0,0,0
-set gyro_rpm_filter_bank_min_hz = 33,33,67,67,100,133,167,267,33,67,100,0,0,0,0,0
-set gyro_rpm_filter_bank_max_hz = 4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000,4000
+set gyro_rpm_filter_bank_motor_index = 1,1,1,1,1,1,1,1,1,2,0,0,0,0,0,0
+set gyro_rpm_filter_bank_gear_ratio = 8027,8000,7973,4013,4000,3987,2667,2000,1000,1000,0,0,0,0,0,0
+set gyro_rpm_filter_bank_notch_q = 300,300,300,300,300,300,300,300,300,300,0,0,0,0,0,0
+set gyro_rpm_filter_bank_min_hz = 20,20,20,33,33,33,50,67,133,20,0,0,0,0,0,0
+set gyro_rpm_filter_bank_max_hz = 60,60,60,120,120,120,180,240,480,60,0,0,0,0,0,0
 set stats = OFF
 set stats_total_flights = 0
 set stats_total_time_s = 0
@@ -780,15 +780,15 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 90
-set i_pitch = 164
-set d_pitch = 25
+set p_pitch = 10
+set i_pitch = 50
+set d_pitch = 0
 set f_pitch = 65
-set p_roll = 80
-set i_roll = 135
-set d_roll = 15
+set p_roll = 10
+set i_roll = 50
+set d_roll = 0
 set f_roll = 65
-set p_yaw = 85
+set p_yaw = 50
 set i_yaw = 25
 set d_yaw = 0
 set f_yaw = 0
