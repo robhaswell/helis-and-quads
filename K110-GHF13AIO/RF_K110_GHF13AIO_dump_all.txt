@@ -213,9 +213,9 @@ feature GOVERNOR
 feature RPM_FILTER
 
 # servo
-servo 1 1500 -500 500 500 0 0
-servo 2 1500 -500 500 500 0 0
-servo 3 1500 -500 500 -500 0 0
+servo 1 1500 -500 500 500 -40 0
+servo 2 1500 -500 500 500 80 0
+servo 3 1500 -500 500 -500 -100 0
 
 # mixer input
 mixer input SR -1000 1000 500
