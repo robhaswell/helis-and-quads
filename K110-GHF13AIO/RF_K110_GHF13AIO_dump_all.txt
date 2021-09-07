@@ -218,10 +218,10 @@ servo 2 1500 -500 500 500 80 0
 servo 3 1500 -500 500 -500 -100 0
 
 # mixer input
-mixer input SR -1000 1000 500
-mixer input SP -1000 1000 500
-mixer input SY -1000 1000 700
-mixer input SC -1000 1000 700
+mixer input SR -1000 1000 1000
+mixer input SP -1000 1000 1000
+mixer input SY -1000 1000 1000
+mixer input SC -1000 1000 800
 mixer input ST 0 1000 1000
 
 # mixer rule
