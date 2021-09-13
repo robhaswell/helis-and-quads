@@ -220,7 +220,7 @@ servo 3 1500 -500 500 -500 -100 0
 # mixer input
 mixer input SR -1000 1000 1000
 mixer input SP -1000 1000 1000
-mixer input SY -1000 1000 700
+mixer input SY -1000 1000 800
 mixer input SC -1000 1000 800
 mixer input ST 0 1000 1000
 
@@ -789,7 +789,7 @@ set i_roll = 135
 set d_roll = 15
 set f_roll = 70
 set p_yaw = 25
-set i_yaw = 8
+set i_yaw = 50
 set d_yaw = 20
 set f_yaw = 0
 set pitch_error_filter = 0
