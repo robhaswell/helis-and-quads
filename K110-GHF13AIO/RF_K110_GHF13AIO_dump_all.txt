@@ -11,7 +11,7 @@ manufacturer_id MTKS
 mcu_id 003e005b3235511832333634
 signature 
 
-# name: K120 rotorflight
+# name: K110 2S BL tail
 
 # resources
 resource BEEPER 1 B02
@@ -361,7 +361,7 @@ mode_color 4 0 3
 # aux
 aux 0 0 2 1950 2100 0 0
 aux 1 3 0 1950 2100 0 0
-aux 2 26 2 900 2100 0 0
+aux 2 26 2 1950 2100 0 0
 aux 3 0 0 900 900 0 0
 aux 4 0 0 900 900 0 0
 aux 5 0 0 900 900 0 0
@@ -471,7 +471,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 41,5,-24,1
+set acc_calibration = -4,132,23,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -555,7 +555,7 @@ set failsafe_recovery_delay = 20
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
 set align_board_pitch = 0
-set align_board_yaw = -90
+set align_board_yaw = 90
 set bat_capacity = 0
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
@@ -588,7 +588,7 @@ set tail_rotor_mode = MOTORIZED
 set tail_motor_idle = 15
 set swash_ring = 100
 set gov_mode = MODE2
-set gov_max_headspeed = 4500
+set gov_max_headspeed = 5000
 set gov_gear_ratio = 8000
 set gov_pwr_filter = 10
 set gov_rpm_filter = 10
@@ -730,10 +730,10 @@ set gyro_1_bustype = SPI
 set gyro_1_spibus = 1
 set gyro_1_i2cBus = 0
 set gyro_1_i2c_address = 0
-set gyro_1_sensor_align = CW0
+set gyro_1_sensor_align = CW180
 set gyro_1_align_roll = 0
 set gyro_1_align_pitch = 0
-set gyro_1_align_yaw = 0
+set gyro_1_align_yaw = 1800
 set gyro_2_bustype = SPI
 set gyro_2_spibus = 0
 set gyro_2_i2cBus = 0
@@ -759,7 +759,7 @@ set stats = OFF
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = K120 rotorflight
+set name = K110 2S BL tail
 set position_alt_source = DEFAULT
 set box_user_1_name = -
 set box_user_2_name = -
@@ -789,8 +789,8 @@ set i_roll = 135
 set d_roll = 15
 set f_roll = 70
 set p_yaw = 25
-set i_yaw = 50
-set d_yaw = 20
+set i_yaw = 25
+set d_yaw = 10
 set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
@@ -815,7 +815,7 @@ set ff_smooth_factor = 37
 set ff_boost = 15
 set yaw_center_offset = 0
 set yaw_cyclic_ff_gain = 40
-set yaw_collective_ff_gain = 100
+set yaw_collective_ff_gain = 200
 set yaw_collective_ff_impulse_gain = 10
 set yaw_collective_ff_impulse_freq = 100
 
