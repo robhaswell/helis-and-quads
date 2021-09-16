@@ -1,7 +1,7 @@
 ###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
-# Rotorflight / STM32F411 (S411) 4.2.9 Aug 22 2021 / 13:28:10 (6ceeb79) MSP API: 1.43
+# Rotorflight / STM32F411 (S411) 4.2.9 Sep 13 2021 / 11:47:08 (5f3bbd6) MSP API: 1.43
 ###ERROR: dump: NO CONFIG FOUND###
 # start the command batch
 batch start
@@ -220,7 +220,7 @@ servo 3 1500 -500 500 -500 -100 0
 # mixer input
 mixer input SR -1000 1000 1000
 mixer input SP -1000 1000 1000
-mixer input SY -1000 1000 800
+mixer input SY -1000 1000 1000
 mixer input SC -1000 1000 800
 mixer input ST 0 1000 1000
 
@@ -444,7 +444,7 @@ rxfail 17 h
 # master
 set gyro_hardware_lpf = NORMAL
 set gyro_lowpass_type = PT1
-set gyro_lowpass_hz = 0
+set gyro_lowpass_hz = 200
 set gyro_lowpass2_type = PT1
 set gyro_lowpass2_hz = 0
 set gyro_notch1_hz = 66
@@ -456,8 +456,8 @@ set gyro_calib_noise_limit = 48
 set gyro_offset_yaw = 0
 set gyro_overflow_detect = ALL
 set gyro_to_use = FIRST
-set gyro_dyn_lpf_min_hz = 0
-set gyro_dyn_lpf_max_hz = 0
+set gyro_dyn_lpf_min_hz = 200
+set gyro_dyn_lpf_max_hz = 500
 set dterm_dyn_lpf_min_hz = 0
 set dterm_dyn_lpf_max_hz = 0
 set dterm_lowpass_type = BIQUAD
@@ -609,6 +609,8 @@ set gov_lost_throttle_timeout = 30
 set gov_lost_headspeed_timeout = 30
 set gov_vbat_offset = 0
 set gov_ff_exponent = 150
+set gov_tta_gain = 30
+set gov_tta_limit = 30
 set servo_pwm_rate = 280
 set reboot_character = 82
 set serial_update_rate_hz = 100
@@ -703,7 +705,7 @@ set sdio_use_cache = OFF
 set sdio_use_4bit_width = OFF
 set system_hse_mhz = 0
 set task_statistics = ON
-set debug_mode = GYRO_FILTERED
+set debug_mode = GYRO_SCALED
 set rate_6pos_switch = OFF
 set cpu_overclock = 120MHZ
 set pwr_on_arm_grace = 5
@@ -788,14 +790,15 @@ set p_roll = 80
 set i_roll = 135
 set d_roll = 15
 set f_roll = 70
-set p_yaw = 25
-set i_yaw = 25
+set p_yaw = 40
+set i_yaw = 40
 set d_yaw = 10
 set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -848,7 +851,8 @@ set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -901,7 +905,8 @@ set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -954,7 +959,8 @@ set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -1007,7 +1013,8 @@ set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -1060,7 +1067,8 @@ set f_yaw = 0
 set pitch_error_filter = 0
 set roll_error_filter = 0
 set yaw_error_filter = 0
-set rate_normalization = ABSOLUTE
+set cyclic_normalization = ABSOLUTE
+set collective_normalization = NATURAL
 set angle_level_strength = 50
 set angle_level_limit = 55
 set horizon_level_strength = 50
@@ -1094,10 +1102,10 @@ set rateprofile_name = -
 set rates_type = BETAFLIGHT
 set roll_rc_rate = 160
 set pitch_rc_rate = 160
-set yaw_rc_rate = 204
+set yaw_rc_rate = 160
 set roll_expo = 30
 set pitch_expo = 30
-set yaw_expo = 50
+set yaw_expo = 30
 set roll_srate = 0
 set pitch_srate = 0
 set yaw_srate = 0
