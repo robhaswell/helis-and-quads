@@ -1,3 +1,4 @@
+dump all
 ###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
@@ -705,7 +706,7 @@ set sdio_use_cache = OFF
 set sdio_use_4bit_width = OFF
 set system_hse_mhz = 0
 set task_statistics = ON
-set debug_mode = DSHOT_RPM_TELEMETRY
+set debug_mode = GYRO_FILTERED
 set rate_6pos_switch = OFF
 set cpu_overclock = 120MHZ
 set pwr_on_arm_grace = 5
@@ -790,7 +791,7 @@ set p_roll = 130
 set i_roll = 140
 set d_roll = 10
 set f_roll = 50
-set p_yaw = 55
+set p_yaw = 45
 set i_yaw = 40
 set d_yaw = 10
 set f_yaw = 0
