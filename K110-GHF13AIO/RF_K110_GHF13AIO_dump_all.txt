@@ -1,4 +1,3 @@
-dump all
 ###WARNING: NO CUSTOM DEFAULTS FOUND###
 
 # version
@@ -783,15 +782,15 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 130
-set i_pitch = 130
+set p_pitch = 110
+set i_pitch = 140
 set d_pitch = 10
 set f_pitch = 50
 set p_roll = 130
-set i_roll = 130
+set i_roll = 140
 set d_roll = 10
 set f_roll = 50
-set p_yaw = 60
+set p_yaw = 55
 set i_yaw = 40
 set d_yaw = 10
 set f_yaw = 0
