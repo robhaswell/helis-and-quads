@@ -124,9 +124,6 @@ beeper -RC_SMOOTHING_INIT_FAIL
 # beacon
 beacon RX_SET
 
-# map
-map TAER1234
-
 # serial
 serial 1 2048 115200 57600 0 115200
 
@@ -228,8 +225,8 @@ set vtx_low_power_disarm = UNTIL_FIRST_ARM
 set vtx_freq = 5769
 set vcd_video_system = NTSC
 set max7456_spi_bus = 2
-set frsky_spi_tx_id = 102,126
-set frsky_spi_offset = -17
+set frsky_spi_tx_id = 122,126
+set frsky_spi_offset = -22
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set cc2500_spi_chip_detect = OFF
 set gyro_1_bustype = SPI
@@ -289,6 +286,10 @@ rateprofile 0
 
 # rateprofile 0
 set thr_mid = 0
+set yaw_rc_rate = 150
+set roll_srate = 50
+set pitch_srate = 50
+set yaw_srate = 25
 
 rateprofile 1
 

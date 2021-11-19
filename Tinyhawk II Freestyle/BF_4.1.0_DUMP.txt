@@ -293,7 +293,7 @@ beacon -RX_LOST
 beacon RX_SET
 
 # map
-map TAER1234
+map AETR1234
 
 # serial
 serial 20 1 115200 57600 0 115200
@@ -908,8 +908,8 @@ set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
 set frsky_spi_autobind = OFF
-set frsky_spi_tx_id = 102,126
-set frsky_spi_offset = -17
+set frsky_spi_tx_id = 122,126
+set frsky_spi_offset = -22
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 set frsky_x_rx_num = 0
 set frsky_spi_a1_source = VBAT
