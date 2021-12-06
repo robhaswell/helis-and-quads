@@ -1,0 +1,177 @@
+diff all
+
+# version
+# EmuFlight / CRAZYBEEF4FR (C4FR) 0.4.0 Oct 24 2021 / 16:36:51 (5e3d9e357) MSP API: 1.51
+
+board_name 
+manufacturer_id 
+mcu_id 0053006d4e56501720363955
+signature 
+
+# reset configuration to default settings
+defaults nosave
+
+# name
+name Mopatop6
+
+# resources
+resource MOTOR 1 B08
+resource MOTOR 2 B07
+resource MOTOR 3 B06
+resource MOTOR 4 B10
+
+# mixer
+
+# servo
+
+# servo mix
+
+
+# feature
+feature LED_STRIP
+
+# beeper
+beeper -GYRO_CALIBRATED
+beeper -DISARMING
+beeper -ARMING_GPS_FIX
+beeper -GPS_STATUS
+beeper -ACC_CALIBRATION_FAIL
+beeper -READY_BEEP
+beeper -DISARM_REPEAT
+beeper -ARMED
+beeper -SYSTEM_INIT
+beeper -ON_USB
+beeper -BLACKBOX_ERASE
+beeper -CAM_CONNECTION_OPEN
+beeper -CAM_CONNECTION_CLOSED
+beeper -RC_SMOOTHING_INIT_FAIL
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# map
+
+# serial
+serial 1 2048 115200 57600 0 115200
+
+# led
+led 0 0,0::L:9
+led 1 1,0::L:1
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1450 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 47 3 1300 1700 0 0
+aux 4 13 2 1300 1700 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# rxrange
+
+# vtx
+
+# rxfail
+
+# master
+set acc_trim_pitch = 34
+set acc_trim_roll = 20
+set acc_calibration = 69,-47,6
+set rx_spi_protocol = FRSKY_D
+set motor_pwm_protocol = DSHOT300
+set align_board_yaw = 180
+set bat_capacity = 300
+set vbat_max_cell_voltage = 45
+set vbat_min_cell_voltage = 31
+set vbat_warning_cell_voltage = 33
+set vbat_scale = 114
+set yaw_motors_reversed = ON
+set pid_process_denom = 2
+set osd_vbat_pos = 2433
+set osd_rssi_pos = 353
+set osd_tim_2_pos = 2454
+set osd_flymode_pos = 374
+set osd_craft_name_pos = 393
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set vtx_band = 5
+set vtx_channel = 8
+set vtx_power = 2
+set vtx_freq = 5917
+set frsky_spi_tx_id = 122,126
+set frsky_spi_offset = -16
+set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
+
+# profile
+profile 0
+
+
+# profile
+profile 1
+
+
+# profile
+profile 2
+
+
+# restore original profile selection
+profile 0
+
+# rateprofile
+rateprofile 0
+
+set thr_mid = 70
+set thr_expo = 80
+set yaw_rc_rate = 150
+set roll_srate = 50
+set pitch_srate = 50
+set yaw_srate = 50
+set das_yaw_with_roll_input = 100
+
+# rateprofile
+rateprofile 1
+
+set thr_mid = 70
+set thr_expo = 80
+set yaw_rc_rate = 150
+set roll_srate = 50
+set pitch_srate = 50
+set yaw_srate = 50
+set das_yaw_with_roll_input = 100
+
+# rateprofile
+rateprofile 2
+
+set thr_mid = 70
+set thr_expo = 80
+set yaw_rc_rate = 150
+set roll_srate = 50
+set pitch_srate = 50
+set yaw_srate = 50
+
+# rateprofile
+rateprofile 3
+
+
+# rateprofile
+rateprofile 4
+
+
+# rateprofile
+rateprofile 5
+
+
+# restore original rateprofile selection
+rateprofile 2
+
+# save configuration
+save
+# 
