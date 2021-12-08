@@ -1,0 +1,35 @@
+{
+  "python.formatting.autopep8Args": [
+    "--max-line-length",
+    "100",
+    "--aggressive"
+  ],
+  "python.formatting.provider": "autopep8",
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+  },
+  "python.envFile": "${workspaceFolder}/.vsenv",
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#ffbb00",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#cc9600",
+    "titleBar.activeBackground": "#ffbb00",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#ffbb0099",
+    "titleBar.inactiveForeground": "#15202b99",
+    "sash.hoverBorder": "#ffc933",
+    "statusBarItem.remoteBackground": "#ffbb00",
+    "statusBarItem.remoteForeground": "#15202b"
+  },
+  "peacock.affectActivityBar": false,
+  "peacock.remoteColor": "#ff3d00",
+  "peacock.color": "#ffbb00",
+  "python.pythonPath": "venv/bin/python",
+  "python.linting.pylintEnabled": true,
+}
