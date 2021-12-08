@@ -22,6 +22,9 @@ def main():
     subparsers = parser.add_subparsers(dest="command")
     subparsers.add_parser("dump",
                           help="Dump and diff the connected flight controller into <name>/BTFL_<version>_DUMP.txt (as well as -DIFF.txt)")
+    parser_load = subparsers.add_parser("load", help="Load a new config")
+    parser_load.add_argument("file", help="File to load")
+    args = parser.parse_args()
 
     ports = list(comports())
     serial_port = ports.pop().device
@@ -46,13 +49,16 @@ def main():
          board_config['flightControllerVersion']))
     print(f"Craft name: {board_config['name']}")
 
-    parser = parser.parse_args()
     with serial.Serial(serial_port) as ser:
         activate_cli(ser)
 
-        if parser.command == "dump":
+        if args.command == "dump":
             dump_path, diff_path = dump_board(ser, board_config)
             print(f"Written files: {dump_path}, {diff_path}")
+
+        if args.command == "load":
+            load_to_board(ser, args.file)
+            print(f"Loaded configuration: {args.file}")
 
 
 def dump_board(ser: serial.Serial, config: dict):
@@ -98,13 +104,25 @@ def dump_board(ser: serial.Serial, config: dict):
     return output_path_dump, output_path_diff
 
 
+def load_to_board(ser: serial.Serial, filename):
+    with open(filename, "rb") as filep:
+        for line in filep:
+            ser.write(line)
+            ser.flush()
+            print(ser.read_all())
+        try:
+            ser.write(b"save\r\n")
+        except serial.serialutil.SerialException:
+            pass
+
+
 def reset_board(ser: serial.Serial):
-    ser.write("exit\r\n".encode())
+    ser.write(b"exit\r\n")
     ser.flush()
 
 
 def activate_cli(ser: serial.Serial):
-    ser.write("#\r\n".encode())
+    ser.write(b"#\r\n")
     wait_for(ser, b"Entering CLI Mode")
 
 
