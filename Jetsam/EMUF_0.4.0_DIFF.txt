@@ -5,7 +5,7 @@
 
 board_name 
 manufacturer_id 
-mcu_id 0053006d4e56501720363955
+mcu_id 006700593330510430373930
 signature 
 
 # reset configuration to default settings
@@ -28,6 +28,9 @@ resource MOTOR 4 B10
 
 
 # feature
+feature -TELEMETRY
+feature -RX_SPI
+feature RX_SERIAL
 feature LED_STRIP
 
 # beeper
@@ -53,11 +56,11 @@ beacon RX_SET
 # map
 
 # serial
-serial 1 2048 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
 
 # led
-led 0 0,0::L:9
-led 1 1,0::L:1
+led 0 0,0::CW:6
+led 1 1,0::CW:6
 
 # color
 
@@ -67,7 +70,7 @@ led 1 1,0::L:1
 aux 0 0 0 1450 2100 0 0
 aux 1 1 1 900 1300 0 0
 aux 2 2 1 1300 1700 0 0
-aux 3 47 3 1300 1700 0 0
+aux 3 47 4 1300 2100 0 0
 aux 4 13 2 1300 1700 0 0
 aux 5 35 2 1700 2100 0 0
 
@@ -82,8 +85,10 @@ adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
 set acc_trim_pitch = 34
-set acc_trim_roll = 20
+set acc_trim_roll = 24
 set acc_calibration = 69,-47,6
+set rssi_channel = 16
+set serialrx_provider = CRSF
 set rx_spi_protocol = FRSKY_D
 set motor_pwm_protocol = DSHOT300
 set align_board_yaw = 180
@@ -103,9 +108,8 @@ set osd_stat_battery = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set vtx_band = 5
-set vtx_channel = 8
-set vtx_power = 2
-set vtx_freq = 5917
+set vtx_channel = 3
+set vtx_freq = 5732
 set frsky_spi_tx_id = 122,126
 set frsky_spi_offset = -16
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
@@ -130,32 +134,49 @@ rateprofile 0
 
 set thr_mid = 70
 set thr_expo = 80
-set yaw_rc_rate = 150
-set roll_srate = 50
-set pitch_srate = 50
-set yaw_srate = 50
-set das_yaw_with_roll_input = 100
+set rates_type = ACTUAL
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 
 # rateprofile
 rateprofile 1
 
 set thr_mid = 70
 set thr_expo = 80
-set yaw_rc_rate = 150
-set roll_srate = 50
-set pitch_srate = 50
-set yaw_srate = 50
-set das_yaw_with_roll_input = 100
+set rates_type = ACTUAL
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
 
 # rateprofile
 rateprofile 2
 
 set thr_mid = 70
 set thr_expo = 80
-set yaw_rc_rate = 150
-set roll_srate = 50
-set pitch_srate = 50
-set yaw_srate = 50
+set rates_type = ACTUAL
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+set das_yaw_with_roll_input = 100
 
 # rateprofile
 rateprofile 3
@@ -170,7 +191,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
