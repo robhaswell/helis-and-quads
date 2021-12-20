@@ -149,6 +149,7 @@ feature -ESC_SENSOR
 feature -DYNAMIC_FILTER
 feature -LEGACY_SA_SUPPORT
 feature RX_SERIAL
+feature TELEMETRY
 feature LED_STRIP
 feature OSD
 feature AIRMODE
@@ -188,8 +189,8 @@ map AETR1234
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
-serial 1 64 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
+serial 1 2048 115200 57600 0 115200
 
 # led
 led 0 0,0::CW:6
