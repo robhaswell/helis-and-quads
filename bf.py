@@ -3,7 +3,6 @@
 Some utilities for working with Betaflight (and derivatives).
 """
 import argparse
-import logging
 import os
 import sys
 
@@ -18,6 +17,7 @@ elif os.name == 'posix':
 
 def main():
     """
+    Main program.
     """
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers(dest="command")
@@ -45,9 +45,7 @@ def main():
         board_config = board.CONFIG
 
     print(
-        "Connected to board. Firmware: %s %s" %
-        (board_config['flightControllerIdentifier'],
-         board_config['flightControllerVersion']))
+        f"Connected to board. Firmware: {board_config['flightControllerIdentifier']} {board_config['flightControllerVersion']}")
     print(f"Craft name: {board_config['name']}")
 
     with serial.Serial(serial_port) as ser:
@@ -63,6 +61,9 @@ def main():
 
 
 def dump_board(ser: serial.Serial, config: dict):
+    """
+    Create a dump of the board config.
+    """
     ident = config['flightControllerIdentifier']
     version = config['flightControllerVersion']
     path = config['name']
@@ -106,6 +107,9 @@ def dump_board(ser: serial.Serial, config: dict):
 
 
 def load_to_board(ser: serial.Serial, filename):
+    """
+    Load a board config into the connected flight controller.
+    """
     with open(filename, "rb") as filep:
         for line in filep:
             ser.write(line)
@@ -118,16 +122,25 @@ def load_to_board(ser: serial.Serial, filename):
 
 
 def reset_board(ser: serial.Serial):
+    """
+    Reset flight controller state.
+    """
     ser.write(b"exit\r\n")
     ser.flush()
 
 
 def activate_cli(ser: serial.Serial):
+    """
+    Enter the CLI on the currently connected board.
+    """
     ser.write(b"#\r\n")
     wait_for(ser, b"Entering CLI Mode")
 
 
 def wait_for(ser: serial.Serial, message):
+    """
+    Wait for {message} on the provided serial port.
+    """
     while line := ser.readline():
         if message in line:
             return
