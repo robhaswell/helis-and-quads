@@ -1,3 +1,4 @@
+#!venv/bin/python
 """
 Some utilities for working with Betaflight (and derivatives).
 """

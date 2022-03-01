@@ -105,8 +105,8 @@ set vtx_band = 5
 set vtx_channel = 8
 set vtx_power = 2
 set vtx_freq = 5917
-set frsky_spi_tx_id = 86,182
-set frsky_spi_offset = -42
+set frsky_spi_tx_id = 122,126
+set frsky_spi_offset = -18
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
 
 # profile
@@ -186,7 +186,7 @@ rateprofile 5
 
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save

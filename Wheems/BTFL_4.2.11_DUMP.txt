@@ -255,8 +255,9 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
+feature RX_SERIAL
+feature TELEMETRY
 feature OSD
-feature RX_SPI
 feature ANTI_GRAVITY
 feature DYNAMIC_FILTER
 
@@ -295,7 +296,7 @@ map AETR1234
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
 serial 1 2048 115200 57600 0 115200
 
 # led
@@ -530,9 +531,9 @@ set dyn_lpf_gyro_max_hz = 750
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
-set acc_trim_pitch = -4
-set acc_trim_roll = 4
-set acc_calibration = -24,47,-98,1
+set acc_trim_pitch = 0
+set acc_trim_roll = 0
+set acc_calibration = -62,33,-82,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -573,7 +574,7 @@ set rc_smoothing_derivative_type = AUTO
 set rc_smoothing_auto_smoothness = 10
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
-set serialrx_provider = SPEK1024
+set serialrx_provider = CRSF
 set serialrx_inverted = OFF
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autoreset = ON
@@ -625,10 +626,10 @@ set align_board_pitch = 0
 set align_board_yaw = 0
 set gimbal_mode = NORMAL
 set bat_capacity = 0
-set vbat_max_cell_voltage = 440
+set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 320
-set vbat_warning_cell_voltage = 330
+set vbat_min_cell_voltage = 330
+set vbat_warning_cell_voltage = 350
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -646,7 +647,7 @@ set vbat_duration_for_critical = 0
 set vbat_scale = 110
 set vbat_divider = 10
 set vbat_multiplier = 1
-set ibata_scale = 179
+set ibata_scale = 183
 set ibata_offset = 0
 set ibatv_scale = 0
 set ibatv_offset = 0
@@ -903,10 +904,10 @@ set pwr_on_arm_grace = 5
 set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 2
 set vtx_power = 1
 set vtx_low_power_disarm = UNTIL_FIRST_ARM
-set vtx_freq = 5658
+set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vtx_spi_bus = 0
