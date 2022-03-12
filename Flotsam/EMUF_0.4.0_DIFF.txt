@@ -28,6 +28,8 @@ resource MOTOR 4 B10
 
 
 # feature
+feature -RX_SPI
+feature RX_SERIAL
 feature LED_STRIP
 
 # beeper
@@ -53,6 +55,7 @@ beacon RX_SET
 # map
 
 # serial
+serial 0 64 115200 57600 0 115200
 serial 1 2048 115200 57600 0 115200
 
 # led
@@ -80,10 +83,10 @@ adjrange 0 0 3 900 2100 12 3 0 0
 # rxfail
 
 # master
-set acc_trim_pitch = 34
-set acc_trim_roll = 20
-set acc_calibration = 69,-47,6
+set acc_calibration = -94,-15,-26
+set serialrx_provider = CRSF
 set rx_spi_protocol = FRSKY_D
+set dshot_idle_value = 2000
 set motor_pwm_protocol = DSHOT300
 set align_board_yaw = 180
 set bat_capacity = 300
@@ -102,9 +105,9 @@ set osd_stat_battery = ON
 set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set vtx_band = 5
-set vtx_channel = 8
-set vtx_power = 2
-set vtx_freq = 5917
+set vtx_channel = 4
+set vtx_power = 3
+set vtx_freq = 5769
 set frsky_spi_tx_id = 122,126
 set frsky_spi_offset = -18
 set frsky_spi_bind_hop_data = 0,30,60,91,120,150,180,210,5,35,65,95,125,155,185,215,10,40,70,100,130,160,190,221,15,45,75,105,135,165,195,225,20,50,80,110,140,170,200,230,25,55,85,115,145,175,205,0,0,0
@@ -127,8 +130,6 @@ profile 0
 # rateprofile
 rateprofile 0
 
-set thr_mid = 70
-set thr_expo = 80
 set rates_type = ACTUAL
 set roll_rc_rate = 15
 set pitch_rc_rate = 15
@@ -143,8 +144,6 @@ set yaw_srate = 53
 # rateprofile
 rateprofile 1
 
-set thr_mid = 70
-set thr_expo = 80
 set rates_type = ACTUAL
 set roll_rc_rate = 15
 set pitch_rc_rate = 15
@@ -159,8 +158,6 @@ set yaw_srate = 100
 # rateprofile
 rateprofile 2
 
-set thr_mid = 70
-set thr_expo = 80
 set rates_type = ACTUAL
 set roll_rc_rate = 15
 set pitch_rc_rate = 15
@@ -171,7 +168,6 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
-set das_yaw_with_roll_input = 100
 
 # rateprofile
 rateprofile 3
