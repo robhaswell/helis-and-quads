@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Jan  9 2022 / 11:42:46 (ee8560af4) MSP API: 1.44
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Feb  1 2022 / 20:05:07 (3267f0417) MSP API: 1.44
 
 # start the command batch
 batch start
@@ -72,7 +72,6 @@ set small_angle = 180
 set deadband = 1
 set yaw_deadband = 1
 set simplified_gyro_filter = OFF
-set simplified_gyro_filter_multiplier = 0
 set report_cell_voltage = ON
 set osd_vbat_pos = 2432
 set osd_rssi_pos = 353
@@ -89,7 +88,7 @@ set osd_stat_bb_no = OFF
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 5
 set vtx_channel = 6
-set vtx_power = 4
+set vtx_power = 3
 set vtx_low_power_disarm = ON
 set vtx_freq = 5843
 set vcd_video_system = NTSC
@@ -207,7 +206,7 @@ set yaw_srate = 70
 set tpa_breakpoint = 1600
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save

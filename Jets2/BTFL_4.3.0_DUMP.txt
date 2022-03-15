@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Jan  9 2022 / 11:42:46 (ee8560af4) MSP API: 1.44
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Feb  1 2022 / 20:05:07 (3267f0417) MSP API: 1.44
 
 # start the command batch
 batch start
@@ -676,7 +676,7 @@ set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
 set simplified_gyro_filter = OFF
-set simplified_gyro_filter_multiplier = 0
+set simplified_gyro_filter_multiplier = 100
 set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set frsky_default_lat = 0
@@ -863,8 +863,9 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 6
-set vtx_power = 4
+set vtx_power = 3
 set vtx_low_power_disarm = ON
+set vtx_softserial_alt = OFF
 set vtx_freq = 5843
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
@@ -924,6 +925,8 @@ set expresslrs_domain = ISM2400
 set expresslrs_rate_index = 0
 set expresslrs_switch_mode = HYBRID
 set expresslrs_model_id = 255
+set scheduler_relax_rx = 1
+set scheduler_relax_osd = 1
 set timezone_offset_minutes = 0
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
@@ -937,6 +940,8 @@ set stats_total_dist_m = 0
 set name = Jets2
 set display_name = -
 set position_alt_source = DEFAULT
+set position_alt_gps_min_sats = 10
+set position_alt_baro_fallback_sats = 7
 set box_user_1_name = -
 set box_user_2_name = -
 set box_user_3_name = -
@@ -1432,7 +1437,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
