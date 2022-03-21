@@ -13,7 +13,7 @@ manufacturer_id MTKS
 mcu_id 003e005b3235511832333634
 signature 
 
-# name: K110 2S BL tail
+# name: K110
 
 # resources
 resource BEEPER 1 B02
@@ -211,6 +211,7 @@ feature -FREQ_SENSOR
 feature -DYNAMIC_FILTER
 feature -RPM_FILTER
 feature RX_SERIAL
+feature TELEMETRY
 feature GOVERNOR
 feature RPM_FILTER
 
@@ -274,7 +275,7 @@ map AETR1C23
 # serial
 serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
-serial 1 128 115200 57600 0 2000000
+serial 1 0 115200 57600 0 115200
 
 # led
 led 0 0,0::C:0
@@ -513,8 +514,8 @@ set rc_smoothing_input_type = BIQUAD
 set rc_smoothing_derivative_type = BIQUAD
 set rc_smoothing_auto_smoothness = 66
 set max_aux_channels = 6
-set serialrx_provider = SBUS
-set serialrx_inverted = OFF
+set serialrx_provider = CRSF
+set serialrx_inverted = ON
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autoreset = ON
 set srxl2_unit_id = 1
@@ -523,7 +524,7 @@ set sbus_baud_fast = OFF
 set crsf_use_rx_snr = OFF
 set rx_min_usec = 885
 set rx_max_usec = 2115
-set serialrx_halfduplex = OFF
+set serialrx_halfduplex = ON
 set adc_device = 1
 set adc_vrefint_calibration = 0
 set adc_tempsensor_calibration30 = 0
@@ -763,7 +764,7 @@ set stats = OFF
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = K110 2S BL tail
+set name = K110
 set position_alt_source = DEFAULT
 set box_user_1_name = -
 set box_user_2_name = -

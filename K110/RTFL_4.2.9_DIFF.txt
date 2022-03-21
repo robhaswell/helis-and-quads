@@ -15,7 +15,7 @@ manufacturer_id MTKS
 mcu_id 003e005b3235511832333634
 signature 
 
-# name: K110 2S BL tail
+# name: K110
 
 # resources
 resource BEEPER 1 B02
@@ -75,6 +75,7 @@ dma pin A08 0
 
 # feature
 feature RX_SERIAL
+feature TELEMETRY
 feature GOVERNOR
 feature RPM_FILTER
 
@@ -110,7 +111,6 @@ map AETR1C23
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 1 128 115200 57600 0 2000000
 
 # aux
 aux 0 0 2 1950 2100 0 0
@@ -144,7 +144,9 @@ set rssi_channel = 18
 set rc_smoothing_derivative_type = BIQUAD
 set rc_smoothing_auto_smoothness = 66
 set max_aux_channels = 6
-set serialrx_provider = SBUS
+set serialrx_provider = CRSF
+set serialrx_inverted = ON
+set serialrx_halfduplex = ON
 set blackbox_p_ratio = 64
 set dshot_burst = AUTO
 set dshot_bidir = ON
@@ -191,7 +193,7 @@ set gyro_rpm_filter_bank_gear_ratio = 8027,8000,7973,4013,4000,3987,2667,2000,10
 set gyro_rpm_filter_bank_notch_q = 200,200,200,200,200,200,200,200,200,200,0,0,0,0,0,0
 set gyro_rpm_filter_bank_min_hz = 20,20,20,33,33,33,50,67,133,20,0,0,0,0,0,0
 set gyro_rpm_filter_bank_max_hz = 60,60,60,120,120,120,180,240,480,60,0,0,0,0,0,0
-set name = K110 2S BL tail
+set name = K110
 
 profile 0
 
