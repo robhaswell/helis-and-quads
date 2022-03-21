@@ -249,7 +249,6 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
 feature RX_SERIAL
-feature SOFTSERIAL
 feature TELEMETRY
 feature OSD
 feature AIRMODE
@@ -919,7 +918,7 @@ set max7456_spi_bus = 2
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
-set displayport_msp_serial = 1
+set displayport_msp_serial = -1
 set displayport_msp_attrs = 0,0,0,0
 set displayport_msp_use_device_blink = OFF
 set displayport_max7456_col_adjust = 0
@@ -1283,7 +1282,7 @@ set idle_max_increase = 150
 set level_race_mode = OFF
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
@@ -1436,7 +1435,7 @@ set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save

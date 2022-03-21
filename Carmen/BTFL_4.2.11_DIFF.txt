@@ -18,6 +18,7 @@ signature
 # name: Carmen
 
 # feature
+feature -SOFTSERIAL
 feature TELEMETRY
 
 # beacon
@@ -44,7 +45,6 @@ vtxtable powervalues 0 1 2
 vtxtable powerlabels 25 200 0
 
 # rxfail
-rxfail 4 h
 rxfail 6 s 1500
 
 # master
@@ -85,7 +85,6 @@ set debug_mode = GYRO_FILTERED
 set vtx_band = 5
 set vtx_channel = 2
 set vtx_power = 1
-set displayport_msp_serial = 1
 set gyro_rpm_notch_harmonics = 1
 set name = Carmen
 
@@ -111,7 +110,7 @@ profile 1
 profile 2
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
@@ -154,7 +153,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 1
 
 # save configuration
 save
