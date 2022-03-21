@@ -250,6 +250,7 @@ feature -ANTI_GRAVITY
 feature -DYNAMIC_FILTER
 feature RX_SERIAL
 feature SOFTSERIAL
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -291,9 +292,9 @@ map AETR1234
 # serial
 serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
-serial 1 0 115200 57600 0 115200
-serial 2 8192 115200 57600 0 115200
-serial 3 1 19200 57600 0 115200
+serial 1 1 115200 57600 0 115200
+serial 2 0 115200 57600 0 115200
+serial 3 0 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 serial 5 0 115200 57600 0 115200
 
@@ -462,15 +463,15 @@ rxrange 3 1000 2000
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A CUSTOM  5865 5845 5825 5805 5785 5765 5745 5725
-vtxtable band 2 BOSCAM_B B CUSTOM  5733 5752 5771 5790 5809 5828 5847 5866
-vtxtable band 3 BOSCAM_E E CUSTOM  5705 5685 5665    0 5885 5905    0    0
-vtxtable band 4 FATSHARK F CUSTOM  5740 5760 5780 5800 5820 5840 5860 5880
-vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I CUSTOM  5732 5765 5828 5840 5866 5740    0    0
+vtxtable band 1 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 2 BAND2    2 CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BAND3    3 CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 4 BAND4    4 CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 5 BAND5    5 CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 6 BAND6    6 CUSTOM     0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
-vtxtable powervalues 25 200 400
-vtxtable powerlabels 25 200 400
+vtxtable powervalues 0 1 2
+vtxtable powerlabels 25 200 0
 
 # vtx
 vtx 0 0 0 0 0 900 900
@@ -491,7 +492,7 @@ rxfail 2 a
 rxfail 3 a
 rxfail 4 h
 rxfail 5 h
-rxfail 6 s 1000
+rxfail 6 s 1500
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -530,9 +531,9 @@ set dyn_lpf_gyro_max_hz = 750
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
-set acc_trim_pitch = 20
-set acc_trim_roll = -12
-set acc_calibration = -11,-7,120,1
+set acc_trim_pitch = -10
+set acc_trim_roll = -8
+set acc_calibration = -130,100,60,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -573,7 +574,7 @@ set rc_smoothing_derivative_type = AUTO
 set rc_smoothing_auto_smoothness = 10
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
-set serialrx_provider = SBUS
+set serialrx_provider = CRSF
 set serialrx_inverted = OFF
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autoreset = ON
@@ -781,7 +782,7 @@ set osd_warn_launch_control = ON
 set osd_warn_no_gps_rescue = ON
 set osd_warn_gps_rescue_disabled = ON
 set osd_warn_rssi = OFF
-set osd_warn_link_quality = OFF
+set osd_warn_link_quality = ON
 set osd_warn_rssi_dbm = OFF
 set osd_warn_over_cap = OFF
 set osd_rssi_alarm = 20
@@ -801,12 +802,12 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2433
+set osd_vbat_pos = 385
 set osd_rssi_pos = 353
-set osd_link_quality_pos = 234
+set osd_link_quality_pos = 2048
 set osd_rssi_dbm_pos = 234
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2454
+set osd_tim_2_pos = 2520
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
@@ -837,7 +838,7 @@ set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
 set osd_warnings_pos = 14697
-set osd_avg_cell_voltage_pos = 234
+set osd_avg_cell_voltage_pos = 2497
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
@@ -864,12 +865,12 @@ set osd_efficiency_pos = 234
 set osd_stat_rtc_date_time = OFF
 set osd_stat_tim_1 = OFF
 set osd_stat_tim_2 = ON
-set osd_stat_max_spd = ON
+set osd_stat_max_spd = OFF
 set osd_stat_max_dist = OFF
 set osd_stat_min_batt = ON
 set osd_stat_endbatt = OFF
 set osd_stat_battery = ON
-set osd_stat_min_rssi = ON
+set osd_stat_min_rssi = OFF
 set osd_stat_max_curr = ON
 set osd_stat_used_mah = ON
 set osd_stat_max_alt = OFF
@@ -878,7 +879,7 @@ set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = OFF
 set osd_stat_max_esc_temp = OFF
 set osd_stat_max_esc_rpm = ON
-set osd_stat_min_link_quality = OFF
+set osd_stat_min_link_quality = ON
 set osd_stat_flight_dist = OFF
 set osd_stat_max_fft = OFF
 set osd_stat_total_flights = OFF
@@ -890,7 +891,7 @@ set osd_profile_1_name = -
 set osd_profile_2_name = -
 set osd_profile_3_name = -
 set osd_gps_sats_show_hdop = OFF
-set osd_displayport_device = MAX7456
+set osd_displayport_device = MSP
 set osd_rcchannels = -1,-1,-1,-1
 set osd_camera_frame_width = 24
 set osd_camera_frame_height = 11
@@ -903,14 +904,14 @@ set pwr_on_arm_grace = 5
 set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 2
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
-set vtx_freq = 5658
+set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vtx_spi_bus = 0
-set vcd_video_system = NTSC
+set vcd_video_system = AUTO
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = DEFAULT
@@ -918,7 +919,7 @@ set max7456_spi_bus = 2
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
-set displayport_msp_serial = -1
+set displayport_msp_serial = 1
 set displayport_msp_attrs = 0,0,0,0
 set displayport_msp_use_device_blink = OFF
 set displayport_max7456_col_adjust = 0
@@ -1435,7 +1436,7 @@ set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
