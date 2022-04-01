@@ -1,0 +1,139 @@
+# diff all
+
+# version
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Nov 22 2021 / 20:40:17 (2e8963de5) MSP API: 1.44
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4SX1280
+manufacturer_id HAMO
+mcu_id 003600604e56500720363955
+signature 
+
+# name: Crux35
+
+# dma
+dma pin A09 NONE
+dma pin A10 NONE
+
+# feature
+feature -ANTI_GRAVITY
+
+# serial
+serial 1 1 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1800 2100 0 0
+aux 1 1 1 1800 2100 0 0
+
+# adjrange
+adjrange 0 0 1 900 1200 12 1 0 0
+adjrange 1 0 1 1200 1800 12 1 0 0
+adjrange 2 0 1 1800 2100 12 1 0 0
+
+# master
+set gyro_lpf1_static_hz = 400
+set gyro_lpf2_static_hz = 800
+set gyro_lpf1_dyn_min_hz = 400
+set gyro_lpf1_dyn_max_hz = 800
+set acc_calibration = 52,-4,134,1
+set dshot_idle_value = 500
+set dshot_burst = OFF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set vbat_max_cell_voltage = 440
+set ibata_scale = 470
+set yaw_motors_reversed = ON
+set small_angle = 180
+set deadband = 1
+set yaw_deadband = 1
+set simplified_gyro_filter_multiplier = 160
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
+set osd_rssi_pos = 314
+set osd_link_quality_pos = 2392
+set osd_rssi_dbm_pos = 2360
+set osd_tim_2_pos = 2433
+set osd_flymode_pos = 2457
+set osd_throttle_pos = 2425
+set osd_vtx_channel_pos = 2082
+set osd_current_pos = 2336
+set osd_mah_drawn_pos = 2368
+set osd_craft_name_pos = 2442
+set osd_warnings_pos = 2345
+set osd_avg_cell_voltage_pos = 2401
+set osd_disarmed_pos = 2314
+set osd_stat_tim_1 = ON
+set osd_stat_max_spd = OFF
+set osd_stat_battery = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
+set osd_displayport_device = MSP
+set debug_mode = RX_EXPRESSLRS_SPI
+set vtx_low_power_disarm = ON
+set vcd_video_system = NTSC
+set displayport_msp_serial = 1
+set expresslrs_uid = 0,0,164,119,214,232
+set expresslrs_rate_index = 1
+set name = Crux35
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 120
+set dterm_lpf1_dyn_max_hz = 240
+set dterm_lpf1_static_hz = 120
+set dterm_lpf2_static_hz = 240
+set iterm_relax = RPY
+set p_pitch = 50
+set i_pitch = 90
+set d_pitch = 43
+set f_pitch = 95
+set p_roll = 53
+set i_roll = 95
+set d_roll = 41
+set f_roll = 91
+set p_yaw = 55
+set i_yaw = 95
+set f_yaw = 91
+set d_min_roll = 33
+set d_min_pitch = 35
+set feedforward_transition = 21
+set simplified_pids_mode = OFF
+set simplified_dterm_filter_multiplier = 160
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 1
+
+# save configuration
+save
