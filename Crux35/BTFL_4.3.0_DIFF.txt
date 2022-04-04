@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Nov 22 2021 / 20:40:17 (2e8963de5) MSP API: 1.44
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Feb  1 2022 / 20:05:07 (3267f0417) MSP API: 1.44
 
 # start the command batch
 batch start

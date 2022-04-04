@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Nov 22 2021 / 20:40:17 (2e8963de5) MSP API: 1.44
+# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Feb  1 2022 / 20:05:07 (3267f0417) MSP API: 1.44
 
 # start the command batch
 batch start
@@ -86,6 +86,8 @@ resource PINIO 1 NONE
 resource PINIO 2 NONE
 resource PINIO 3 NONE
 resource PINIO 4 NONE
+resource USB_MSC_PIN 1 NONE
+resource FLASH_CS 1 A14
 resource OSD_CS 1 B12
 resource RX_SPI_CS 1 A15
 resource RX_SPI_EXTI 1 C14
@@ -127,6 +129,12 @@ timer A10 AF1
 # pin A10: TIM1 CH3 (AF1)
 
 # dma
+dma SPI_MOSI 1 NONE
+dma SPI_MOSI 2 NONE
+dma SPI_MOSI 3 NONE
+dma SPI_MISO 1 NONE
+dma SPI_MISO 2 NONE
+dma SPI_MISO 3 NONE
 dma SPI_TX 1 NONE
 dma SPI_TX 2 NONE
 dma SPI_TX 3 NONE
@@ -191,12 +199,10 @@ feature -AIRMODE
 feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
-feature -DYNAMIC_FILTER
 feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature RX_SPI
-feature DYNAMIC_FILTER
 
 # serial
 serial 20 1 115200 57600 0 115200
@@ -527,7 +533,7 @@ set adc_tempsensor_calibration30 = 0
 set adc_tempsensor_calibration110 = 0
 set input_filtering_mode = OFF
 set blackbox_sample_rate = 1/4
-set blackbox_device = SERIAL
+set blackbox_device = SPIFLASH
 set blackbox_disable_pids = OFF
 set blackbox_disable_rc = OFF
 set blackbox_disable_setpoint = OFF
@@ -545,7 +551,7 @@ set min_command = 1000
 set dshot_idle_value = 500
 set dshot_burst = OFF
 set dshot_bidir = ON
-set dshot_bitbang = OFF
+set dshot_bitbang = ON
 set dshot_bitbang_timer = AUTO
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
@@ -660,8 +666,6 @@ set pid_process_denom = 2
 set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
-set thrust_linear = 0
-set transient_throttle_limit = 0
 set simplified_gyro_filter = ON
 set simplified_gyro_filter_multiplier = 160
 set tlm_inverted = OFF
@@ -706,6 +710,7 @@ set ledstrip_beacon_color = WHITE
 set ledstrip_beacon_period_ms = 500
 set ledstrip_beacon_percent = 50
 set ledstrip_beacon_armed_only = OFF
+set ledstrip_brightness = 100
 set osd_units = METRIC
 set osd_warn_arming_disable = ON
 set osd_warn_batt_not_full = OFF
@@ -838,7 +843,7 @@ set osd_rcchannels = -1,-1,-1,-1
 set osd_camera_frame_width = 24
 set osd_camera_frame_height = 11
 set osd_stat_avg_cell_value = OFF
-set osd_task_frequency = 60
+set osd_framerate_hz = 12
 set osd_menu_background = TRANSPARENT
 set system_hse_mhz = 8
 set task_statistics = ON
@@ -846,19 +851,19 @@ set debug_mode = RX_EXPRESSLRS_SPI
 set rate_6pos_switch = OFF
 set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
-set scheduler_optimize_rate = AUTO
 set enable_stick_arming = OFF
 set vtx_band = 0
 set vtx_channel = 0
 set vtx_power = 0
 set vtx_low_power_disarm = ON
+set vtx_softserial_alt = OFF
 set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = NTSC
 set vcd_h_offset = 0
 set vcd_v_offset = 0
-set max7456_clock = DEFAULT
+set max7456_clock = NOMINAL
 set max7456_spi_bus = 2
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
@@ -883,6 +888,8 @@ set camera_control_inverted = OFF
 set pinio_config = 1,1,1,1
 set pinio_box = 40,41,255,255
 set usb_hid_cdc = OFF
+set usb_msc_pin_pullup = ON
+set flash_spi_bus = 2
 set rcdevice_init_dev_attempts = 6
 set rcdevice_init_dev_attempt_interval = 1000
 set rcdevice_protocol_version = 0
@@ -909,6 +916,8 @@ set expresslrs_domain = ISM2400
 set expresslrs_rate_index = 1
 set expresslrs_switch_mode = HYBRID
 set expresslrs_model_id = 255
+set scheduler_relax_rx = 1
+set scheduler_relax_osd = 1
 set timezone_offset_minutes = 0
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
@@ -922,6 +931,8 @@ set stats_total_dist_m = 0
 set name = Crux35
 set display_name = -
 set position_alt_source = DEFAULT
+set position_alt_gps_min_sats = 10
+set position_alt_baro_fallback_sats = 7
 set box_user_1_name = -
 set box_user_2_name = -
 set box_user_3_name = -
@@ -998,8 +1009,8 @@ set integrated_yaw_relax = 200
 set d_min_roll = 33
 set d_min_pitch = 35
 set d_min_yaw = 0
-set d_min_boost_gain = 37
-set d_min_advance = 20
+set d_max_gain = 37
+set d_max_advance = 20
 set motor_output_limit = 100
 set auto_profile_cell_count = 0
 set launch_control_mode = NORMAL
@@ -1007,10 +1018,12 @@ set launch_trigger_allow_reset = ON
 set launch_trigger_throttle_percent = 20
 set launch_angle_limit = 0
 set launch_control_gain = 40
+set thrust_linear = 0
+set transient_throttle_limit = 0
 set feedforward_transition = 21
 set feedforward_averaging = OFF
-set feedforward_smoothing = 25
-set feedforward_jitter_reduction = 7
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 7
 set feedforward_boost = 15
 set feedforward_max_rate_limit = 90
 set dyn_idle_min_rpm = 0
@@ -1026,8 +1039,8 @@ set simplified_d_gain = 100
 set simplified_pi_gain = 100
 set simplified_dmax_gain = 100
 set simplified_feedforward_gain = 100
-set simplified_pitch_d_gain = 115
-set simplified_pitch_pi_gain = 105
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 160
 
@@ -1102,8 +1115,8 @@ set integrated_yaw_relax = 200
 set d_min_roll = 30
 set d_min_pitch = 34
 set d_min_yaw = 0
-set d_min_boost_gain = 37
-set d_min_advance = 20
+set d_max_gain = 37
+set d_max_advance = 20
 set motor_output_limit = 100
 set auto_profile_cell_count = 0
 set launch_control_mode = NORMAL
@@ -1111,10 +1124,12 @@ set launch_trigger_allow_reset = ON
 set launch_trigger_throttle_percent = 20
 set launch_angle_limit = 0
 set launch_control_gain = 40
+set thrust_linear = 0
+set transient_throttle_limit = 0
 set feedforward_transition = 0
 set feedforward_averaging = OFF
-set feedforward_smoothing = 25
-set feedforward_jitter_reduction = 7
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 7
 set feedforward_boost = 15
 set feedforward_max_rate_limit = 90
 set dyn_idle_min_rpm = 0
@@ -1130,8 +1145,8 @@ set simplified_d_gain = 100
 set simplified_pi_gain = 100
 set simplified_dmax_gain = 100
 set simplified_feedforward_gain = 100
-set simplified_pitch_d_gain = 115
-set simplified_pitch_pi_gain = 105
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
 
@@ -1206,8 +1221,8 @@ set integrated_yaw_relax = 200
 set d_min_roll = 30
 set d_min_pitch = 34
 set d_min_yaw = 0
-set d_min_boost_gain = 37
-set d_min_advance = 20
+set d_max_gain = 37
+set d_max_advance = 20
 set motor_output_limit = 100
 set auto_profile_cell_count = 0
 set launch_control_mode = NORMAL
@@ -1215,10 +1230,12 @@ set launch_trigger_allow_reset = ON
 set launch_trigger_throttle_percent = 20
 set launch_angle_limit = 0
 set launch_control_gain = 40
+set thrust_linear = 0
+set transient_throttle_limit = 0
 set feedforward_transition = 0
 set feedforward_averaging = OFF
-set feedforward_smoothing = 25
-set feedforward_jitter_reduction = 7
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 7
 set feedforward_boost = 15
 set feedforward_max_rate_limit = 90
 set dyn_idle_min_rpm = 0
@@ -1234,8 +1251,8 @@ set simplified_d_gain = 100
 set simplified_pi_gain = 100
 set simplified_dmax_gain = 100
 set simplified_feedforward_gain = 100
-set simplified_pitch_d_gain = 115
-set simplified_pitch_pi_gain = 105
+set simplified_pitch_d_gain = 100
+set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
 
