@@ -32,12 +32,20 @@ aux 3 13 2 1300 1700 0 0
 aux 4 26 0 1450 2100 0 0
 aux 5 35 2 1700 2100 0 0
 
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
-vtxtable powervalues 0 1 2
+vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # rxfail
@@ -46,13 +54,12 @@ rxfail 6 s 1000
 # master
 set gyro_lpf1_static_hz = 0
 set gyro_lpf2_static_hz = 0
-set dyn_notch_count = 4
+set dyn_notch_count = 2
 set dyn_notch_min_hz = 125
 set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_calibration = -35,-21,-12,1
-set rssi_channel = 15
 set serialrx_provider = CRSF
 set dshot_bidir = ON
 set vbat_max_cell_voltage = 435
@@ -82,44 +89,23 @@ set osd_displayport_device = MSP
 set debug_mode = GYRO_FILTERED
 set vtx_band = 5
 set vtx_channel = 2
-set vtx_power = 1
+set vtx_power = 3
 set displayport_msp_serial = 1
 set gyro_1_align_yaw = 1800
+set rpm_filter_harmonics = 2
 set name = Mintay
 
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_min_hz = 105
-set dterm_lpf1_dyn_max_hz = 210
-set dterm_lpf1_static_hz = 105
-set dterm_lpf2_static_hz = 210
-set anti_gravity_gain = 8000
-set pidsum_limit = 1000
-set pidsum_limit_yaw = 1000
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set yaw_lowpass_hz = 0
-set p_pitch = 80
-set i_pitch = 143
-set d_pitch = 57
-set f_pitch = 252
-set p_roll = 66
-set i_roll = 118
-set f_roll = 210
-set p_yaw = 66
-set i_yaw = 118
-set f_yaw = 210
-set d_min_roll = 40
-set d_min_pitch = 57
-set thrust_linear = 20
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
-set simplified_master_multiplier = 135
-set simplified_pi_gain = 110
-set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 130
-set simplified_pitch_d_gain = 125
-set simplified_pitch_pi_gain = 115
-set simplified_dterm_filter_multiplier = 140
+set simplified_dterm_filter_multiplier = 120
 
 profile 1
 
