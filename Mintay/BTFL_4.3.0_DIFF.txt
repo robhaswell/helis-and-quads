@@ -19,6 +19,7 @@ signature
 
 # serial
 serial 1 1 115200 57600 0 115200
+serial 2 128 115200 57600 0 2000000
 serial 3 0 115200 57600 0 115200
 
 # beacon
@@ -60,13 +61,16 @@ set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_calibration = -35,-21,-12,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
 set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/1
+set blackbox_device = SERIAL
 set dshot_bidir = ON
 set vbat_max_cell_voltage = 435
 set vbat_min_cell_voltage = 350
 set yaw_motors_reversed = ON
 set small_angle = 180
-set pid_process_denom = 2
 set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
 set osd_warn_link_quality = ON
@@ -89,7 +93,7 @@ set osd_displayport_device = MSP
 set debug_mode = GYRO_FILTERED
 set vtx_band = 5
 set vtx_channel = 2
-set vtx_power = 3
+set vtx_power = 1
 set displayport_msp_serial = 1
 set gyro_1_align_yaw = 1800
 set rpm_filter_harmonics = 2
@@ -98,14 +102,11 @@ set name = Mintay
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_min_hz = 90
-set dterm_lpf1_dyn_max_hz = 180
-set dterm_lpf1_static_hz = 90
-set dterm_lpf2_static_hz = 180
-set yaw_lowpass_hz = 0
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
-set simplified_dterm_filter_multiplier = 120
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set dyn_idle_min_rpm = 30
 
 profile 1
 
