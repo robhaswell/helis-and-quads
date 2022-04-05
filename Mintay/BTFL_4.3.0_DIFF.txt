@@ -53,6 +53,14 @@ vtxtable powerlabels 25 200 0
 rxfail 6 s 1500
 
 # master
+set gyro_lpf2_static_hz = 1000
+set dyn_notch_count = 2
+set dyn_notch_q = 400
+set dyn_notch_min_hz = 100
+set dyn_notch_max_hz = 800
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
+set gyro_lpf1_dyn_expo = 8
 set acc_calibration = -35,-21,-12,1
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
@@ -64,6 +72,7 @@ set vbat_max_cell_voltage = 435
 set vbat_min_cell_voltage = 350
 set yaw_motors_reversed = ON
 set small_angle = 180
+set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
 set osd_warn_link_quality = ON
 set osd_vbat_pos = 385
@@ -88,9 +97,39 @@ set vtx_channel = 2
 set vtx_power = 1
 set displayport_msp_serial = 1
 set gyro_1_align_yaw = 1800
+set rpm_filter_harmonics = 1
 set name = Mintay
 
 profile 0
+
+# profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 0
+set dterm_lpf1_dyn_expo = 0
+set dterm_lpf1_static_hz = 80
+set dterm_lpf2_static_hz = 140
+set anti_gravity_gain = 4000
+set p_pitch = 54
+set i_pitch = 72
+set d_pitch = 35
+set f_pitch = 112
+set p_roll = 51
+set i_roll = 69
+set d_roll = 33
+set f_roll = 108
+set p_yaw = 51
+set i_yaw = 69
+set f_yaw = 108
+set d_min_roll = 33
+set d_min_pitch = 35
+set feedforward_jitter_factor = 12
+set simplified_i_gain = 75
+set simplified_d_gain = 110
+set simplified_pi_gain = 115
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 90
+set simplified_pitch_d_gain = 95
+set simplified_dterm_filter = OFF
 
 profile 1
 
