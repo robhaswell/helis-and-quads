@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.3.0 Feb  1 2022 / 20:14:54 (3267f0417) MSP API: 1.44
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Apr  6 2022 / 07:58:20 (2fd2e8eca) MSP API: 1.44
 # config: manufacturer_id: DIAT, board_name: MAMBAF722_I2C, version: ec268d11, date: 2021-07-26T13:10:45Z
 
 # start the command batch
@@ -58,19 +58,17 @@ set dyn_notch_count = 2
 set dyn_notch_q = 450
 set dyn_notch_min_hz = 100
 set gyro_lpf1_dyn_min_hz = 0
-set acc_calibration = -35,-21,-12,1
+set acc_calibration = -33,-3,88,1
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set serialrx_provider = CRSF
 set blackbox_sample_rate = 1/1
 set blackbox_device = SERIAL
 set dshot_bidir = ON
-set motor_pwm_protocol = DSHOT300
 set vbat_max_cell_voltage = 435
 set vbat_min_cell_voltage = 350
 set yaw_motors_reversed = ON
 set small_angle = 180
-set pid_process_denom = 2
 set report_cell_voltage = ON
 set osd_warn_link_quality = ON
 set osd_vbat_pos = 385
@@ -89,11 +87,10 @@ set osd_stat_bb_no = OFF
 set osd_stat_max_esc_rpm = ON
 set osd_stat_min_link_quality = ON
 set osd_displayport_device = MSP
-set debug_mode = GYRO_FILTERED
+set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 2
 set vtx_power = 1
-set vtx_freq = 5695
 set displayport_msp_serial = 1
 set gyro_1_align_yaw = 1800
 set name = Mintay

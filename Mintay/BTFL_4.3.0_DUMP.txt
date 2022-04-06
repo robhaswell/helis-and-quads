@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.3.0 Feb  1 2022 / 20:14:54 (3267f0417) MSP API: 1.44
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Apr  6 2022 / 07:58:20 (2fd2e8eca) MSP API: 1.44
 # config: manufacturer_id: DIAT, board_name: MAMBAF722_I2C, version: ec268d11, date: 2021-07-26T13:10:45Z
 
 # start the command batch
@@ -526,7 +526,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -35,-21,-12,1
+set acc_calibration = -33,-3,88,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -571,6 +571,7 @@ set srxl2_unit_id = 1
 set srxl2_baud_fast = ON
 set sbus_baud_fast = OFF
 set crsf_use_rx_snr = OFF
+set crsf_use_negotiated_baud = OFF
 set airmode_start_throttle_percent = 25
 set rx_min_usec = 885
 set rx_max_usec = 2115
@@ -608,20 +609,20 @@ set dshot_bidir = ON
 set dshot_bitbang = AUTO
 set dshot_bitbang_timer = AUTO
 set use_unsynced_pwm = OFF
-set motor_pwm_protocol = DSHOT300
+set motor_pwm_protocol = DSHOT600
 set motor_pwm_rate = 480
 set motor_pwm_inversion = OFF
 set motor_poles = 14
 set motor_output_reordering = 0,1,2,3,4,5,6,7
 set thr_corr_value = 0
 set thr_corr_angle = 800
-set failsafe_delay = 4
+set failsafe_delay = 10
 set failsafe_off_delay = 10
 set failsafe_throttle = 1000
 set failsafe_switch_mode = STAGE1
 set failsafe_throttle_low_delay = 100
 set failsafe_procedure = DROP
-set failsafe_recovery_delay = 20
+set failsafe_recovery_delay = 10
 set failsafe_stick_threshold = 30
 set align_board_roll = 0
 set align_board_pitch = 0
@@ -717,7 +718,7 @@ set gps_rescue_use_mag = ON
 set deadband = 0
 set yaw_deadband = 0
 set yaw_control_reversed = OFF
-set pid_process_denom = 2
+set pid_process_denom = 1
 set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
@@ -907,7 +908,7 @@ set osd_stat_avg_cell_value = OFF
 set osd_framerate_hz = 12
 set osd_menu_background = TRANSPARENT
 set task_statistics = ON
-set debug_mode = GYRO_FILTERED
+set debug_mode = GYRO_SCALED
 set rate_6pos_switch = OFF
 set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
@@ -917,7 +918,7 @@ set vtx_channel = 2
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5695
+set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
