@@ -94,32 +94,10 @@ set vtx_channel = 2
 set vtx_power = 1
 set displayport_msp_serial = 1
 set gyro_1_align_yaw = 1800
+set rpm_filter_harmonics = 2
 set name = Mintay
 
 profile 0
-
-# profile 0
-set p_pitch = 42
-set i_pitch = 75
-set d_pitch = 29
-set f_pitch = 149
-set p_roll = 40
-set i_roll = 72
-set d_roll = 25
-set f_roll = 143
-set p_yaw = 40
-set i_yaw = 72
-set f_yaw = 143
-set d_min_roll = 21
-set d_min_pitch = 23
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
-set simplified_d_gain = 70
-set simplified_pi_gain = 90
-set simplified_dmax_gain = 70
-set simplified_feedforward_gain = 120
 
 profile 1
 
