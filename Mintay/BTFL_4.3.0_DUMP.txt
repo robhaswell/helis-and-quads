@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.3.0 Apr  6 2022 / 07:58:20 (2fd2e8eca) MSP API: 1.44
+# Betaflight / STM32F7X2 (S7X2) 4.3.0 Apr 25 2022 / 01:06:24 (9d71184) MSP API: 1.44
 # config: manufacturer_id: DIAT, board_name: MAMBAF722_I2C, version: ec268d11, date: 2021-07-26T13:10:45Z
 
 # start the command batch
@@ -11,7 +11,7 @@ batch start
 board_name MAMBAF722_I2C
 manufacturer_id DIAT
 mcu_id 003300305333500720333931
-signature 
+signature
 
 # name: Mintay
 
@@ -500,9 +500,9 @@ rxfail 17 h
 # master
 set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
-set gyro_lpf1_static_hz = 0
+set gyro_lpf1_static_hz = 250
 set gyro_lpf2_type = PT1
-set gyro_lpf2_static_hz = 0
+set gyro_lpf2_static_hz = 500
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -516,10 +516,10 @@ set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
 set dyn_notch_count = 1
 set dyn_notch_q = 500
-set dyn_notch_min_hz = 100
-set dyn_notch_max_hz = 400
-set gyro_lpf1_dyn_min_hz = 300
-set gyro_lpf1_dyn_max_hz = 600
+set dyn_notch_min_hz = 150
+set dyn_notch_max_hz = 600
+set gyro_lpf1_dyn_min_hz = 250
+set gyro_lpf1_dyn_max_hz = 500
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
@@ -616,7 +616,7 @@ set motor_poles = 14
 set motor_output_reordering = 0,1,2,3,4,5,6,7
 set thr_corr_value = 0
 set thr_corr_angle = 800
-set failsafe_delay = 10
+set failsafe_delay = 15
 set failsafe_off_delay = 10
 set failsafe_throttle = 1000
 set failsafe_switch_mode = STAGE1
@@ -723,7 +723,7 @@ set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
 set simplified_gyro_filter = ON
-set simplified_gyro_filter_multiplier = 120
+set simplified_gyro_filter_multiplier = 100
 set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set frsky_default_lat = 0
@@ -914,11 +914,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 2
+set vtx_channel = 4
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5695
+set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
@@ -1016,13 +1016,13 @@ profile 0
 
 # profile 0
 set profile_name = -
-set dterm_lpf1_dyn_min_hz = 90
-set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_max_hz = 150
 set dterm_lpf1_dyn_expo = 5
 set dterm_lpf1_type = PT1
-set dterm_lpf1_static_hz = 90
+set dterm_lpf1_static_hz = 75
 set dterm_lpf2_type = PT1
-set dterm_lpf2_static_hz = 180
+set dterm_lpf2_static_hz = 150
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
 set vbat_sag_compensation = 0
@@ -1056,18 +1056,18 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 61
-set i_pitch = 109
-set d_pitch = 59
-set f_pitch = 156
-set p_roll = 58
-set i_roll = 104
-set d_roll = 52
-set f_roll = 150
-set p_yaw = 58
-set i_yaw = 104
+set p_pitch = 47
+set i_pitch = 84
+set d_pitch = 46
+set f_pitch = 125
+set p_roll = 45
+set i_roll = 80
+set d_roll = 40
+set f_roll = 120
+set p_yaw = 45
+set i_yaw = 80
 set d_yaw = 0
-set f_yaw = 160
+set f_yaw = 120
 set angle_level_strength = 50
 set horizon_level_strength = 50
 set horizon_transition = 75
@@ -1080,8 +1080,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 39
-set d_min_pitch = 44
+set d_min_roll = 30
+set d_min_pitch = 34
 set d_min_yaw = 0
 set d_max_gain = 37
 set d_max_advance = 20
@@ -1095,28 +1095,28 @@ set launch_control_gain = 40
 set thrust_linear = 0
 set transient_throttle_limit = 0
 set feedforward_transition = 0
-set feedforward_averaging = OFF
-set feedforward_smooth_factor = 25
-set feedforward_jitter_factor = 7
-set feedforward_boost = 20
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
 set feedforward_max_rate_limit = 90
-set dyn_idle_min_rpm = 25
+set dyn_idle_min_rpm = 0
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
 set dyn_idle_max_increase = 150
 set level_race_mode = OFF
-set simplified_pids_mode = RP
+set simplified_pids_mode = RPY
 set simplified_master_multiplier = 100
 set simplified_i_gain = 100
-set simplified_d_gain = 130
-set simplified_pi_gain = 130
+set simplified_d_gain = 100
+set simplified_pi_gain = 100
 set simplified_dmax_gain = 100
-set simplified_feedforward_gain = 125
+set simplified_feedforward_gain = 100
 set simplified_pitch_d_gain = 100
 set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
-set simplified_dterm_filter_multiplier = 120
+set simplified_dterm_filter_multiplier = 100
 
 profile 1
 
