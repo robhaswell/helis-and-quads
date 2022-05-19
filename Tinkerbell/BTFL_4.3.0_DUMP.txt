@@ -255,7 +255,7 @@ feature ANTI_GRAVITY
 # serial
 serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
-serial 1 0 115200 57600 0 115200
+serial 1 1 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
 serial 3 1 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
@@ -417,12 +417,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1450 2100 0 0
+aux 5 35 2 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -439,7 +439,7 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 0 900 900 0 0 0 0
+adjrange 0 0 3 900 2100 12 3 0 0
 adjrange 1 0 0 900 900 0 0 0 0
 adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
@@ -508,7 +508,7 @@ rxfail 2 a
 rxfail 3 a
 rxfail 4 h
 rxfail 5 h
-rxfail 6 h
+rxfail 6 s 1500
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -1375,15 +1375,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 set tpa_rate = 65
 set tpa_breakpoint = 1350
 set tpa_mode = D
@@ -1403,15 +1403,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
 set tpa_rate = 65
 set tpa_breakpoint = 1350
 set tpa_mode = D
@@ -1431,17 +1431,17 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1250
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1457,19 +1457,19 @@ rateprofile 3
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1536,7 +1536,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 3
 
 # save configuration
 save
