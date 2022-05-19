@@ -1,0 +1,94 @@
+# diff all
+
+# version
+# Betaflight / STM32F405 (S405) 4.3.0 Apr 25 2022 / 01:02:32 (9d71184) MSP API: 1.44
+# config: manufacturer_id: FLWO, board_name: FLYWOOF405S_AIO, version: 77770957, date: 2022-01-08T14:27:41Z
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name FLYWOOF405S_AIO
+manufacturer_id FLWO
+mcu_id 002f00203436511130393731
+signature
+
+# name: Tinkerbell
+
+# feature
+feature -RX_PARALLEL_PWM
+feature TELEMETRY
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = 70,-55,-67,1
+set mag_hardware = NONE
+set baro_hardware = NONE
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set serialrx_provider = CRSF
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set align_board_yaw = 45
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set report_cell_voltage = ON
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
+set name = Tinkerbell
+
+profile 0
+
+# profile 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
