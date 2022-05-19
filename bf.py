@@ -74,23 +74,23 @@ def dump_board(ser: serial.Serial, config: dict):
     output_path_dump = f"{path}/{ident}_{version}_DUMP.txt"
     output_path_diff = f"{path}/{ident}_{version}_DIFF.txt"
 
-    dump = ""
+    def _read_board():
+        output = ""
+        while True:
+            line = ser.readline().decode()
+            if line:
+                line = line.strip() + "\n"
+            output += line
+
+            if line.strip() == "save":
+                break
+        return output
+
     ser.write("dump all\r\n".encode())
-    while True:
-        line = ser.readline().decode()
-        dump += line
+    dump = _read_board()
 
-        if line == "save\r\n":
-            break
-
-    diff = ""
     ser.write("diff all\r\n".encode())
-    while True:
-        line = ser.readline().decode()
-        diff += line
-
-        if line == "save\r\n":
-            break
+    diff = _read_board()
 
     reset_board(ser)
 
