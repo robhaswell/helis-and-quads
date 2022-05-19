@@ -4,6 +4,7 @@ isort==5.10.1
 lazy-object-proxy==1.6.0
 mccabe==0.6.1
 platformdirs==2.4.0
+progressbar2==4.0.0
 pycodestyle==2.8.0
 pylint==2.12.2
 pyserial==3.5

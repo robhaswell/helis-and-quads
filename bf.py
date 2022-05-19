@@ -5,7 +5,9 @@ Some utilities for working with Betaflight (and derivatives).
 import argparse
 import os
 import sys
+from cgitb import reset
 
+import progressbar
 import serial
 from yamspy import MSPy
 
@@ -110,15 +112,22 @@ def load_to_board(ser: serial.Serial, filename):
     """
     Load a board config into the connected flight controller.
     """
+    output = ""
     with open(filename, "rb") as filep:
-        for line in filep:
+        for line in progressbar.progressbar(list(filep)):
             ser.write(line)
             ser.flush()
-            print(ser.read_all())
+            output += ser.read_all().decode()
         try:
             ser.write(b"save\r\n")
+            output += ser.read_all().decode()
         except serial.serialutil.SerialException:
+            raise
             pass
+
+    reset_board(ser)
+    output += ser.read_all().decode()
+    print(output)
 
 
 def reset_board(ser: serial.Serial):
