@@ -1,7 +1,8 @@
 # diff all
 
 # version
-# Betaflight / CRAZYBEEF4SX1280 (HAMO) 4.3.0 Feb  1 2022 / 20:05:07 (3267f0417) MSP API: 1.44
+# Betaflight / STM32F411SX1280 (S4SX) 4.3.1 Jul 13 2022 / 03:33:32 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: HAMO, board_name: CRAZYBEEF4SX1280, version: 7df66093, date: 2022-06-12T13:41:42Z
 
 # start the command batch
 batch start
@@ -14,7 +15,7 @@ manufacturer_id HAMO
 mcu_id 003600604e56500720363955
 signature
 
-# name: Crux35
+# name: Cricket
 
 # dma
 dma pin A09 NONE
@@ -69,6 +70,7 @@ set dshot_burst = OFF
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
+set align_board_roll = 180
 set vbat_max_cell_voltage = 440
 set ibata_scale = 470
 set yaw_motors_reversed = ON
@@ -114,7 +116,7 @@ set vcd_video_system = NTSC
 set displayport_msp_serial = 1
 set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_model_id = 0
-set name = Crux35
+set name = Cricket
 
 profile 0
 

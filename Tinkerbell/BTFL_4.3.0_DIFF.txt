@@ -69,10 +69,11 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 2
 set report_cell_voltage = ON
+set osd_displayport_device = MSP
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 1
-set vtx_freq = 5658
+set vtx_channel = 2
+set vtx_power = 3
+set displayport_msp_serial = 3
 set name = Tinkerbell
 
 profile 0
@@ -147,7 +148,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 3
+rateprofile 0
 
 # save configuration
 save

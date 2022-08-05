@@ -2,29 +2,29 @@
 # dump all
 
 # version
-# Betaflight / STM32F405 (S405) 4.3.0 Apr 25 2022 / 01:02:32 (9d71184) MSP API: 1.44
-# config: manufacturer_id: FLWO, board_name: FLYWOOF405S_AIO, version: 77770957, date: 2022-01-08T14:27:41Z
+# Betaflight / STM32F411SX1280 (S4SX) 4.3.1 Jul 13 2022 / 03:33:32 (8d4f005) MSP API: 1.44
+# config: manufacturer_id: HAMO, board_name: CRAZYBEEF4SX1280, version: 7df66093, date: 2022-06-12T13:41:42Z
 
 # start the command batch
 batch start
 
-board_name FLYWOOF405S_AIO
-manufacturer_id FLWO
-mcu_id 002f00203436511130393731
+board_name CRAZYBEEF4SX1280
+manufacturer_id HAMO
+mcu_id 003600604e56500720363955
 signature
 
-# name: Tinkerbell
+# name: Cricket
 
 # resources
-resource BEEPER 1 C13
-resource MOTOR 1 B00
-resource MOTOR 2 B01
-resource MOTOR 3 A03
-resource MOTOR 4 A02
-resource MOTOR 5 B05
-resource MOTOR 6 B07
-resource MOTOR 7 C09
-resource MOTOR 8 C08
+resource BEEPER 1 C15
+resource MOTOR 1 B10
+resource MOTOR 2 B06
+resource MOTOR 3 B07
+resource MOTOR 4 B08
+resource MOTOR 5 NONE
+resource MOTOR 6 NONE
+resource MOTOR 7 NONE
+resource MOTOR 8 NONE
 resource SERVO 1 NONE
 resource SERVO 2 NONE
 resource SERVO 3 NONE
@@ -33,24 +33,22 @@ resource SERVO 5 NONE
 resource SERVO 6 NONE
 resource SERVO 7 NONE
 resource SERVO 8 NONE
-resource PPM 1 B08
-resource PWM 1 NONE
-resource PWM 2 NONE
-resource PWM 3 NONE
+resource PPM 1 A03
+resource PWM 1 A02
+resource PWM 2 A09
+resource PWM 3 A10
 resource PWM 4 NONE
 resource PWM 5 NONE
 resource PWM 6 NONE
 resource PWM 7 NONE
 resource PWM 8 NONE
-resource SONAR_TRIGGER 1 NONE
-resource SONAR_ECHO 1 NONE
-resource LED_STRIP 1 A09
-resource SERIAL_TX 1 B06
-resource SERIAL_TX 2 D05
-resource SERIAL_TX 3 B10
-resource SERIAL_TX 4 A00
+resource LED_STRIP 1 A00
+resource SERIAL_TX 1 A09
+resource SERIAL_TX 2 A02
+resource SERIAL_TX 3 NONE
+resource SERIAL_TX 4 NONE
 resource SERIAL_TX 5 NONE
-resource SERIAL_TX 6 C06
+resource SERIAL_TX 6 NONE
 resource SERIAL_TX 7 NONE
 resource SERIAL_TX 8 NONE
 resource SERIAL_TX 9 NONE
@@ -58,11 +56,11 @@ resource SERIAL_TX 10 NONE
 resource SERIAL_TX 11 NONE
 resource SERIAL_TX 12 NONE
 resource SERIAL_RX 1 A10
-resource SERIAL_RX 2 D06
-resource SERIAL_RX 3 B11
-resource SERIAL_RX 4 A01
-resource SERIAL_RX 5 D02
-resource SERIAL_RX 6 C07
+resource SERIAL_RX 2 A03
+resource SERIAL_RX 3 NONE
+resource SERIAL_RX 4 NONE
+resource SERIAL_RX 5 NONE
+resource SERIAL_RX 6 NONE
 resource SERIAL_RX 7 NONE
 resource SERIAL_RX 8 NONE
 resource SERIAL_RX 9 NONE
@@ -81,38 +79,26 @@ resource INVERTER 9 NONE
 resource INVERTER 10 NONE
 resource INVERTER 11 NONE
 resource INVERTER 12 NONE
-resource I2C_SCL 1 B08
-resource I2C_SCL 2 NONE
-resource I2C_SCL 3 NONE
-resource I2C_SDA 1 B09
-resource I2C_SDA 2 NONE
-resource I2C_SDA 3 NONE
-resource LED 1 C14
+resource LED 1 C13
 resource LED 2 NONE
 resource LED 3 NONE
 resource RX_BIND 1 NONE
 resource RX_BIND_PLUG 1 NONE
-resource TRANSPONDER 1 NONE
 resource SPI_SCK 1 A05
-resource SPI_SCK 2 NONE
-resource SPI_SCK 3 C10
+resource SPI_SCK 2 B13
+resource SPI_SCK 3 B03
 resource SPI_MISO 1 A06
-resource SPI_MISO 2 NONE
-resource SPI_MISO 3 C11
+resource SPI_MISO 2 B14
+resource SPI_MISO 3 B04
 resource SPI_MOSI 1 A07
-resource SPI_MOSI 2 NONE
-resource SPI_MOSI 3 C12
-resource ESCSERIAL 1 B08
+resource SPI_MOSI 2 B15
+resource SPI_MOSI 3 B05
+resource ESCSERIAL 1 NONE
 resource CAMERA_CONTROL 1 NONE
-resource ADC_BATT 1 C03
-resource ADC_RSSI 1 C00
-resource ADC_CURR 1 C02
+resource ADC_BATT 1 B00
+resource ADC_RSSI 1 NONE
+resource ADC_CURR 1 B01
 resource ADC_EXT 1 NONE
-resource BARO_CS 1 NONE
-resource BARO_EOC 1 NONE
-resource BARO_XCLR 1 NONE
-resource COMPASS_CS 1 NONE
-resource COMPASS_EXTI 1 NONE
 resource SDCARD_CS 1 NONE
 resource SDCARD_DETECT 1 NONE
 resource PINIO 1 NONE
@@ -120,26 +106,19 @@ resource PINIO 2 NONE
 resource PINIO 3 NONE
 resource PINIO 4 NONE
 resource USB_MSC_PIN 1 NONE
-resource FLASH_CS 1 B03
-resource OSD_CS 1 B14
-resource RX_SPI_CS 1 NONE
-resource RX_SPI_EXTI 1 NONE
-resource RX_SPI_BIND 1 NONE
-resource RX_SPI_LED 1 NONE
-resource RX_SPI_CC2500_TX_EN 1 NONE
-resource RX_SPI_CC2500_LNA_EN 1 NONE
-resource RX_SPI_CC2500_ANT_SEL 1 NONE
-resource RX_SPI_EXPRESSLRS_RESET 1 NONE
-resource RX_SPI_EXPRESSLRS_BUSY 1 NONE
-resource GYRO_EXTI 1 B13
+resource FLASH_CS 1 A14
+resource OSD_CS 1 B12
+resource RX_SPI_CS 1 A15
+resource RX_SPI_EXTI 1 C14
+resource RX_SPI_BIND 1 B02
+resource RX_SPI_LED 1 B09
+resource RX_SPI_EXPRESSLRS_RESET 1 A08
+resource RX_SPI_EXPRESSLRS_BUSY 1 A13
+resource GYRO_EXTI 1 A01
 resource GYRO_EXTI 2 NONE
-resource GYRO_CS 1 B12
+resource GYRO_CS 1 A04
 resource GYRO_CS 2 NONE
-resource USB_DETECT 1 A08
-resource VTX_POWER 1 NONE
-resource VTX_CS 1 NONE
-resource VTX_DATA 1 NONE
-resource VTX_CLK 1 NONE
+resource USB_DETECT 1 NONE
 resource PULLUP 1 NONE
 resource PULLUP 2 NONE
 resource PULLUP 3 NONE
@@ -150,24 +129,24 @@ resource PULLDOWN 3 NONE
 resource PULLDOWN 4 NONE
 
 # timer
-timer B00 AF2
-# pin B00: TIM3 CH3 (AF2)
-timer B01 AF2
-# pin B01: TIM3 CH4 (AF2)
-timer A03 AF1
-# pin A03: TIM2 CH4 (AF1)
-timer A02 AF1
-# pin A02: TIM2 CH3 (AF1)
-timer B05 AF2
-# pin B05: TIM3 CH2 (AF2)
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer B06 AF2
+# pin B06: TIM4 CH1 (AF2)
 timer B07 AF2
 # pin B07: TIM4 CH2 (AF2)
-timer C09 AF3
-# pin C09: TIM8 CH4 (AF3)
-timer C08 AF3
-# pin C08: TIM8 CH3 (AF3)
+timer B08 AF2
+# pin B08: TIM4 CH3 (AF2)
+timer A00 AF2
+# pin A00: TIM5 CH1 (AF2)
+timer A02 AF3
+# pin A02: TIM9 CH1 (AF3)
 timer A09 AF1
 # pin A09: TIM1 CH2 (AF1)
+timer A10 AF1
+# pin A10: TIM1 CH3 (AF1)
 
 # dma
 dma SPI_MOSI 1 NONE
@@ -202,24 +181,20 @@ dma UART_RX 5 NONE
 dma UART_RX 6 NONE
 dma UART_RX 7 NONE
 dma UART_RX 8 NONE
-dma pin B00 0
-# pin B00: DMA1 Stream 7 Channel 5
-dma pin B01 0
-# pin B01: DMA1 Stream 2 Channel 5
-dma pin A03 1
-# pin A03: DMA1 Stream 6 Channel 3
-dma pin A02 0
-# pin A02: DMA1 Stream 1 Channel 3
-dma pin B05 0
-# pin B05: DMA1 Stream 5 Channel 5
+dma pin A03 NONE
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin B06 0
+# pin B06: DMA1 Stream 0 Channel 2
 dma pin B07 0
 # pin B07: DMA1 Stream 3 Channel 2
-dma pin C09 0
-# pin C09: DMA2 Stream 7 Channel 7
-dma pin C08 0
-# pin C08: DMA2 Stream 2 Channel 0
-dma pin A09 0
-# pin A09: DMA2 Stream 6 Channel 0
+dma pin B08 0
+# pin B08: DMA1 Stream 7 Channel 2
+dma pin A00 0
+# pin A00: DMA1 Stream 2 Channel 6
+dma pin A02 NONE
+dma pin A09 NONE
+dma pin A10 NONE
 
 # feature
 feature -RX_PPM
@@ -244,22 +219,17 @@ feature -AIRMODE
 feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
-feature RX_SERIAL
+feature SOFTSERIAL
 feature TELEMETRY
-feature RSSI_ADC
 feature LED_STRIP
 feature OSD
 feature AIRMODE
-feature ANTI_GRAVITY
+feature RX_SPI
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 64 115200 57600 0 115200
-serial 1 0 115200 57600 0 115200
-serial 2 0 115200 57600 0 115200
-serial 3 1 115200 57600 0 115200
-serial 4 0 115200 57600 0 115200
-serial 5 0 115200 57600 0 115200
+serial 0 1 115200 57600 0 115200
+serial 1 1 115200 57600 0 115200
 
 # mixer
 mixer QUADX
@@ -308,8 +278,8 @@ beeper CAM_CONNECTION_CLOSE
 beeper RC_SMOOTHING_INIT_FAIL
 
 # beacon
-beacon -RX_LOST
-beacon -RX_SET
+beacon RX_LOST
+beacon RX_SET
 
 # map
 map AETR1234
@@ -524,9 +494,9 @@ rxfail 17 h
 # master
 set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
-set gyro_lpf1_static_hz = 250
+set gyro_lpf1_static_hz = 400
 set gyro_lpf2_type = PT1
-set gyro_lpf2_static_hz = 500
+set gyro_lpf2_static_hz = 800
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -538,37 +508,19 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
-set dyn_notch_count = 1
-set dyn_notch_q = 500
+set dyn_notch_count = 3
+set dyn_notch_q = 300
 set dyn_notch_min_hz = 150
 set dyn_notch_max_hz = 600
-set gyro_lpf1_dyn_min_hz = 250
-set gyro_lpf1_dyn_max_hz = 500
+set gyro_lpf1_dyn_min_hz = 400
+set gyro_lpf1_dyn_max_hz = 800
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = 70,-55,-67,1
-set align_mag = DEFAULT
-set mag_align_roll = 0
-set mag_align_pitch = 0
-set mag_align_yaw = 0
-set mag_bustype = I2C
-set mag_i2c_device = 1
-set mag_i2c_address = 0
-set mag_spi_device = 0
-set mag_hardware = NONE
-set mag_calibration = 0,0,0
-set baro_bustype = I2C
-set baro_spi_device = 0
-set baro_i2c_device = 1
-set baro_i2c_address = 0
-set baro_hardware = NONE
-set baro_tab_size = 21
-set baro_noise_lpf = 600
-set baro_cf_vel = 985
+set acc_calibration = 52,-4,134,1
 set mid_rc = 1500
 set min_check = 1050
 set max_check = 1900
@@ -579,15 +531,15 @@ set rssi_offset = 0
 set rssi_invert = OFF
 set rssi_src_frame_lpf_period = 30
 set rc_smoothing = ON
-set rc_smoothing_auto_factor = 25
-set rc_smoothing_auto_factor_throttle = 25
+set rc_smoothing_auto_factor = 30
+set rc_smoothing_auto_factor_throttle = 30
 set rc_smoothing_setpoint_cutoff = 0
 set rc_smoothing_feedforward_cutoff = 0
 set rc_smoothing_throttle_cutoff = 0
 set rc_smoothing_debug_axis = ROLL
 set fpv_mix_degrees = 0
 set max_aux_channels = 14
-set serialrx_provider = CRSF
+set serialrx_provider = SPEK1024
 set serialrx_inverted = OFF
 set spektrum_sat_bind = 0
 set spektrum_sat_bind_autoreset = ON
@@ -601,8 +553,8 @@ set rx_min_usec = 885
 set rx_max_usec = 2115
 set serialrx_halfduplex = OFF
 set msp_override_channels_mask = 0
-set rx_spi_protocol = V202_250K
-set rx_spi_bus = 0
+set rx_spi_protocol = EXPRESSLRS
+set rx_spi_bus = 3
 set rx_spi_led_inversion = OFF
 set adc_device = 1
 set adc_vrefint_calibration = 0
@@ -615,8 +567,6 @@ set blackbox_disable_pids = OFF
 set blackbox_disable_rc = OFF
 set blackbox_disable_setpoint = OFF
 set blackbox_disable_bat = OFF
-set blackbox_disable_mag = OFF
-set blackbox_disable_alt = OFF
 set blackbox_disable_rssi = OFF
 set blackbox_disable_gyro = OFF
 set blackbox_disable_acc = OFF
@@ -627,17 +577,17 @@ set blackbox_mode = NORMAL
 set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
-set dshot_idle_value = 550
+set dshot_idle_value = 500
 set dshot_burst = OFF
 set dshot_bidir = ON
-set dshot_bitbang = AUTO
+set dshot_bitbang = OFF
 set dshot_bitbang_timer = AUTO
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_pwm_rate = 480
 set motor_pwm_inversion = OFF
-set motor_poles = 14
-set motor_output_reordering = 1,3,0,2,4,5,6,7
+set motor_poles = 12
+set motor_output_reordering = 0,1,2,3,4,5,6,7
 set thr_corr_value = 0
 set thr_corr_angle = 800
 set failsafe_delay = 15
@@ -648,12 +598,12 @@ set failsafe_throttle_low_delay = 100
 set failsafe_procedure = DROP
 set failsafe_recovery_delay = 10
 set failsafe_stick_threshold = 30
-set align_board_roll = 0
+set align_board_roll = 180
 set align_board_pitch = 0
-set align_board_yaw = 45
+set align_board_yaw = 0
 set gimbal_mode = NORMAL
 set bat_capacity = 0
-set vbat_max_cell_voltage = 430
+set vbat_max_cell_voltage = 440
 set vbat_full_cell_voltage = 410
 set vbat_min_cell_voltage = 330
 set vbat_warning_cell_voltage = 350
@@ -674,7 +624,7 @@ set vbat_duration_for_critical = 0
 set vbat_scale = 110
 set vbat_divider = 10
 set vbat_multiplier = 1
-set ibata_scale = 170
+set ibata_scale = 470
 set ibata_offset = 0
 set ibatv_scale = 0
 set ibatv_offset = 0
@@ -738,16 +688,15 @@ set gps_rescue_min_sats = 8
 set gps_rescue_min_dth = 100
 set gps_rescue_allow_arming_without_fix = OFF
 set gps_rescue_alt_mode = MAX_ALT
-set gps_rescue_use_mag = ON
-set deadband = 0
-set yaw_deadband = 0
+set deadband = 1
+set yaw_deadband = 1
 set yaw_control_reversed = OFF
 set pid_process_denom = 2
 set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
 set simplified_gyro_filter = ON
-set simplified_gyro_filter_multiplier = 100
+set simplified_gyro_filter_multiplier = 160
 set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set frsky_default_lat = 0
@@ -757,7 +706,7 @@ set frsky_unit = METRIC
 set frsky_vfas_precision = 0
 set hott_alarm_int = 5
 set pid_in_tlm = OFF
-set report_cell_voltage = ON
+set report_cell_voltage = OFF
 set ibus_sensor = 1,2,3,0,0,0,0,0,0,0,0,0,0,0,0
 set mavlink_mah_as_heading_divisor = 0
 set telemetry_disabled_voltage = OFF
@@ -799,20 +748,20 @@ set sdio_use_cache = OFF
 set sdio_use_4bit_width = OFF
 set osd_units = METRIC
 set osd_warn_arming_disable = ON
-set osd_warn_batt_not_full = ON
-set osd_warn_batt_warning = ON
+set osd_warn_batt_not_full = OFF
+set osd_warn_batt_warning = OFF
 set osd_warn_batt_critical = ON
 set osd_warn_visual_beeper = ON
 set osd_warn_crash_flip = ON
-set osd_warn_esc_fail = ON
-set osd_warn_core_temp = ON
+set osd_warn_esc_fail = OFF
+set osd_warn_core_temp = OFF
 set osd_warn_rc_smoothing = ON
 set osd_warn_fail_safe = ON
 set osd_warn_launch_control = ON
 set osd_warn_no_gps_rescue = ON
 set osd_warn_gps_rescue_disabled = ON
 set osd_warn_rssi = OFF
-set osd_warn_link_quality = OFF
+set osd_warn_link_quality = ON
 set osd_warn_rssi_dbm = OFF
 set osd_warn_over_cap = OFF
 set osd_rssi_alarm = 20
@@ -832,26 +781,26 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 234
-set osd_rssi_pos = 234
-set osd_link_quality_pos = 234
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2048
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 234
+set osd_rssi_dbm_pos = 312
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 234
+set osd_tim_2_pos = 2454
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 234
+set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 234
+set osd_throttle_pos = 377
+set osd_vtx_channel_pos = 34
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
-set osd_current_pos = 234
-set osd_mah_drawn_pos = 234
+set osd_current_pos = 288
+set osd_mah_drawn_pos = 320
 set osd_motor_diag_pos = 234
-set osd_craft_name_pos = 234
+set osd_craft_name_pos = 393
 set osd_display_name_pos = 234
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
@@ -868,12 +817,12 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14665
-set osd_avg_cell_voltage_pos = 234
+set osd_warnings_pos = 14697
+set osd_avg_cell_voltage_pos = 2432
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
-set osd_disarmed_pos = 234
+set osd_disarmed_pos = 2314
 set osd_nheading_pos = 234
 set osd_up_down_reference_pos = 205
 set osd_nvario_pos = 234
@@ -896,23 +845,23 @@ set osd_camera_frame_pos = 35
 set osd_efficiency_pos = 234
 set osd_total_flights_pos = 234
 set osd_stat_rtc_date_time = OFF
-set osd_stat_tim_1 = OFF
+set osd_stat_tim_1 = ON
 set osd_stat_tim_2 = ON
-set osd_stat_max_spd = ON
+set osd_stat_max_spd = OFF
 set osd_stat_max_dist = OFF
 set osd_stat_min_batt = ON
 set osd_stat_endbatt = OFF
-set osd_stat_battery = OFF
-set osd_stat_min_rssi = ON
+set osd_stat_battery = ON
+set osd_stat_min_rssi = OFF
 set osd_stat_max_curr = ON
 set osd_stat_used_mah = ON
 set osd_stat_max_alt = OFF
-set osd_stat_bbox = ON
-set osd_stat_bb_no = ON
+set osd_stat_bbox = OFF
+set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = OFF
 set osd_stat_max_esc_temp = OFF
-set osd_stat_max_esc_rpm = OFF
-set osd_stat_min_link_quality = OFF
+set osd_stat_max_esc_rpm = ON
+set osd_stat_min_link_quality = ON
 set osd_stat_flight_dist = OFF
 set osd_stat_max_fft = OFF
 set osd_stat_total_flights = OFF
@@ -931,31 +880,30 @@ set osd_camera_frame_height = 11
 set osd_stat_avg_cell_value = OFF
 set osd_framerate_hz = 12
 set osd_menu_background = TRANSPARENT
-set system_hse_mhz = 0
+set system_hse_mhz = 8
 set task_statistics = ON
-set debug_mode = NONE
+set debug_mode = RX_EXPRESSLRS_SPI
 set rate_6pos_switch = OFF
-set cpu_overclock = OFF
+set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 2
-set vtx_power = 3
-set vtx_low_power_disarm = OFF
+set vtx_power = 1
+set vtx_low_power_disarm = ON
 set vtx_softserial_alt = OFF
-set vtx_freq = 0
+set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vtx_spi_bus = 0
-set vcd_video_system = AUTO
+set vcd_video_system = NTSC
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
-set max7456_spi_bus = 3
+set max7456_spi_bus = 2
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
-set displayport_msp_serial = 3
+set displayport_msp_serial = 1
 set displayport_msp_attrs = 0,0,0,0
 set displayport_msp_use_device_blink = OFF
 set displayport_max7456_col_adjust = 0
@@ -965,28 +913,18 @@ set displayport_max7456_blk = 0
 set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
-set frsky_spi_autobind = OFF
-set frsky_spi_tx_id = 0,0,0
-set frsky_spi_offset = 0
-set frsky_spi_bind_hop_data = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-set frsky_x_rx_num = 0
-set frsky_spi_a1_source = VBAT
-set cc2500_spi_chip_detect = ON
 set led_inversion = 0
-set dashboard_i2c_bus = 1
-set dashboard_i2c_addr = 60
 set camera_control_mode = HARDWARE_PWM
 set camera_control_ref_voltage = 330
 set camera_control_key_delay = 180
 set camera_control_internal_resistance = 470
 set camera_control_button_resistance = 450,270,150,68,0
 set camera_control_inverted = OFF
-set rangefinder_hardware = NONE
 set pinio_config = 1,1,1,1
-set pinio_box = 255,255,255,255
+set pinio_box = 40,41,255,255
 set usb_hid_cdc = OFF
 set usb_msc_pin_pullup = ON
-set flash_spi_bus = 3
+set flash_spi_bus = 2
 set rcdevice_init_dev_attempts = 6
 set rcdevice_init_dev_attempt_interval = 1000
 set rcdevice_protocol_version = 0
@@ -995,48 +933,37 @@ set gyro_1_bustype = SPI
 set gyro_1_spibus = 1
 set gyro_1_i2cBus = 0
 set gyro_1_i2c_address = 0
-set gyro_1_sensor_align = CW180
+set gyro_1_sensor_align = CW90
 set gyro_1_align_roll = 0
 set gyro_1_align_pitch = 0
-set gyro_1_align_yaw = 1800
+set gyro_1_align_yaw = 900
 set gyro_2_bustype = SPI
-set gyro_2_spibus = 1
+set gyro_2_spibus = 0
 set gyro_2_i2cBus = 0
 set gyro_2_i2c_address = 0
 set gyro_2_sensor_align = CW0
 set gyro_2_align_roll = 0
 set gyro_2_align_pitch = 0
 set gyro_2_align_yaw = 0
-set i2c1_pullup = OFF
-set i2c1_clockspeed_khz = 800
-set i2c2_pullup = OFF
-set i2c2_clockspeed_khz = 800
-set i2c3_pullup = OFF
-set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
-set spektrum_spi_protocol = 0
-set spektrum_spi_mfg_id = 0,0,0,0
-set spektrum_spi_num_channels = 0
-set expresslrs_uid = 0,0,0,0,0,0
-set expresslrs_domain = AU433
+set expresslrs_uid = 254,203,179,9,87,168
+set expresslrs_domain = ISM2400
 set expresslrs_rate_index = 0
 set expresslrs_switch_mode = HYBRID
-set expresslrs_model_id = 255
-set scheduler_relax_rx = 25
-set scheduler_relax_osd = 25
+set expresslrs_model_id = 0
+set scheduler_relax_rx = 1
+set scheduler_relax_osd = 1
 set timezone_offset_minutes = 0
 set rpm_filter_harmonics = 3
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 100
 set rpm_filter_fade_range_hz = 50
 set rpm_filter_lpf_hz = 150
-set flysky_spi_tx_id = 0
-set flysky_spi_rf_channels = 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 set stats_min_armed_time_s = -1
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = Tinkerbell
+set name = Cricket
 set display_name = -
 set position_alt_source = DEFAULT
 set position_alt_gps_min_sats = 10
@@ -1050,13 +977,13 @@ profile 0
 
 # profile 0
 set profile_name = -
-set dterm_lpf1_dyn_min_hz = 75
-set dterm_lpf1_dyn_max_hz = 150
+set dterm_lpf1_dyn_min_hz = 120
+set dterm_lpf1_dyn_max_hz = 240
 set dterm_lpf1_dyn_expo = 5
 set dterm_lpf1_type = PT1
-set dterm_lpf1_static_hz = 75
+set dterm_lpf1_static_hz = 120
 set dterm_lpf2_type = PT1
-set dterm_lpf2_static_hz = 150
+set dterm_lpf2_static_hz = 240
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
 set vbat_sag_compensation = 0
@@ -1076,7 +1003,7 @@ set crash_recovery_rate = 100
 set crash_limit_yaw = 200
 set crash_recovery = OFF
 set iterm_rotation = OFF
-set iterm_relax = RP
+set iterm_relax = RPY
 set iterm_relax_type = SETPOINT
 set iterm_relax_cutoff = 15
 set iterm_windup = 85
@@ -1090,18 +1017,18 @@ set acro_trainer_angle_limit = 20
 set acro_trainer_lookahead_ms = 50
 set acro_trainer_debug_axis = ROLL
 set acro_trainer_gain = 75
-set p_pitch = 47
-set i_pitch = 84
-set d_pitch = 46
-set f_pitch = 125
-set p_roll = 45
-set i_roll = 80
-set d_roll = 40
-set f_roll = 120
-set p_yaw = 45
-set i_yaw = 80
+set p_pitch = 50
+set i_pitch = 90
+set d_pitch = 43
+set f_pitch = 95
+set p_roll = 53
+set i_roll = 95
+set d_roll = 41
+set f_roll = 91
+set p_yaw = 55
+set i_yaw = 95
 set d_yaw = 0
-set f_yaw = 120
+set f_yaw = 91
 set angle_level_strength = 50
 set horizon_level_strength = 50
 set horizon_transition = 75
@@ -1114,8 +1041,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 30
-set d_min_pitch = 34
+set d_min_roll = 33
+set d_min_pitch = 35
 set d_min_yaw = 0
 set d_max_gain = 37
 set d_max_advance = 20
@@ -1128,11 +1055,11 @@ set launch_angle_limit = 0
 set launch_control_gain = 40
 set thrust_linear = 0
 set transient_throttle_limit = 0
-set feedforward_transition = 0
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
+set feedforward_transition = 21
+set feedforward_averaging = OFF
+set feedforward_smooth_factor = 25
+set feedforward_jitter_factor = 7
+set feedforward_boost = 15
 set feedforward_max_rate_limit = 90
 set dyn_idle_min_rpm = 0
 set dyn_idle_p_gain = 50
@@ -1140,7 +1067,7 @@ set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
 set dyn_idle_max_increase = 150
 set level_race_mode = OFF
-set simplified_pids_mode = RPY
+set simplified_pids_mode = OFF
 set simplified_master_multiplier = 100
 set simplified_i_gain = 100
 set simplified_d_gain = 100
@@ -1150,7 +1077,7 @@ set simplified_feedforward_gain = 100
 set simplified_pitch_d_gain = 100
 set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
-set simplified_dterm_filter_multiplier = 100
+set simplified_dterm_filter_multiplier = 160
 
 profile 1
 
@@ -1485,19 +1412,19 @@ rateprofile 4
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1513,19 +1440,19 @@ rateprofile 5
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100

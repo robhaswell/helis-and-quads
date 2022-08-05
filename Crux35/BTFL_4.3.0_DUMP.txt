@@ -10,7 +10,7 @@ batch start
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
 mcu_id 003600604e56500720363955
-signature 
+signature
 
 # name: Crux35
 
@@ -206,7 +206,7 @@ feature RX_SPI
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
+serial 0 1 115200 57600 0 115200
 serial 1 1 115200 57600 0 115200
 
 # mixer
@@ -365,12 +365,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 1800 2100 0 0
-aux 1 1 1 1800 2100 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1450 2100 0 0
+aux 5 35 2 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -387,9 +387,9 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 1 900 1200 12 1 0 0
-adjrange 1 0 1 1200 1800 12 1 0 0
-adjrange 2 0 1 1800 2100 12 1 0 0
+adjrange 0 0 3 900 2100 12 3 0 0
+adjrange 1 0 0 900 900 0 0 0 0
+adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
 adjrange 4 0 0 900 900 0 0 0 0
 adjrange 5 0 0 900 900 0 0 0 0
@@ -425,11 +425,17 @@ rxrange 2 1000 2000
 rxrange 3 1000 2000
 
 # vtxtable
-vtxtable bands 0
-vtxtable channels 0
-vtxtable powerlevels 0
-vtxtable powervalues
-vtxtable powerlabels
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # vtx
 vtx 0 0 0 0 0 900 900
@@ -450,7 +456,7 @@ rxfail 2 a
 rxfail 3 a
 rxfail 4 h
 rxfail 5 h
-rxfail 6 h
+rxfail 6 s 1500
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -726,7 +732,7 @@ set osd_warn_launch_control = ON
 set osd_warn_no_gps_rescue = ON
 set osd_warn_gps_rescue_disabled = ON
 set osd_warn_rssi = OFF
-set osd_warn_link_quality = OFF
+set osd_warn_link_quality = ON
 set osd_warn_rssi_dbm = OFF
 set osd_warn_over_cap = OFF
 set osd_rssi_alarm = 20
@@ -746,26 +752,26 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 234
-set osd_rssi_pos = 314
-set osd_link_quality_pos = 2392
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2048
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 2360
+set osd_rssi_dbm_pos = 312
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2433
+set osd_tim_2_pos = 2454
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 2457
+set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 2425
-set osd_vtx_channel_pos = 2082
+set osd_throttle_pos = 377
+set osd_vtx_channel_pos = 34
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
-set osd_current_pos = 2336
-set osd_mah_drawn_pos = 2368
+set osd_current_pos = 288
+set osd_mah_drawn_pos = 320
 set osd_motor_diag_pos = 234
-set osd_craft_name_pos = 2442
+set osd_craft_name_pos = 393
 set osd_display_name_pos = 234
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
@@ -782,8 +788,8 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 2345
-set osd_avg_cell_voltage_pos = 2401
+set osd_warnings_pos = 14697
+set osd_avg_cell_voltage_pos = 2432
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
@@ -817,7 +823,7 @@ set osd_stat_max_dist = OFF
 set osd_stat_min_batt = ON
 set osd_stat_endbatt = OFF
 set osd_stat_battery = ON
-set osd_stat_min_rssi = ON
+set osd_stat_min_rssi = OFF
 set osd_stat_max_curr = ON
 set osd_stat_used_mah = ON
 set osd_stat_max_alt = OFF
@@ -825,8 +831,8 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set osd_stat_max_g_force = OFF
 set osd_stat_max_esc_temp = OFF
-set osd_stat_max_esc_rpm = OFF
-set osd_stat_min_link_quality = OFF
+set osd_stat_max_esc_rpm = ON
+set osd_stat_min_link_quality = ON
 set osd_stat_flight_dist = OFF
 set osd_stat_max_fft = OFF
 set osd_stat_total_flights = OFF
@@ -852,12 +858,12 @@ set rate_6pos_switch = OFF
 set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
-set vtx_band = 0
-set vtx_channel = 0
-set vtx_power = 0
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
 set vtx_low_power_disarm = ON
 set vtx_softserial_alt = OFF
-set vtx_freq = 0
+set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = NTSC
@@ -911,11 +917,11 @@ set gyro_2_align_roll = 0
 set gyro_2_align_pitch = 0
 set gyro_2_align_yaw = 0
 set mco2_on_pc9 = OFF
-set expresslrs_uid = 0,0,164,119,214,232
+set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 1
+set expresslrs_rate_index = 0
 set expresslrs_switch_mode = HYBRID
-set expresslrs_model_id = 255
+set expresslrs_model_id = 0
 set scheduler_relax_rx = 1
 set scheduler_relax_osd = 1
 set timezone_offset_minutes = 0
@@ -1267,15 +1273,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 set tpa_rate = 65
 set tpa_breakpoint = 1350
 set tpa_mode = D
@@ -1295,15 +1301,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
 set tpa_rate = 65
 set tpa_breakpoint = 1350
 set tpa_mode = D
@@ -1323,17 +1329,17 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1250
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1349,19 +1355,19 @@ rateprofile 3
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1377,19 +1383,19 @@ rateprofile 4
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1405,19 +1411,19 @@ rateprofile 5
 set rateprofile_name = -
 set thr_mid = 50
 set thr_expo = 0
-set rates_type = ACTUAL
+set rates_type = BETAFLIGHT
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
+set roll_rc_rate = 100
+set pitch_rc_rate = 100
+set yaw_rc_rate = 100
 set roll_expo = 0
 set pitch_expo = 0
 set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_srate = 70
+set pitch_srate = 70
+set yaw_srate = 70
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1600
 set tpa_mode = D
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
@@ -1428,7 +1434,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
