@@ -20,7 +20,6 @@ signature
 # feature
 feature -RX_PARALLEL_PWM
 feature -LED_STRIP
-feature -RSSI_ADC
 feature TELEMETRY
 
 # serial
@@ -60,7 +59,6 @@ rxfail 6 s 1500
 # master
 set gyro_lpf1_static_hz = 0
 set gyro_lpf1_dyn_min_hz = 0
-set gyro_lpf1_dyn_max_hz = 500
 set acc_trim_pitch = 24
 set acc_trim_roll = -14
 set acc_calibration = -8,154,-4452,1
