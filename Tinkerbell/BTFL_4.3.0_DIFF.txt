@@ -20,6 +20,7 @@ signature
 # feature
 feature -RX_PARALLEL_PWM
 feature -RSSI_ADC
+feature -RSSI_ADC
 feature TELEMETRY
 
 # serial
@@ -34,7 +35,7 @@ aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
 aux 2 2 1 1300 1700 0 0
 aux 3 13 2 1300 1700 0 0
-aux 4 26 0 1450 2100 0 0
+aux 4 26 0 1700 2100 0 0
 aux 5 35 2 1700 2100 0 0
 
 # adjrange
