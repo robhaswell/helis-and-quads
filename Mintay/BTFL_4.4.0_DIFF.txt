@@ -102,7 +102,7 @@ feature ESC_SENSOR
 # serial
 serial 0 64 115200 57600 0 115200
 serial 2 1024 115200 57600 0 115200
-serial 3 131073 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
@@ -141,8 +141,6 @@ rxfail 6 s 1500
 set gyro_lpf1_static_hz = 0
 set gyro_lpf1_dyn_min_hz = 0
 set acc_lpf_hz = 10
-set acc_trim_pitch = 24
-set acc_trim_roll = -14
 set acc_calibration = -8,154,-4452,1
 set mag_hardware = NONE
 set baro_bustype = I2C
@@ -187,17 +185,18 @@ set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2048
-set osd_rssi_dbm_pos = 2506
-set osd_tim_2_pos = 2515
+set osd_rssi_dbm_pos = 2508
+set osd_tim_2_pos = 2520
 set osd_flymode_pos = 374
+set osd_vtx_channel_pos = 21
 set osd_craft_name_pos = 393
-set osd_warnings_pos = 14695
+set osd_warnings_pos = 14697
 set osd_avg_cell_voltage_pos = 2497
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_freq = 5658
+set vtx_power = 1
 set max7456_spi_bus = 0
 set displayport_msp_serial = 3
 set cc2500_spi_chip_detect = ON
@@ -233,6 +232,7 @@ set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
 set feedforward_boost = 18
+set dyn_idle_min_rpm = 20
 set simplified_pids_mode = RP
 set simplified_d_gain = 130
 set simplified_pi_gain = 130

@@ -273,7 +273,7 @@ serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 1024 115200 57600 0 115200
-serial 3 131073 115200 57600 0 115200
+serial 3 1 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 
 # mixer
@@ -563,8 +563,8 @@ set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
-set acc_trim_pitch = 24
-set acc_trim_roll = -14
+set acc_trim_pitch = 0
+set acc_trim_roll = 0
 set acc_calibration = -8,154,-4452,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
@@ -838,15 +838,15 @@ set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2048
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 2506
+set osd_rssi_dbm_pos = 2508
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2515
+set osd_tim_2_pos = 2520
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 234
+set osd_vtx_channel_pos = 21
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
@@ -870,7 +870,7 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14695
+set osd_warnings_pos = 14697
 set osd_avg_cell_voltage_pos = 2497
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
@@ -919,10 +919,10 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 0
+set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5658
+set vtx_freq = 0
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
@@ -1105,7 +1105,7 @@ set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 90
-set dyn_idle_min_rpm = 0
+set dyn_idle_min_rpm = 20
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
