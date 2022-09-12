@@ -5,7 +5,6 @@ Some utilities for working with Betaflight (and derivatives).
 import argparse
 import os
 import sys
-from cgitb import reset
 
 import progressbar
 import serial

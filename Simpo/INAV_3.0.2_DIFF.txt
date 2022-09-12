@@ -1,0 +1,231 @@
+
+# diff all
+
+# version
+# INAV/MATEKF411SE 3.0.2 Sep 15 2021 / 10:13:43 (66011184)
+# GCC-9.3.1 20200408 (release)
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults noreboot
+
+# resources
+
+# mixer
+
+mmix reset
+
+mmix 0  1.000  0.000  0.000  0.000
+
+# servo mix
+smix reset
+
+smix 0 3 0 50 0 -1
+smix 1 3 1 50 0 -1
+smix 2 4 0 -50 0 -1
+smix 3 4 1 50 0 -1
+
+# servo
+servo 3 1000 2000 1611 -100
+servo 4 1000 2000 1431 100
+
+# safehome
+
+# logic
+logic 0 1 -1 4 1 11 0 0 0
+logic 1 1 -1 5 1 11 0 0 0
+logic 2 1 -1 6 1 11 0 0 0
+logic 4 1 0 25 0 1 0 0 0
+logic 5 1 1 25 0 2 0 0 0
+logic 6 1 2 25 0 4 0 0 0
+logic 7 0 3 25 0 4 0 0 0
+
+# gvar
+
+# pid
+
+# feature
+feature MOTOR_STOP
+feature GPS
+feature DASHBOARD
+feature PWM_OUTPUT_ENABLE
+feature FW_LAUNCH
+feature FW_AUTOTRIM
+
+# beeper
+
+# map
+
+# serial
+serial 0 2 115200 115200 0 115200
+serial 30 4096 115200 115200 0 115200
+
+# led
+
+# color
+
+# mode_color
+
+# aux
+aux 0 0 0 1700 2100
+aux 1 1 1 900 1300
+aux 2 11 2 1300 1650
+aux 3 10 2 1675 2100
+aux 4 12 1 1275 1750
+
+# adjrange
+
+# rxrange
+
+# temp_sensor
+
+# wp
+#wp 0 invalid
+
+# osd_layout
+osd_layout 0 0 1 7 H
+osd_layout 0 1 1 5 V
+osd_layout 0 2 0 0 V
+osd_layout 0 3 8 6 V
+osd_layout 0 4 8 6 V
+osd_layout 0 7 1 1 V
+osd_layout 0 8 18 0 H
+osd_layout 0 9 1 8 V
+osd_layout 0 10 1 13 V
+osd_layout 0 11 2 6 V
+osd_layout 0 12 1 7 V
+osd_layout 0 13 24 5 V
+osd_layout 0 14 25 2 V
+osd_layout 0 15 24 6 V
+osd_layout 0 20 19 15 H
+osd_layout 0 21 1 15 H
+osd_layout 0 22 14 3 V
+osd_layout 0 23 23 7 V
+osd_layout 0 25 28 4 V
+osd_layout 0 28 23 14 V
+osd_layout 0 29 23 13 H
+osd_layout 0 30 1 12 V
+osd_layout 0 32 1 4 V
+osd_layout 0 34 10 1 V
+osd_layout 0 40 23 8 V
+osd_layout 0 85 24 4 H
+osd_layout 0 97 1 14 V
+osd_layout 0 105 11 8 H
+osd_layout 0 110 25 1 V
+osd_layout 1 16 2 2 V
+osd_layout 1 17 2 3 V
+osd_layout 1 18 2 4 V
+osd_layout 1 56 2 5 V
+osd_layout 1 57 2 8 V
+osd_layout 1 58 2 9 V
+osd_layout 1 59 2 10 V
+osd_layout 1 60 2 11 V
+osd_layout 1 61 2 7 V
+osd_layout 1 62 2 6 V
+osd_layout 1 63 13 6 V
+osd_layout 1 79 2 9 H
+osd_layout 1 80 2 11 H
+osd_layout 1 81 2 13 H
+osd_layout 1 82 2 10 H
+osd_layout 1 84 2 14 H
+osd_layout 1 119 2 1 V
+
+# master
+set gyro_hardware_lpf = 42HZ
+set dynamic_gyro_notch_enabled = ON
+set dynamic_gyro_notch_q = 250
+set dynamic_gyro_notch_min_hz = 30
+set acc_hardware = MPU6000
+set acczero_x = 54
+set acczero_y = -28
+set acczero_z = -233
+set accgain_x = 4067
+set accgain_y = 4098
+set accgain_z = 4030
+set align_mag = CW270FLIP
+set mag_hardware = NONE
+set baro_hardware = DPS310
+set serialrx_provider = CRSF
+set motor_pwm_protocol = STANDARD
+set throttle_idle =  6.000
+set failsafe_procedure = RTH
+set align_board_roll = 8
+set platform_type = AIRPLANE
+set model_preview_type = 8
+set small_angle = 180
+set imu_acc_ignore_rate = 9
+set imu_acc_ignore_slope = 5
+set applied_defaults = 3
+set gps_sbas_mode = AUTO
+set airmode_type = STICK_CENTER_ONCE
+set nav_wp_radius = 1500
+set nav_rth_allow_landing = NEVER
+set nav_rth_altitude = 5000
+set nav_fw_bank_angle = 45
+set nav_fw_loiter_radius = 6000
+set nav_fw_control_smoothness = 2
+set nav_fw_launch_max_angle = 180
+set nav_fw_launch_detect_time = 20
+set nav_fw_launch_thr = 1850
+set nav_fw_launch_idle_thr = 1400
+set nav_fw_launch_motor_delay = 100
+set nav_fw_launch_timeout = 10000
+set nav_fw_launch_climb_angle = 30
+set osd_video_system = PAL
+set osd_units = UK
+set osd_crosshairs_style = AIRCRAFT
+set osd_coordinate_digits = 11
+set name = Simpo
+set vtx_band = 5
+set vtx_power = 2
+
+# profile
+profile 1
+
+set fw_p_pitch = 17
+set fw_i_pitch = 30
+set fw_ff_pitch = 171
+set fw_p_roll = 7
+set fw_i_roll = 14
+set fw_ff_roll = 66
+set fw_p_level = 30
+set max_angle_inclination_rll = 450
+set yaw_lpf_hz = 30
+set fw_turn_assist_pitch_gain =  0.200
+set nav_fw_pos_z_p = 20
+set nav_fw_pos_z_d = 5
+set nav_fw_pos_xy_p = 60
+set d_boost_factor =  1.000
+set fw_level_pitch_trim =  4.168
+set roll_rate = 31
+set pitch_rate = 9
+set manual_yaw_rate = 60
+
+# profile
+profile 2
+
+
+# profile
+profile 3
+
+
+# battery_profile
+battery_profile 1
+
+
+# battery_profile
+battery_profile 2
+
+
+# battery_profile
+battery_profile 3
+
+
+# restore original profile selection
+profile 1
+battery_profile 1
+
+# save configuration
+save
