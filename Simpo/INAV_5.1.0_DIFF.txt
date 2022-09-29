@@ -55,8 +55,8 @@ blackbox MOTORS
 # map
 
 # serial
-serial 0 2 115200 115200 0 115200
-serial 30 4096 115200 115200 0 115200
+serial 0 2 115200 19200 0 115200
+serial 30 2 115200 19200 0 115200
 
 # led
 
@@ -116,17 +116,17 @@ osd_layout 0 126 14 15 V
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = 246
-set gyro_zero_y = 8
-set gyro_zero_z = -13
-set ins_gravity_cmss =  993.493
+set gyro_zero_x = 141
+set gyro_zero_y = 6
+set gyro_zero_z = -19
+set ins_gravity_cmss =  993.293
 set acc_hardware = MPU6000
-set acczero_x = 54
-set acczero_y = -28
-set acczero_z = -233
-set accgain_x = 4067
-set accgain_y = 4098
-set accgain_z = 4030
+set acczero_x = 40
+set acczero_y = -17
+set acczero_z = -202
+set accgain_x = 4076
+set accgain_y = 4101
+set accgain_z = 4027
 set align_mag = CW270FLIP
 set mag_hardware = NONE
 set baro_hardware = DPS310
