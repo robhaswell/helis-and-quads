@@ -3,7 +3,7 @@
 
 # version
 # Betaflight / STM32F7X2 (S7X2) 4.4.0 Aug  8 2022 / 16:39:26 (1b723b4) MSP API: 1.45
-# config: manufacturer_id: MTKS, board_name: MATEKF411RX, version: edcd244b, date: 2022-06-29T02:24:46Z
+# config: manufacturer_id: RUSH, board_name: BLADE_F7_HD, version: edcd244b, date: 2022-06-29T02:24:46Z
 
 # start the command batch
 batch start
@@ -13,7 +13,7 @@ manufacturer_id RUSH
 mcu_id 001e00385931500420383539
 signature
 
-# name: Mintay
+# name: Sonic
 
 # resources
 resource BEEPER 1 B02
@@ -237,6 +237,13 @@ dma pin C07 0
 # pin C07: DMA2 Stream 2 Channel 0
 dma pin C06 0
 # pin C06: DMA2 Stream 2 Channel 0
+dma pin A15 NONE
+dma pin A08 NONE
+dma pin B01 NONE
+dma pin B00 NONE
+dma pin C07 NONE
+dma pin C06 NONE
+dma pin B06 NONE
 
 # feature
 feature -RX_PPM
@@ -273,7 +280,7 @@ serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 1024 115200 57600 0 115200
-serial 3 1 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 
 # mixer
@@ -565,7 +572,7 @@ set acc_hardware = AUTO
 set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
-set acc_calibration = -8,154,-4452,1
+set acc_calibration = 83,-178,359,1
 set align_mag = DEFAULT
 set mag_align_roll = 0
 set mag_align_pitch = 0
@@ -846,7 +853,7 @@ set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 21
+set osd_vtx_channel_pos = 2069
 set osd_crosshairs_pos = 205
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
@@ -918,11 +925,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 1
+set vtx_channel = 3
+set vtx_power = 0
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 0
+set vtx_freq = 5732
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = AUTO
@@ -1007,7 +1014,7 @@ set stats_min_armed_time_s = -1
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set name = Mintay
+set name = Sonic
 set display_name = -
 set position_alt_source = DEFAULT
 set position_alt_gps_min_sats = 10

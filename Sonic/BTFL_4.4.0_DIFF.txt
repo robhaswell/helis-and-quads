@@ -2,7 +2,7 @@
 
 # version
 # Betaflight / STM32F7X2 (S7X2) 4.4.0 Aug  8 2022 / 16:39:26 (1b723b4) MSP API: 1.45
-# config: manufacturer_id: MTKS, board_name: MATEKF411RX, version: edcd244b, date: 2022-06-29T02:24:46Z
+# config: manufacturer_id: RUSH, board_name: BLADE_F7_HD, version: edcd244b, date: 2022-06-29T02:24:46Z
 
 # start the command batch
 batch start
@@ -15,100 +15,54 @@ manufacturer_id RUSH
 mcu_id 001e00385931500420383539
 signature
 
-# name: Mintay
-
-# resources
-resource BEEPER 1 B02
-resource MOTOR 1 C08
-resource MOTOR 2 C09
-resource MOTOR 3 B01
-resource MOTOR 4 B00
-resource MOTOR 5 C07
-resource MOTOR 6 C06
-resource MOTOR 7 B06
-resource MOTOR 8 B07
-resource PPM 1 NONE
-resource PWM 1 NONE
-resource PWM 2 NONE
-resource PWM 3 NONE
-resource LED_STRIP 1 A15
-resource SERIAL_TX 3 C10
-resource SERIAL_TX 4 A00
-resource SERIAL_TX 5 C12
-resource SERIAL_RX 3 C11
-resource SERIAL_RX 4 A01
-resource SERIAL_RX 5 D02
-resource I2C_SCL 1 B08
-resource I2C_SDA 1 B09
-resource LED 1 B10
-resource SPI_SCK 3 NONE
-resource SPI_MISO 3 NONE
-resource SPI_MOSI 3 NONE
-resource ADC_BATT 1 C00
-resource ADC_CURR 1 C01
-resource FLASH_CS 1 B12
-resource OSD_CS 1 NONE
-resource RX_SPI_CS 1 NONE
-resource RX_SPI_EXTI 1 NONE
-resource RX_SPI_BIND 1 NONE
-resource RX_SPI_LED 1 NONE
-resource RX_SPI_CC2500_TX_EN 1 NONE
-resource RX_SPI_CC2500_LNA_EN 1 NONE
-resource RX_SPI_CC2500_ANT_SEL 1 NONE
-resource GYRO_EXTI 1 A04
-resource GYRO_CS 1 C04
+# name: Sonic
 
 # timer
-timer A15 AF1
-# pin A15: TIM2 CH1 (AF1)
-timer A08 AF1
-# pin A08: TIM1 CH1 (AF1)
-timer C08 AF3
-# pin C08: TIM8 CH3 (AF3)
-timer C09 AF3
-# pin C09: TIM8 CH4 (AF3)
-timer B01 AF2
-# pin B01: TIM3 CH4 (AF2)
-timer B00 AF2
-# pin B00: TIM3 CH3 (AF2)
-timer C07 AF3
-# pin C07: TIM8 CH2 (AF3)
-timer C06 AF3
-# pin C06: TIM8 CH1 (AF3)
+timer A03 AF3
+# pin A03: TIM9 CH2 (AF3)
+timer B10 AF1
+# pin B10: TIM2 CH3 (AF1)
+timer B08 AF2
+# pin B08: TIM4 CH3 (AF2)
+timer A00 AF2
+# pin A00: TIM5 CH1 (AF2)
+timer A02 AF3
+# pin A02: TIM9 CH1 (AF3)
+timer A09 AF1
+# pin A09: TIM1 CH2 (AF1)
+timer A10 AF1
+# pin A10: TIM1 CH3 (AF1)
 
 # dma
-dma pin A15 0
-# pin A15: DMA1 Stream 5 Channel 3
-dma pin A08 0
-# pin A08: DMA2 Stream 6 Channel 0
-dma pin C08 0
-# pin C08: DMA2 Stream 2 Channel 0
-dma pin C09 0
-# pin C09: DMA2 Stream 7 Channel 7
-dma pin B01 0
-# pin B01: DMA1 Stream 2 Channel 5
-dma pin B00 0
-# pin B00: DMA1 Stream 7 Channel 5
-dma pin C07 0
-# pin C07: DMA2 Stream 2 Channel 0
-dma pin C06 0
-# pin C06: DMA2 Stream 2 Channel 0
+dma pin B10 0
+# pin B10: DMA1 Stream 1 Channel 3
+dma pin B08 0
+# pin B08: DMA1 Stream 7 Channel 2
+dma pin A00 0
+# pin A00: DMA1 Stream 2 Channel 6
+dma pin A09 0
+# pin A09: DMA2 Stream 6 Channel 0
+dma pin A10 0
+# pin A10: DMA2 Stream 6 Channel 0
+dma pin A15 NONE
+dma pin A08 NONE
+dma pin B01 NONE
+dma pin B00 NONE
+dma pin C07 NONE
+dma pin C06 NONE
+dma pin B06 NONE
 
 # feature
-feature -RX_SPI
+feature -LED_STRIP
 feature TELEMETRY
-feature ESC_SENSOR
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 2 1024 115200 57600 0 115200
-serial 3 1 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
-
-# led
-led 0 0,15::C:2
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -141,21 +95,14 @@ rxfail 6 s 1500
 set gyro_lpf1_static_hz = 0
 set gyro_lpf1_dyn_min_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = -8,154,-4452,1
+set acc_calibration = 83,-178,359,1
 set mag_hardware = NONE
-set baro_bustype = I2C
-set baro_i2c_device = 1
 set baro_hardware = NONE
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set serialrx_provider = CRSF
 set crsf_use_rx_snr = ON
-set rx_spi_protocol = V202_250K
-set rx_spi_bus = 0
-set rx_spi_led_inversion = OFF
 set blackbox_sample_rate = 1/2
-set blackbox_device = SPIFLASH
-set dshot_burst = ON
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
 set align_board_pitch = 180
@@ -188,23 +135,17 @@ set osd_link_quality_pos = 2048
 set osd_rssi_dbm_pos = 2508
 set osd_tim_2_pos = 2520
 set osd_flymode_pos = 374
-set osd_vtx_channel_pos = 21
+set osd_vtx_channel_pos = 2069
 set osd_craft_name_pos = 393
 set osd_warnings_pos = 14697
 set osd_avg_cell_voltage_pos = 2497
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 1
-set max7456_spi_bus = 0
+set vtx_channel = 3
+set vtx_freq = 5732
 set displayport_msp_serial = 3
-set cc2500_spi_chip_detect = ON
-set flash_spi_bus = 2
-set gyro_1_sensor_align = CW270
-set gyro_1_align_yaw = 2700
-set gyro_2_spibus = 0
-set name = Mintay
+set name = Sonic
 
 profile 0
 
