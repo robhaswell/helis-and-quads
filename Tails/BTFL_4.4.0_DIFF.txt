@@ -15,7 +15,7 @@ manufacturer_id RUSH
 mcu_id 002f00203436511130393731
 signature
 
-# name: Tinkerbell
+# name: Tails
 
 # resources
 resource BEEPER 1 C13
@@ -177,6 +177,7 @@ set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
+set vtx_power = 1
 set vtx_freq = 5658
 set max7456_spi_bus = 3
 set displayport_msp_serial = 3
@@ -185,7 +186,7 @@ set flash_spi_bus = 3
 set gyro_1_sensor_align = CW180
 set gyro_1_align_yaw = 1800
 set gyro_2_spibus = 1
-set name = Tinkerbell
+set name = Tails
 
 profile 0
 
