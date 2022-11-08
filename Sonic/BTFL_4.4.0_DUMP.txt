@@ -272,7 +272,6 @@ feature RX_SERIAL
 feature TELEMETRY
 feature OSD
 feature AIRMODE
-feature ESC_SENSOR
 feature ANTI_GRAVITY
 
 # serial

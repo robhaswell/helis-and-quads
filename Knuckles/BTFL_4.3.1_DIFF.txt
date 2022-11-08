@@ -34,6 +34,7 @@ set yaw_motors_reversed = ON
 set small_angle = 180
 set report_cell_voltage = ON
 set debug_mode = GYRO_SCALED
+set vcd_video_system = PAL
 set name = Knuckles
 
 profile 0
