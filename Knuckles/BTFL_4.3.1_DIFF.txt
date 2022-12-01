@@ -90,9 +90,9 @@ set osd_stat_max_esc_rpm = ON
 set osd_stat_min_link_quality = ON
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 4
-set vtx_power = 1
-set vtx_freq = 5769
+set vtx_channel = 7
+set vtx_power = 4
+set vtx_freq = 5880
 set name = Knuckles
 
 profile 0
