@@ -116,10 +116,10 @@ osd_layout 0 97 19 16 V
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -1
-set gyro_zero_y = 6
-set gyro_zero_z = 1
-set ins_gravity_cmss =  979.618
+set gyro_zero_x = -2
+set gyro_zero_y = 5
+set gyro_zero_z = 3
+set ins_gravity_cmss =  980.499
 set acc_hardware = ICM42605
 set acczero_x = -5
 set acczero_y = -8
@@ -131,6 +131,7 @@ set align_mag = CW270FLIP
 set mag_hardware = NONE
 set baro_hardware = SPL06
 set motor_pwm_protocol = STANDARD
+set failsafe_procedure = RTH
 set platform_type = AIRPLANE
 set model_preview_type = 8
 set small_angle = 180
@@ -234,6 +235,7 @@ set yaw_rate = 3
 battery_profile 1
 
 set throttle_idle =  5.000
+set nav_fw_launch_thr = 2000
 
 # battery_profile
 battery_profile 2
