@@ -1,0 +1,114 @@
+# diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.4.0 Jan 12 2023 / 16:25:30 (2417d50d8) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CRAZYBEEF4SX1280
+manufacturer_id HAMO
+mcu_id 003600604e56500720363955
+signature
+
+# name: Cricket
+
+# dma
+dma pin A09 NONE
+dma pin A10 NONE
+
+# feature
+feature -RX_SERIAL
+feature -SOFTSERIAL
+feature RX_SPI
+
+# serial
+serial 1 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_LOST
+beacon RX_SET
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1450 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# rxfail
+rxfail 6 s 1500
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_trim_roll = -16
+set vbat_max_cell_voltage = 440
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set ibata_scale = 470
+set motor_output_reordering = 2,3,0,1,4,5,6,7
+set yaw_motors_reversed = ON
+set small_angle = 180
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_low_power_disarm = ON
+set vtx_freq = 5658
+set expresslrs_uid = 254,203,179,9,87,168
+set expresslrs_rate_index = 1
+set expresslrs_switch_mode = HYBRID
+set craft_name = Cricket
+set pilot_name = Mopatop
+set displayport_msp_serial = 1
+set expresslrs_model_id = 0
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
