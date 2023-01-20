@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F411 (S411) 4.4.0 Jan 12 2023 / 16:29:29 (2417d50d8) MSP API: 1.45
+# Betaflight / STM32F411 (S411) 4.4.0 Jan 20 2023 / 13:44:42 (a7cf8f0c6) MSP API: 1.45
 
 # config: YES
 
