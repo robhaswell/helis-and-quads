@@ -192,6 +192,7 @@ feature -AIRMODE
 feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature RX_SPI
@@ -645,11 +646,11 @@ set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 1
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
@@ -697,8 +698,8 @@ set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
 set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 1
-set expresslrs_switch_mode = HYBRID
+set expresslrs_rate_index = 0
+set expresslrs_switch_mode = WIDE
 set expresslrs_model_id = 1
 set scheduler_relax_rx = 1
 set scheduler_relax_osd = 1

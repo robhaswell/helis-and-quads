@@ -21,7 +21,6 @@ signature
 # feature
 feature -RX_SERIAL
 feature -SOFTSERIAL
-feature -TELEMETRY
 feature OSD
 feature RX_SPI
 
@@ -102,15 +101,13 @@ set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 1
 set vtx_power = 1
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vcd_video_system = HD
 set gyro_1_sensor_align = CW0
 set gyro_1_align_yaw = 0
 set expresslrs_uid = 254,203,179,9,87,168
-set expresslrs_rate_index = 1
-set expresslrs_switch_mode = HYBRID
 set expresslrs_model_id = 1
 set craft_name = M6 HDZero
 set pilot_name = Mopatop
