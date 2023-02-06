@@ -12,7 +12,7 @@ defaults nosave
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
 mcu_id 004e00265333500920373331
-signature 
+signature
 
 # name: Jets2
 
@@ -87,12 +87,13 @@ set osd_stat_bbox = OFF
 set osd_stat_bb_no = OFF
 set debug_mode = RX_EXPRESSLRS_SPI
 set vtx_band = 5
-set vtx_channel = 6
+set vtx_channel = 1
 set vtx_power = 3
 set vtx_low_power_disarm = ON
-set vtx_freq = 5843
+set vtx_freq = 5658
 set vcd_video_system = NTSC
 set expresslrs_uid = 254,203,179,9,87,168
+set expresslrs_model_id = 0
 set name = Jets2
 
 profile 0
