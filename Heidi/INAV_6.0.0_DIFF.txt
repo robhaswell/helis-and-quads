@@ -43,21 +43,6 @@ feature FW_AUTOTRIM
 
 # beeper
 
-# blackbox
-blackbox -NAV_ACC
-blackbox NAV_POS
-blackbox NAV_PID
-blackbox MAG
-blackbox ACC
-blackbox ATTI
-blackbox RC_DATA
-blackbox RC_COMMAND
-blackbox MOTORS
-blackbox -GYRO_RAW
-blackbox -PEAKS_R
-blackbox -PEAKS_P
-blackbox -PEAKS_Y
-
 # map
 
 # serial
