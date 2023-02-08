@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F411 (S411) 4.4.0 Dec 31 2022 / 23:03:22 (2c34b3949) MSP API: 1.45
+# Betaflight / STM32F411 (S411) 4.4.0 Feb  8 2023 / 10:44:57 (575c7759f) MSP API: 1.45
 
 # config: YES
 
@@ -11,22 +11,21 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name CRAZYBEEF4SX1280
-manufacturer_id HAMO
-mcu_id 004e00265333500920373331
+board_name BETAFPVF411
+manufacturer_id BEFH
+mcu_id 006b00333535510936323431
 signature
 
 # name: Mobsnail
 
 # feature
-feature -RX_SERIAL
-feature -TELEMETRY
-feature RX_SPI
+feature -SOFTSERIAL
 
 # serial
-serial 0 131073 115200 57600 0 115200
+serial 1 131073 115200 57600 0 115200
 
 # beacon
+beacon RX_LOST
 beacon RX_SET
 
 # aux
@@ -41,65 +40,38 @@ aux 5 35 2 1700 2100 0 0
 adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
-set gyro_lpf1_static_hz = 0
-set dyn_notch_count = 2
-set dyn_notch_q = 450
-set gyro_lpf1_dyn_min_hz = 0
-set acc_lpf_hz = 10
-set acc_calibration = 6,-8,183,1
-set dshot_idle_value = 2000
+set acc_calibration = -16,-24,29,1
+set serialrx_provider = CRSF
+set blackbox_sample_rate = 1/2
+set min_throttle = 1070
 set dshot_bidir = ON
+set dshot_bitbang = ON
+set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
-set vbat_max_cell_voltage = 435
+set motor_pwm_rate = 480
+set motor_poles = 12
 set yaw_motors_reversed = ON
 set small_angle = 180
+set pid_process_denom = 1
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
-set osd_link_quality_pos = 2573
-set osd_tim_2_pos = 3555
+set osd_link_quality_pos = 2445
+set osd_tim_2_pos = 2461
 set osd_flymode_pos = 374
-set osd_vtx_channel_pos = 1036
+set osd_vtx_channel_pos = 29
 set osd_craft_name_pos = 393
 set osd_warnings_pos = 14677
-set osd_avg_cell_voltage_pos = 2541
+set osd_avg_cell_voltage_pos = 2445
 set osd_displayport_device = MSP
+set osd_canvas_width = 30
+set osd_canvas_height = 13
 set vcd_video_system = HD
-set expresslrs_uid = 254,203,179,9,87,168
-set expresslrs_model_id = 1
+set gyro_1_sensor_align = CW90
+set gyro_1_align_yaw = 900
 set craft_name = Mobsnail
 set pilot_name = Mopatop
 
 profile 0
-
-# profile 0
-set iterm_relax_cutoff = 20
-set p_pitch = 71
-set i_pitch = 63
-set d_pitch = 67
-set f_pitch = 249
-set p_roll = 68
-set i_roll = 60
-set d_roll = 62
-set f_roll = 239
-set p_yaw = 68
-set i_yaw = 60
-set f_yaw = 239
-set d_min_roll = 62
-set d_min_pitch = 67
-set d_max_advance = 0
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 35
-set feedforward_jitter_factor = 4
-set feedforward_boost = 18
-set feedforward_max_rate_limit = 95
-set simplified_master_multiplier = 105
-set simplified_i_gain = 50
-set simplified_d_gain = 200
-set simplified_pi_gain = 145
-set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 190
-set simplified_pitch_d_gain = 95
-set tpa_breakpoint = 1250
 
 profile 1
 
