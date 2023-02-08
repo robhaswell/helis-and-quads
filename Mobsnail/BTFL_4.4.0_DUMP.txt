@@ -540,7 +540,7 @@ set blackbox_high_resolution = OFF
 set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
-set dshot_idle_value = 600
+set dshot_idle_value = 2000
 set dshot_burst = AUTO
 set dshot_bidir = ON
 set dshot_edt = OFF
@@ -880,9 +880,9 @@ set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
 set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 1
-set expresslrs_switch_mode = HYBRID
-set expresslrs_model_id = 0
+set expresslrs_rate_index = 0
+set expresslrs_switch_mode = WIDE
+set expresslrs_model_id = 1
 set scheduler_relax_rx = 1
 set scheduler_relax_osd = 1
 set serialmsp_halfduplex = OFF
@@ -995,7 +995,7 @@ set feedforward_smooth_factor = 35
 set feedforward_jitter_factor = 4
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 95
-set dyn_idle_min_rpm = 50
+set dyn_idle_min_rpm = 0
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
@@ -1447,7 +1447,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save

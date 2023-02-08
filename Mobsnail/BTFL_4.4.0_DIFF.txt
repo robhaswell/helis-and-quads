@@ -47,7 +47,7 @@ set dyn_notch_q = 450
 set gyro_lpf1_dyn_min_hz = 0
 set acc_lpf_hz = 10
 set acc_calibration = 6,-8,183,1
-set dshot_idle_value = 600
+set dshot_idle_value = 2000
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set vbat_max_cell_voltage = 435
@@ -65,9 +65,7 @@ set osd_avg_cell_voltage_pos = 2541
 set osd_displayport_device = MSP
 set vcd_video_system = HD
 set expresslrs_uid = 254,203,179,9,87,168
-set expresslrs_rate_index = 1
-set expresslrs_switch_mode = HYBRID
-set expresslrs_model_id = 0
+set expresslrs_model_id = 1
 set craft_name = Mobsnail
 set pilot_name = Mopatop
 
@@ -94,7 +92,6 @@ set feedforward_smooth_factor = 35
 set feedforward_jitter_factor = 4
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 95
-set dyn_idle_min_rpm = 50
 set simplified_master_multiplier = 105
 set simplified_i_gain = 50
 set simplified_d_gain = 200
@@ -144,7 +141,7 @@ rateprofile 2
 rateprofile 3
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
