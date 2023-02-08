@@ -40,10 +40,16 @@ aux 5 35 2 1700 2100 0 0
 adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
+set gyro_lpf1_static_hz = 0
+set dyn_notch_count = 2
+set dyn_notch_q = 450
+set gyro_lpf1_dyn_min_hz = 0
+set acc_lpf_hz = 10
 set acc_calibration = -16,-24,29,1
 set serialrx_provider = CRSF
 set blackbox_sample_rate = 1/2
 set min_throttle = 1070
+set dshot_idle_value = 600
 set dshot_bidir = ON
 set dshot_bitbang = ON
 set use_unsynced_pwm = OFF
@@ -65,6 +71,7 @@ set osd_avg_cell_voltage_pos = 2445
 set osd_displayport_device = MSP
 set osd_canvas_width = 30
 set osd_canvas_height = 13
+set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
 set gyro_1_sensor_align = CW90
 set gyro_1_align_yaw = 900
@@ -73,14 +80,68 @@ set pilot_name = Mopatop
 
 profile 0
 
+# profile 0
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set p_pitch = 61
+set i_pitch = 109
+set d_pitch = 59
+set f_pitch = 162
+set p_roll = 58
+set i_roll = 104
+set d_roll = 52
+set f_roll = 156
+set p_yaw = 58
+set i_yaw = 104
+set f_yaw = 156
+set d_min_roll = 39
+set d_min_pitch = 44
+set simplified_d_gain = 130
+set simplified_pi_gain = 130
+set simplified_feedforward_gain = 130
+set simplified_dterm_filter_multiplier = 120
+
 profile 1
+
+# profile 1
+set iterm_relax_cutoff = 20
+set p_pitch = 71
+set i_pitch = 63
+set d_pitch = 67
+set f_pitch = 249
+set p_roll = 68
+set i_roll = 60
+set d_roll = 62
+set f_roll = 239
+set p_yaw = 68
+set i_yaw = 60
+set f_yaw = 239
+set d_min_roll = 62
+set d_min_pitch = 67
+set d_max_advance = 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 95
+set dyn_idle_min_rpm = 50
+set simplified_master_multiplier = 105
+set simplified_i_gain = 50
+set simplified_d_gain = 200
+set simplified_pi_gain = 145
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 190
+set simplified_pitch_d_gain = 95
+set tpa_breakpoint = 1250
 
 profile 2
 
 profile 3
 
 # restore original profile selection
-profile 0
+profile 1
 
 rateprofile 0
 
