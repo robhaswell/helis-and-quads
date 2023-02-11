@@ -2,7 +2,7 @@
 # diff all
 
 # version
-# INAV/ATOMRCF405 6.0.0 Jan  4 2023 / 16:17:48 (c75211b0)
+# INAV/ATOMRCF405 6.0.0 Feb  6 2023 / 13:02:56 (263278a0)
 # GCC-10.2.1 20201103 (release)
 
 # start the command batch
@@ -13,13 +13,13 @@ defaults noreboot
 
 # resources
 
-# mixer
+# Mixer: motor mixer
 
 mmix reset
 
 mmix 0  1.000  0.000  0.000  0.000
 
-# servo mixer
+# Mixer: servo mixer
 smix reset
 
 smix 0 1 1 100 0 -1
@@ -27,14 +27,14 @@ smix 1 2 0 100 0 -1
 smix 2 3 0 100 0 -1
 smix 3 4 2 100 0 -1
 
-# servo
+# Outputs [servo]
 servo 1 1000 2000 1510 -100
 servo 2 1000 2000 1495 -100
 servo 3 1000 2000 1495 -100
 
 # safehome
 
-# feature
+# features
 feature -CURRENT_METER
 feature MOTOR_STOP
 feature GPS
@@ -58,20 +58,20 @@ blackbox -PEAKS_R
 blackbox -PEAKS_P
 blackbox -PEAKS_Y
 
-# map
+# Receiver: Channel map
 
-# serial
+# Ports
 serial 0 0 115200 115200 0 115200
 serial 2 33554432 115200 115200 0 115200
 serial 4 2 115200 9600 0 115200
 
-# led
+# LEDs
 
-# color
+# LED color
 
-# mode_color
+# LED mode_color
 
-# aux
+# Modes [aux]
 aux 0 0 0 1500 2100
 aux 1 1 4 1300 1700
 aux 2 12 4 900 1300
@@ -81,16 +81,16 @@ aux 5 21 3 1700 2100
 aux 6 13 3 1300 1700
 aux 7 26 0 1700 2100
 
-# adjrange
+# Adjustments [adjrange]
 
-# rxrange
+# Receiver rxrange
 
 # temp_sensor
 
-# wp
+# Mission Control Waypoints [wp]
 #wp 0 invalid
 
-# osd_layout
+# OSD [osd_layout]
 osd_layout 0 0 7 1 V
 osd_layout 0 1 12 0 H
 osd_layout 0 2 0 0 V
@@ -113,20 +113,20 @@ osd_layout 0 40 40 3 V
 osd_layout 0 85 36 15 V
 osd_layout 0 97 19 16 V
 
-# logic
+# Programming: logic
 
-# global vars
+# Programming: global variables
 
-# programmable pid controllers
+# Programming: PID controllers
 
 # master
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -31
-set gyro_zero_y = 8
-set gyro_zero_z = -16
-set ins_gravity_cmss =  940.444
+set gyro_zero_x = -24
+set gyro_zero_y = -7
+set gyro_zero_z = -24
+set ins_gravity_cmss =  970.055
 set acc_hardware = MPU6000
 set acczero_x = 56
 set acczero_y = 27

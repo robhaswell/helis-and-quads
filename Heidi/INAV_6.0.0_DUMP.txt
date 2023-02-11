@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# INAV/ATOMRCF405 6.0.0 Jan  4 2023 / 16:17:48 (c75211b0)
+# INAV/ATOMRCF405 6.0.0 Feb  6 2023 / 13:02:56 (263278a0)
 # GCC-10.2.1 20201103 (release)
 
 # start the command batch
@@ -10,13 +10,13 @@ batch start
 
 # resources
 
-# mixer
+# Mixer: motor mixer
 
 mmix reset
 
 mmix 0  1.000  0.000  0.000  0.000
 
-# servo mixer
+# Mixer: servo mixer
 smix reset
 
 smix 0 1 1 100 0 -1
@@ -24,7 +24,7 @@ smix 1 2 0 100 0 -1
 smix 2 3 0 100 0 -1
 smix 3 4 2 100 0 -1
 
-# servo
+# Outputs [servo]
 servo 0 1000 2000 1500 100
 servo 1 1000 2000 1510 -100
 servo 2 1000 2000 1495 -100
@@ -52,7 +52,7 @@ safehome 5 0 0 0
 safehome 6 0 0 0
 safehome 7 0 0 0
 
-# feature
+# features
 feature -THR_VBAT_COMP
 feature -VBAT
 feature -TX_PROF_SEL
@@ -128,10 +128,10 @@ blackbox -PEAKS_R
 blackbox -PEAKS_P
 blackbox -PEAKS_Y
 
-# map
+# Receiver: Channel map
 map AETR
 
-# serial
+# Ports
 serial 20 1 115200 115200 0 115200
 serial 0 0 115200 115200 0 115200
 serial 1 64 115200 115200 0 115200
@@ -139,7 +139,7 @@ serial 2 33554432 115200 115200 0 115200
 serial 3 0 115200 115200 0 115200
 serial 4 2 115200 9600 0 115200
 
-# led
+# LEDs
 led 0 0,0::C:0
 led 1 0,0::C:0
 led 2 0,0::C:0
@@ -173,7 +173,7 @@ led 29 0,0::C:0
 led 30 0,0::C:0
 led 31 0,0::C:0
 
-# color
+# LED color
 color 0 0,0,0
 color 1 0,255,255
 color 2 0,0,255
@@ -191,7 +191,7 @@ color 13 330,0,255
 color 14 0,0,0
 color 15 0,0,0
 
-# mode_color
+# LED mode_color
 mode_color 0 0 1
 mode_color 0 1 11
 mode_color 0 2 2
@@ -236,11 +236,9 @@ mode_color 6 4 0
 mode_color 6 5 2
 mode_color 6 6 3
 mode_color 6 7 6
-mode_color 6 8 0
-mode_color 6 9 0
-mode_color 6 10 0
+mode_color 6 8 1
 
-# aux
+# Modes [aux]
 aux 0 0 0 1500 2100
 aux 1 1 4 1300 1700
 aux 2 12 4 900 1300
@@ -282,7 +280,7 @@ aux 37 0 0 900 900
 aux 38 0 0 900 900
 aux 39 0 0 900 900
 
-# adjrange
+# Adjustments [adjrange]
 adjrange 0 0 0 900 900 0 0
 adjrange 1 0 0 900 900 0 0
 adjrange 2 0 0 900 900 0 0
@@ -304,7 +302,7 @@ adjrange 17 0 0 900 900 0 0
 adjrange 18 0 0 900 900 0 0
 adjrange 19 0 0 900 900 0 0
 
-# rxrange
+# Receiver rxrange
 rxrange 0 1000 2000
 rxrange 1 1000 2000
 rxrange 2 1000 2000
@@ -320,7 +318,7 @@ temp_sensor 5 0 0 0 0 0
 temp_sensor 6 0 0 0 0 0
 temp_sensor 7 0 0 0 0 0
 
-# wp
+# Mission Control Waypoints [wp]
 #wp 0 invalid
 wp 0 0 0 0 0 0 0 0 0
 wp 1 0 0 0 0 0 0 0 0
@@ -443,7 +441,7 @@ wp 117 0 0 0 0 0 0 0 0
 wp 118 0 0 0 0 0 0 0 0
 wp 119 0 0 0 0 0 0 0 0
 
-# osd_layout
+# OSD [osd_layout]
 osd_layout 0 0 7 1 V
 osd_layout 0 1 12 0 H
 osd_layout 0 2 0 0 V
@@ -586,6 +584,7 @@ osd_layout 0 138 0 0 H
 osd_layout 0 139 0 0 H
 osd_layout 0 140 12 3 H
 osd_layout 0 141 12 3 H
+osd_layout 0 142 20 3 H
 osd_layout 1 0 23 0 H
 osd_layout 1 1 12 0 H
 osd_layout 1 2 0 0 H
@@ -728,6 +727,7 @@ osd_layout 1 138 0 0 H
 osd_layout 1 139 0 0 H
 osd_layout 1 140 12 3 H
 osd_layout 1 141 12 3 H
+osd_layout 1 142 20 3 H
 osd_layout 2 0 23 0 H
 osd_layout 2 1 12 0 H
 osd_layout 2 2 0 0 H
@@ -870,6 +870,7 @@ osd_layout 2 138 0 0 H
 osd_layout 2 139 0 0 H
 osd_layout 2 140 12 3 H
 osd_layout 2 141 12 3 H
+osd_layout 2 142 20 3 H
 osd_layout 3 0 23 0 H
 osd_layout 3 1 12 0 H
 osd_layout 3 2 0 0 H
@@ -1012,8 +1013,9 @@ osd_layout 3 138 0 0 H
 osd_layout 3 139 0 0 H
 osd_layout 3 140 12 3 H
 osd_layout 3 141 12 3 H
+osd_layout 3 142 20 3 H
 
-# logic
+# Programming: logic
 logic 0 0 -1 0 0 0 0 0 0
 logic 1 0 -1 0 0 0 0 0 0
 logic 2 0 -1 0 0 0 0 0 0
@@ -1079,7 +1081,7 @@ logic 61 0 -1 0 0 0 0 0 0
 logic 62 0 -1 0 0 0 0 0 0
 logic 63 0 -1 0 0 0 0 0 0
 
-# global vars
+# Programming: global variables
 gvar 0 0 -32768 32767
 gvar 1 0 -32768 32767
 gvar 2 0 -32768 32767
@@ -1089,7 +1091,7 @@ gvar 5 0 -32768 32767
 gvar 6 0 -32768 32767
 gvar 7 0 -32768 32767
 
-# programmable pid controllers
+# Programming: PID controllers
 pid 0 0 0 0 0 0 0 0 0 0
 pid 1 0 0 0 0 0 0 0 0 0
 pid 2 0 0 0 0 0 0 0 0 0
@@ -1115,10 +1117,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = -31
-set gyro_zero_y = 8
-set gyro_zero_z = -16
-set ins_gravity_cmss =  940.444
+set gyro_zero_x = -24
+set gyro_zero_y = -7
+set gyro_zero_z = -24
+set ins_gravity_cmss =  970.055
 set vbat_adc_channel = 3
 set rssi_adc_channel = 1
 set current_adc_channel = 2
@@ -1283,7 +1285,7 @@ set inav_w_xyz_acc_p =  1.000
 set inav_w_acc_bias =  0.010
 set inav_max_eph_epv =  1000.000
 set inav_baro_epv =  100.000
-set nav_disarm_on_landing = OFF
+set nav_disarm_on_landing = ON
 set nav_land_detect_sensitivity = 5
 set nav_use_midthr_for_althold = OFF
 set nav_extra_arming_safety = ON
@@ -1331,7 +1333,7 @@ set safehome_max_distance = 20000
 set safehome_usage_mode = RTH
 set nav_mission_planner_reset = ON
 set nav_mc_bank_angle = 30
-set nav_auto_disarm_delay = 2000
+set nav_auto_disarm_delay = 1000
 set nav_mc_braking_speed_threshold = 100
 set nav_mc_braking_disengage_speed = 75
 set nav_mc_braking_timeout = 2000
@@ -1405,6 +1407,7 @@ set ledstrip_visual_beeper = OFF
 set osd_telemetry = OFF
 set osd_video_system = HDZERO
 set osd_row_shiftdown = 0
+set osd_msp_displayport_fullframe_interval = 10
 set osd_units = METRIC
 set osd_stats_energy_unit = MAH
 set osd_stats_min_voltage_unit = BATTERY
@@ -1491,6 +1494,7 @@ set i2c_speed = 400KHZ
 set debug_mode = NONE
 set throttle_tilt_comp_str = 0
 set name = Heidi
+set pilot_name =
 set mode_range_logic_operator = OR
 set stats = OFF
 set stats_total_time = 0
