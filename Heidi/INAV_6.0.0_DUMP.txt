@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# INAV/ATOMRCF405 6.0.0 Dec 31 2022 / 14:43:44 (2bbbf489)
+# INAV/ATOMRCF405 6.0.0 Jan  4 2023 / 16:17:48 (c75211b0)
 # GCC-10.2.1 20201103 (release)
 
 # start the command batch
@@ -26,9 +26,9 @@ smix 3 4 2 100 0 -1
 
 # servo
 servo 0 1000 2000 1500 100
-servo 1 1000 2000 1500 -100
-servo 2 1000 2000 1500 -100
-servo 3 1000 2000 1500 -100
+servo 1 1000 2000 1510 -100
+servo 2 1000 2000 1495 -100
+servo 3 1000 2000 1495 -100
 servo 4 1000 2000 1500 100
 servo 5 1000 2000 1500 100
 servo 6 1000 2000 1500 100
@@ -242,13 +242,13 @@ mode_color 6 10 0
 
 # aux
 aux 0 0 0 1500 2100
-aux 1 1 1 1300 1700
-aux 2 12 1 900 1300
-aux 3 21 5 1300 1700
-aux 4 0 0 900 900
-aux 5 0 0 900 900
-aux 6 0 0 900 900
-aux 7 0 0 900 900
+aux 1 1 4 1300 1700
+aux 2 12 4 900 1300
+aux 3 11 2 1300 1700
+aux 4 10 2 1700 2100
+aux 5 21 3 1700 2100
+aux 6 13 3 1300 1700
+aux 7 26 0 1700 2100
 aux 8 0 0 900 900
 aux 9 0 0 900 900
 aux 10 0 0 900 900
@@ -444,47 +444,47 @@ wp 118 0 0 0 0 0 0 0 0
 wp 119 0 0 0 0 0 0 0 0
 
 # osd_layout
-osd_layout 0 0 23 0 V
-osd_layout 0 1 12 0 V
-osd_layout 0 2 0 0 H
+osd_layout 0 0 7 1 V
+osd_layout 0 1 12 0 H
+osd_layout 0 2 0 0 V
 osd_layout 0 3 8 6 H
-osd_layout 0 4 8 6 H
+osd_layout 0 4 8 6 V
 osd_layout 0 5 23 8 H
 osd_layout 0 6 23 9 H
-osd_layout 0 7 13 12 V
+osd_layout 0 7 46 0 V
 osd_layout 0 8 20 2 H
-osd_layout 0 9 1 2 V
+osd_layout 0 9 1 2 H
 osd_layout 0 10 8 6 H
-osd_layout 0 11 2 3 V
-osd_layout 0 12 1 4 V
-osd_layout 0 13 23 1 H
-osd_layout 0 14 0 11 V
-osd_layout 0 15 1 0 V
+osd_layout 0 11 10 15 V
+osd_layout 0 12 1 4 H
+osd_layout 0 13 36 16 V
+osd_layout 0 14 6 2 V
+osd_layout 0 15 40 1 V
 osd_layout 0 16 2 10 H
 osd_layout 0 17 2 11 H
 osd_layout 0 18 2 12 H
 osd_layout 0 19 15 1 H
 osd_layout 0 20 18 12 H
 osd_layout 0 21 0 12 H
-osd_layout 0 22 14 11 H
-osd_layout 0 23 1 1 H
+osd_layout 0 22 25 1 V
+osd_layout 0 23 40 2 V
 osd_layout 0 24 12 2 H
-osd_layout 0 25 23 5 H
+osd_layout 0 25 36 7 V
 osd_layout 0 26 24 7 H
 osd_layout 0 27 3 5 H
-osd_layout 0 28 23 11 V
+osd_layout 0 28 43 17 V
 osd_layout 0 29 23 12 H
-osd_layout 0 30 1 13 V
+osd_layout 0 30 11 13 V
 osd_layout 0 31 0 10 H
-osd_layout 0 32 12 1 H
-osd_layout 0 33 6 2 H
+osd_layout 0 32 10 16 V
+osd_layout 0 33 5 3 V
 osd_layout 0 34 18 2 H
 osd_layout 0 35 1 5 H
 osd_layout 0 36 1 5 H
 osd_layout 0 37 1 6 H
 osd_layout 0 38 1 7 H
 osd_layout 0 39 1 5 H
-osd_layout 0 40 1 2 H
+osd_layout 0 40 40 3 V
 osd_layout 0 41 1 8 H
 osd_layout 0 42 1 7 H
 osd_layout 0 43 0 0 H
@@ -529,7 +529,7 @@ osd_layout 0 81 2 12 H
 osd_layout 0 82 2 12 H
 osd_layout 0 83 2 12 H
 osd_layout 0 84 2 12 H
-osd_layout 0 85 23 1 H
+osd_layout 0 85 36 15 V
 osd_layout 0 86 19 2 H
 osd_layout 0 87 19 3 H
 osd_layout 0 88 19 4 H
@@ -541,7 +541,7 @@ osd_layout 0 93 19 9 H
 osd_layout 0 94 19 10 H
 osd_layout 0 95 19 11 H
 osd_layout 0 96 0 0 H
-osd_layout 0 97 0 12 H
+osd_layout 0 97 19 16 V
 osd_layout 0 98 0 0 H
 osd_layout 0 99 0 0 H
 osd_layout 0 100 12 4 H
@@ -1115,10 +1115,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = -33
-set gyro_zero_y = -8
-set gyro_zero_z = -23
-set ins_gravity_cmss =  980.093
+set gyro_zero_x = -31
+set gyro_zero_y = 8
+set gyro_zero_z = -16
+set ins_gravity_cmss =  940.444
 set vbat_adc_channel = 3
 set rssi_adc_channel = 1
 set current_adc_channel = 2
@@ -1177,8 +1177,7 @@ set rx_max_usec = 2115
 set serialrx_halfduplex = AUTO
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 1
-set blackbox_device = SDCARD
-set sdcard_detect_inverted = OFF
+set blackbox_device = SPIFLASH
 set max_throttle = 1850
 set min_command = 1000
 set motor_pwm_rate = 16000
@@ -1404,7 +1403,7 @@ set mavlink_extra3_rate = 1
 set mavlink_version = 2
 set ledstrip_visual_beeper = OFF
 set osd_telemetry = OFF
-set osd_video_system = AUTO
+set osd_video_system = HDZERO
 set osd_row_shiftdown = 0
 set osd_units = METRIC
 set osd_stats_energy_unit = MAH

@@ -2,7 +2,7 @@
 # diff all
 
 # version
-# INAV/ATOMRCF405 6.0.0 Dec 31 2022 / 14:43:44 (2bbbf489)
+# INAV/ATOMRCF405 6.0.0 Jan  4 2023 / 16:17:48 (c75211b0)
 # GCC-10.2.1 20201103 (release)
 
 # start the command batch
@@ -28,9 +28,9 @@ smix 2 3 0 100 0 -1
 smix 3 4 2 100 0 -1
 
 # servo
-servo 1 1000 2000 1500 -100
-servo 2 1000 2000 1500 -100
-servo 3 1000 2000 1500 -100
+servo 1 1000 2000 1510 -100
+servo 2 1000 2000 1495 -100
+servo 3 1000 2000 1495 -100
 
 # safehome
 
@@ -42,6 +42,21 @@ feature PWM_OUTPUT_ENABLE
 feature FW_AUTOTRIM
 
 # beeper
+
+# blackbox
+blackbox -NAV_ACC
+blackbox NAV_POS
+blackbox NAV_PID
+blackbox MAG
+blackbox ACC
+blackbox ATTI
+blackbox RC_DATA
+blackbox RC_COMMAND
+blackbox MOTORS
+blackbox -GYRO_RAW
+blackbox -PEAKS_R
+blackbox -PEAKS_P
+blackbox -PEAKS_Y
 
 # map
 
@@ -58,9 +73,13 @@ serial 4 2 115200 9600 0 115200
 
 # aux
 aux 0 0 0 1500 2100
-aux 1 1 1 1300 1700
-aux 2 12 1 900 1300
-aux 3 21 5 1300 1700
+aux 1 1 4 1300 1700
+aux 2 12 4 900 1300
+aux 3 11 2 1300 1700
+aux 4 10 2 1700 2100
+aux 5 21 3 1700 2100
+aux 6 13 3 1300 1700
+aux 7 26 0 1700 2100
 
 # adjrange
 
@@ -72,6 +91,27 @@ aux 3 21 5 1300 1700
 #wp 0 invalid
 
 # osd_layout
+osd_layout 0 0 7 1 V
+osd_layout 0 1 12 0 H
+osd_layout 0 2 0 0 V
+osd_layout 0 4 8 6 V
+osd_layout 0 7 46 0 V
+osd_layout 0 9 1 2 H
+osd_layout 0 11 10 15 V
+osd_layout 0 12 1 4 H
+osd_layout 0 13 36 16 V
+osd_layout 0 14 6 2 V
+osd_layout 0 15 40 1 V
+osd_layout 0 22 25 1 V
+osd_layout 0 23 40 2 V
+osd_layout 0 25 36 7 V
+osd_layout 0 28 43 17 V
+osd_layout 0 30 11 13 V
+osd_layout 0 32 10 16 V
+osd_layout 0 33 5 3 V
+osd_layout 0 40 40 3 V
+osd_layout 0 85 36 15 V
+osd_layout 0 97 19 16 V
 
 # logic
 
@@ -83,10 +123,10 @@ aux 3 21 5 1300 1700
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -33
-set gyro_zero_y = -8
-set gyro_zero_z = -23
-set ins_gravity_cmss =  980.093
+set gyro_zero_x = -31
+set gyro_zero_y = 8
+set gyro_zero_z = -16
+set ins_gravity_cmss =  940.444
 set acc_hardware = MPU6000
 set acczero_x = 56
 set acczero_y = 27
@@ -117,6 +157,7 @@ set nav_fw_control_smoothness = 2
 set nav_fw_launch_motor_delay = 100
 set nav_fw_launch_max_altitude = 5000
 set nav_fw_launch_climb_angle = 30
+set osd_video_system = HDZERO
 set name = Heidi
 set tz_automatic_dst = EU
 
