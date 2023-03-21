@@ -207,6 +207,7 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -331,9 +332,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 5 0 0 3 1700 2100
-vtx 1 0 0 0 0 900 900
-vtx 2 0 0 0 0 900 900
+vtx 0 5 0 0 1 900 1300
+vtx 1 5 0 0 2 1300 1700
+vtx 2 5 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -500,7 +501,7 @@ set beeper_inversion = ON
 set beeper_od = OFF
 set beeper_frequency = 0
 set beeper_dshot_beacon_tone = 1
-set yaw_motors_reversed = OFF
+set yaw_motors_reversed = ON
 set mixer_type = LEGACY
 set crashflip_motor_percent = 0
 set crashflip_expo = 35
@@ -578,17 +579,17 @@ set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2048
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 2444
+set osd_rssi_dbm_pos = 2508
 set osd_rsnr_pos = 234
 set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2456
+set osd_tim_2_pos = 3520
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 234
 set osd_vtx_channel_pos = 2069
-set osd_crosshairs_pos = 205
+set osd_crosshairs_pos = 2362
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 234
@@ -613,7 +614,7 @@ set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
 set osd_warnings_pos = 14697
-set osd_avg_cell_voltage_pos = 2433
+set osd_avg_cell_voltage_pos = 2497
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
@@ -649,7 +650,7 @@ set osd_sys_lq_pos = 234
 set osd_sys_goggle_dvr_pos = 234
 set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
-set osd_sys_vtx_temp_pos = 234
+set osd_sys_vtx_temp_pos = 2529
 set osd_sys_fan_speed_pos = 234
 set osd_stat_bitmask = 14124
 set osd_profile = 1
@@ -667,12 +668,12 @@ set osd_menu_background = TRANSPARENT
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 53
-set osd_canvas_height = 20
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
-set debug_mode = NONE
+set debug_mode = GYRO_SCALED
 set rate_6pos_switch = OFF
 set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
@@ -1281,7 +1282,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 1
+rateprofile 0
 
 # save configuration
 save
