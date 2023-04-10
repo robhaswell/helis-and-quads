@@ -47,9 +47,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 5 0 0 1 900 1300
-vtx 1 5 0 0 2 1300 1700
-vtx 2 5 0 0 3 1700 2100
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 
 # master
 set gyro_lpf1_static_hz = 0
