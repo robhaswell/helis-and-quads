@@ -1,0 +1,77 @@
+# diff all
+
+# version
+# Betaflight / STM32F411 (S411) 4.4.1 Apr  7 2023 / 09:41:09 (e43d591b2) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BETAFPVF4SX1280
+manufacturer_id BEFH
+mcu_id 0051002e3535510936323431
+signature
+
+# name: 1S Toothpick
+
+# feature
+feature -RX_SERIAL
+feature -SOFTSERIAL
+
+# serial
+serial 1 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = 90,7,30,1
+set rc_smoothing_auto_factor = 52
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set motor_poles = 12
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 1
+set report_cell_voltage = ON
+set osd_canvas_width = 30
+set osd_canvas_height = 13
+set expresslrs_uid = 254,203,179,9,87,168
+set craft_name = 1S Toothpick
+set pilot_name = Mopatop
+
+profile 0
+
+# profile 0
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 45
+set feedforward_jitter_factor = 8
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
