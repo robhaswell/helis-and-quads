@@ -1,0 +1,18 @@
+---
+summary:
+  name: Custom
+  author: Mopatop
+  info: 
+
+colors:
+  PRIMARY1:   0x000000
+  PRIMARY2:   0xF8FCF8
+  PRIMARY3:   0x484C48
+  SECONDARY1: 0x404440
+  SECONDARY2: 0xB8BCB8
+  SECONDARY3: 0xF0FCF0
+  FOCUS:      0xF07400
+  EDIT:       0x2880C0
+  ACTIVE:     0x70C4F0
+  WARNING:    0xF80000
+  DISABLED:   0x505450

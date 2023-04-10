@@ -1,0 +1,78 @@
+Labels:
+  "Favorites":
+Sort: 4
+Models:
+  model1.yml:
+    hash: "f04300007b56ce8a"
+    name: "Racing"
+    mod1id: 1
+    mod1type: 5
+    labels: ""
+    bitmap: "THII-FS.png"
+    lastopen: 0
+  model11.yml:
+    hash: "b825000023562da7"
+    name: "Fomie"
+    mod1id: 4
+    mod1type: 5
+    labels: ""
+    bitmap: "Segl04.jpg"
+    lastopen: 0
+  model2.yml:
+    hash: "a2290000ba546105"
+    name: "ELRS heli"
+    mod1id: 1
+    mod1type: 5
+    labels: ""
+    bitmap: "K110.JPG"
+    lastopen: 0
+  model5.yml:
+    hash: "d02c0000ba546105"
+    name: "Blade 150 S"
+    mod0id: 62
+    mod0type: 6
+    mod0rf: 61
+    labels: ""
+    bitmap: "150-S.png"
+    lastopen: 0
+  model6.yml:
+    hash: "cd4100007b566e91"
+    name: "Fixed Wing"
+    mod1id: 2
+    mod1type: 5
+    labels: ""
+    bitmap: "zohd-dart.png"
+    lastopen: 1680792926
+  model4.yml:
+    hash: "2a3000006856f0a6"
+    name: "OMPHOBBY M2"
+    mod0type: 6
+    mod0rf: 5
+    labels: ""
+    bitmap: "OH-M2-2.jpg"
+    lastopen: 0
+  model3.yml:
+    hash: "a74300005156cb56"
+    name: "Freestyle"
+    mod1id: 1
+    mod1type: 5
+    labels: ""
+    bitmap: "THII-FS.png"
+    lastopen: 0
+  model7.yml:
+    hash: "093000005956eb60"
+    name: "RX Test"
+    mod1id: 63
+    mod1type: 5
+    labels: ""
+    bitmap: ""
+    lastopen: 1677326865
+  model8.yml:
+    hash: "d62b000064562273"
+    name: "Goosky RS4"
+    mod1id: 3
+    mod1type: 5
+    labels: ""
+    bitmap: "goosky-rs4.pn"
+    lastopen: 0
+

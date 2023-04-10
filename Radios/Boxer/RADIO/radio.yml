@@ -1,0 +1,158 @@
+checksum: 7369
+manuallyEdited: 0
+semver: 2.8.0
+board: boxer
+calib: 
+   Rud:
+      mid: 1013
+      spanNeg: 752
+      spanPos: 764
+   Ele:
+      mid: 1054
+      spanNeg: 760
+      spanPos: 712
+   Thr:
+      mid: 1010
+      spanNeg: 757
+      spanPos: 810
+   Ail:
+      mid: 1035
+      spanNeg: 773
+      spanPos: 785
+   POT1:
+      mid: 1030
+      spanNeg: 1008
+      spanPos: 1001
+   POT2:
+      mid: 1028
+      spanNeg: 1008
+      spanPos: 1002
+   POT3:
+      mid: 1285
+      spanNeg: 5645
+      spanPos: 10271
+currModel: 1
+contrast: 18
+vBatWarn: 66
+txVoltageCalibration: -6
+backlightMode: backlight_mode_on
+antennaMode: MODE_PER_MODEL
+disableRtcWarning: 1
+keysBacklight: 0
+internalModule: TYPE_CROSSFIRE
+trainer: 
+   mix: 
+      0:
+         srcChn: 3
+         mode: REPL
+         studWeight: 100
+      1:
+         srcChn: 1
+         mode: REPL
+         studWeight: 100
+      2:
+         srcChn: 2
+         mode: REPL
+         studWeight: 100
+      3:
+         srcChn: 0
+         mode: REPL
+         studWeight: 100
+view: 1
+fai: 0
+beepMode: mode_nokeys
+alarmsFlash: 0
+disableMemoryWarning: 0
+disableAlarmWarning: 0
+stickMode: 1
+timezone: 0
+adjustRTC: 0
+inactivityTimer: 30
+internalModuleBaudrate: 2
+splashMode: 3
+hapticMode: mode_nokeys
+switchesDelay: 0
+lightAutoOff: 12
+templateSetup: 21
+PPM_Multiplier: 0
+hapticLength: 0
+beepLength: 1
+hapticStrength: 2
+gpsFormat: 0
+speakerPitch: 0
+speakerVolume: 23
+vBatMin: 64
+vBatMax: 84
+backlightBright: 0
+globalTimer: 89364
+bluetoothBaudrate: 0
+bluetoothMode: OFF
+countryCode: 0
+pwrOnSpeed: 1
+pwrOffSpeed: 1
+noJitterFilter: 1
+imperial: 0
+disableRssiPoweroffAlarm: 1
+USBMode: 0
+jackMode: 0
+ttsLanguage: "en"
+beepVolume: 4
+wavVolume: 4
+varioVolume: 2
+backgroundVolume: 3
+varioPitch: 0
+varioRange: 0
+varioRepeat: 0
+customFn: 
+   0:
+      swtch: "ON"
+      func: BACKLIGHT
+      def: "POT1,1"
+   1:
+      swtch: "ON"
+      func: VOLUME
+      def: "POT2,1"
+serialPort: 
+   VCP:
+      mode: CLI
+      power: 0
+potsConfig: 
+   POT1:
+      type: with_detent
+      name: ""
+   POT2:
+      type: with_detent
+      name: ""
+   POT3:
+      type: multipos_switch
+      name: ""
+backlightColor: 0
+switchConfig: 
+   SA:
+      type: 2pos
+      name: ""
+   SB:
+      type: 3pos
+      name: ""
+   SC:
+      type: 3pos
+      name: ""
+   SD:
+      type: 2pos
+      name: ""
+   SE:
+      type: 2pos
+      name: ""
+   SF:
+      type: toggle
+      name: ""
+   SG:
+      type: toggle
+      name: ""
+   SH:
+      type: toggle
+      name: ""
+bluetoothName: ""
+ownerRegistrationID: " 692XAP-"
+rotEncMode: 0
+uartSampleMode: 0

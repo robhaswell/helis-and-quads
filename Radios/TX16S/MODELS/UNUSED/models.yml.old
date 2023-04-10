@@ -1,0 +1,13 @@
+- "Models":
+  - filename: "model1.yml"
+    name: "ELRS drone"
+  - filename: "model2.yml"
+    name: "ELRS heli"
+  - filename: "model4.yml"
+    name: "OMPHOBBY M2"
+  - filename: "model5.yml"
+    name: "Blade 150 S"
+  - filename: "model6.yml"
+    name: "Fixed Wing"
+  - filename: "model11.yml"
+    name: "Fomie"
