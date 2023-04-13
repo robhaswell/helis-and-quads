@@ -332,9 +332,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 5 0 0 1 900 1300
-vtx 1 5 0 0 2 1300 1700
-vtx 2 5 0 0 3 1700 2100
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -586,14 +586,14 @@ set osd_tim_2_pos = 3489
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
-set osd_g_force_pos = 65
-set osd_throttle_pos = 442
+set osd_g_force_pos = 234
+set osd_throttle_pos = 234
 set osd_vtx_channel_pos = 3112
 set osd_crosshairs_pos = 2327
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
-set osd_current_pos = 417
-set osd_mah_drawn_pos = 448
+set osd_current_pos = 234
+set osd_mah_drawn_pos = 234
 set osd_wh_drawn_pos = 234
 set osd_motor_diag_pos = 234
 set osd_craft_name_pos = 393
@@ -628,7 +628,7 @@ set osd_esc_rpm_freq_pos = 234
 set osd_rtc_date_time_pos = 234
 set osd_adjustment_range_pos = 234
 set osd_flip_arrow_pos = 234
-set osd_core_temp_pos = 234
+set osd_core_temp_pos = 55
 set osd_log_status_pos = 234
 set osd_stick_overlay_left_pos = 234
 set osd_stick_overlay_right_pos = 234
