@@ -54,6 +54,7 @@ dma pin B06 NONE
 
 # feature
 feature -LED_STRIP
+feature -ESC_SENSOR
 feature TELEMETRY
 
 # serial
@@ -87,6 +88,11 @@ vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
+
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 
 # rxfail
 rxfail 6 s 1500
@@ -131,19 +137,23 @@ set simplified_gyro_filter_multiplier = 150
 set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
-set osd_link_quality_pos = 2048
-set osd_rssi_dbm_pos = 2508
-set osd_tim_2_pos = 2520
+set osd_link_quality_pos = 2082
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
 set osd_flymode_pos = 374
-set osd_vtx_channel_pos = 2069
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 2327
 set osd_craft_name_pos = 393
-set osd_warnings_pos = 14697
-set osd_avg_cell_voltage_pos = 2497
+set osd_warnings_pos = 14675
+set osd_avg_cell_voltage_pos = 2475
+set osd_disarmed_pos = 429
+set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_freq = 5658
 set displayport_msp_serial = 3
 set name = Sonic
@@ -186,7 +196,7 @@ profile 1
 profile 2
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
@@ -226,9 +236,9 @@ set yaw_rc_rate = 15
 set roll_expo = 50
 set pitch_expo = 50
 set yaw_expo = 50
-set roll_srate = 53
-set pitch_srate = 53
-set yaw_srate = 53
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
 set tpa_rate = 0
 set tpa_breakpoint = 0
 ###ERROR IN diff: CORRUPTED CONFIG: tpa_breakpoint = 0###
@@ -252,7 +262,7 @@ rateprofile 4
 rateprofile 5
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save

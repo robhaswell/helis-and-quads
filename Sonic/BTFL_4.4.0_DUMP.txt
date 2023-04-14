@@ -272,7 +272,6 @@ feature RX_SERIAL
 feature TELEMETRY
 feature OSD
 feature AIRMODE
-feature ESC_SENSOR
 feature ANTI_GRAVITY
 
 # serial
@@ -512,9 +511,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 0 0 0 0 900 900
-vtx 1 0 0 0 0 900 900
-vtx 2 0 0 0 0 900 900
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -843,18 +842,18 @@ set osd_tim1 = 2560
 set osd_tim2 = 2561
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
-set osd_link_quality_pos = 2048
+set osd_link_quality_pos = 2082
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 2508
-set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2520
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 2069
-set osd_crosshairs_pos = 205
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 2327
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 234
@@ -877,12 +876,12 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14697
-set osd_avg_cell_voltage_pos = 2497
+set osd_warnings_pos = 14675
+set osd_avg_cell_voltage_pos = 2475
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
-set osd_disarmed_pos = 234
+set osd_disarmed_pos = 429
 set osd_nheading_pos = 234
 set osd_up_down_reference_pos = 205
 set osd_nvario_pos = 234
@@ -904,7 +903,7 @@ set osd_rcchannels_pos = 234
 set osd_camera_frame_pos = 35
 set osd_efficiency_pos = 234
 set osd_total_flights_pos = 234
-set osd_stat_bitmask = 14124
+set osd_stat_bitmask = 5092
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -926,7 +925,7 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5658
@@ -1343,7 +1342,7 @@ set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
 
 # restore original profile selection
-profile 2
+profile 0
 
 rateprofile 0
 
@@ -1416,9 +1415,9 @@ set yaw_rc_rate = 15
 set roll_expo = 50
 set pitch_expo = 50
 set yaw_expo = 50
-set roll_srate = 53
-set pitch_srate = 53
-set yaw_srate = 53
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
 set tpa_rate = 0
 set tpa_breakpoint = 0
 ###ERROR IN dump: CORRUPTED CONFIG: tpa_breakpoint = 0###
@@ -1516,7 +1515,7 @@ set roll_level_expo = 0
 set pitch_level_expo = 0
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save
