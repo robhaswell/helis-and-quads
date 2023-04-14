@@ -142,9 +142,9 @@ set osd_avg_cell_voltage_pos = 2497
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 3
+set vtx_channel = 1
 set vtx_power = 1
-set vtx_freq = 5732
+set vtx_freq = 5658
 set displayport_msp_serial = 3
 set name = Sonic
 
