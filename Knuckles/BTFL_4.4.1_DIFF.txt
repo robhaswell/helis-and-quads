@@ -20,14 +20,9 @@ signature
 
 # feature
 feature -SOFTSERIAL
-feature -TELEMETRY
 
 # serial
-serial 0 0 115200 57600 0 115200
-serial 3 0 115200 57600 0 115200
-
-# beacon
-beacon RX_SET
+serial 3 131073 115200 57600 0 115200
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -53,14 +48,13 @@ vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
-# rxfail
-rxfail 6 s 1500
-
 # vtx
 vtx 0 4 0 0 1 900 1300
 vtx 1 4 0 0 2 1300 1700
 vtx 2 4 0 0 3 1700 2100
 
+# rxfail
+rxfail 6 s 1500
 
 # master
 set dyn_notch_count = 1
@@ -96,7 +90,7 @@ set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 2
-set vtx_power = 1
+set vtx_power = 3
 set vtx_freq = 5695
 set vcd_video_system = HD
 set craft_name = Knuckles

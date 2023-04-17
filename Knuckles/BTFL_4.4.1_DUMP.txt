@@ -181,16 +181,17 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 115200
+serial 0 64 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
-serial 3 0 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 serial 5 0 115200 57600 0 115200
 
@@ -228,7 +229,7 @@ beeper RC_SMOOTHING_INIT_FAIL
 
 # beacon
 beacon -RX_LOST
-beacon RX_SET
+beacon -RX_SET
 
 # map
 map AETR1234
@@ -307,9 +308,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 0 0 0 0 900 900
-vtx 1 0 0 0 0 900 900
-vtx 2 0 0 0 0 900 900
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -546,19 +547,19 @@ set osd_tim1 = 2560
 set osd_tim2 = 2561
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
-set osd_link_quality_pos = 2081
+set osd_link_quality_pos = 2082
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 234
+set osd_rssi_dbm_pos = 377
 set osd_rsnr_pos = 234
-set osd_tim_1_pos = 234
-set osd_tim_2_pos = 2455
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
 set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
 set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 14388
-set osd_crosshairs_pos = 205
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 2327
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 234
@@ -566,7 +567,7 @@ set osd_mah_drawn_pos = 234
 set osd_wh_drawn_pos = 234
 set osd_motor_diag_pos = 234
 set osd_craft_name_pos = 393
-set osd_pilot_name_pos = 234
+set osd_pilot_name_pos = 2549
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
 set osd_gps_lat_pos = 234
@@ -582,12 +583,12 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14696
-set osd_avg_cell_voltage_pos = 2433
+set osd_warnings_pos = 14675
+set osd_avg_cell_voltage_pos = 2475
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
-set osd_disarmed_pos = 234
+set osd_disarmed_pos = 429
 set osd_nheading_pos = 234
 set osd_up_down_reference_pos = 205
 set osd_ready_mode_pos = 234
@@ -619,9 +620,9 @@ set osd_sys_lq_pos = 234
 set osd_sys_goggle_dvr_pos = 234
 set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
-set osd_sys_vtx_temp_pos = 234
+set osd_sys_vtx_temp_pos = 2114
 set osd_sys_fan_speed_pos = 234
-set osd_stat_bitmask = 14124
+set osd_stat_bitmask = 5092
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -637,8 +638,8 @@ set osd_menu_background = TRANSPARENT
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 0
 set task_statistics = ON
@@ -649,13 +650,13 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 2
-set vtx_power = 1
+set vtx_power = 3
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vcd_video_system = AUTO
+set vcd_video_system = HD
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
