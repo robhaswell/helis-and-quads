@@ -22,6 +22,9 @@ signature
 serial 1 64 115200 57600 0 115200
 serial 3 131073 115200 57600 0 115200
 
+# beacon
+beacon RX_SET
+
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
@@ -91,6 +94,7 @@ set osd_warnings_pos = 14675
 set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
 set osd_core_temp_pos = 55
+set osd_sys_goggle_voltage_pos = 2068
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
@@ -98,9 +102,9 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 2
-set vtx_freq = 5658
+set vtx_channel = 4
+set vtx_power = 3
+set vtx_freq = 5769
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
 set craft_name = OpenRacer One
@@ -110,6 +114,7 @@ profile 0
 
 # profile 0
 set dterm_lpf1_dyn_expo = 7
+set crash_recovery = ON
 set iterm_relax_cutoff = 20
 set iterm_limit = 500
 set pidsum_limit_yaw = 1000
