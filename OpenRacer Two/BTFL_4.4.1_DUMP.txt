@@ -248,30 +248,30 @@ beacon RX_SET
 map AETR1234
 
 # led
-led 0 0,0::C:1
-led 1 1,0::C:1
-led 2 2,0::C:1
-led 3 3,0::C:1
+led 0 0,0::C:15
+led 1 1,0::C:0
+led 2 2,0::C:0
+led 3 3,0::C:0
 led 4 4,0::C:1
-led 5 5,0::C:1
-led 6 6,0::C:1
-led 7 7,0::C:1
-led 8 8,0::C:1
-led 9 9,0::C:1
-led 10 10,0::C:1
-led 11 11,0::C:1
-led 12 12,0::C:1
-led 13 13,0::C:1
-led 14 14,0::C:1
-led 15 15,0::C:1
-led 16 0,1::C:1
-led 17 1,1::C:1
-led 18 2,1::C:1
-led 19 3,1::C:1
-led 20 4,1::C:1
-led 21 5,1::C:1
-led 22 6,1::C:1
-led 23 7,1::C:1
+led 5 5,0::C:2
+led 6 6,0::C:3
+led 7 7,0::C:4
+led 8 8,0::C:5
+led 9 9,0::C:6
+led 10 10,0::C:7
+led 11 11,0::C:8
+led 12 12,0::C:9
+led 13 13,0::C:10
+led 14 14,0::C:11
+led 15 15,0::C:12
+led 16 0,1::C:13
+led 17 1,1::C:14
+led 18 2,1::C:15
+led 19 3,1::C:15
+led 20 4,1::C:15
+led 21 5,1::C:15
+led 22 6,1::C:15
+led 23 7,1::C:15
 led 24 8,1::C:1
 led 25 9,1::C:1
 led 26 10,1::C:1
@@ -780,7 +780,7 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 3
+set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5658
