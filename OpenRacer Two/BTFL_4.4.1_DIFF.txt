@@ -30,41 +30,55 @@ serial 3 131073 115200 57600 0 115200
 beacon RX_SET
 
 # led
-led 0 0,0::CT:0
-led 1 1,0::CT:0
-led 2 2,0::CT:0
-led 3 3,0::CT:1
-led 4 4,0::CT:2
-led 5 5,0::CT:3
-led 6 6,0::CT:14
-led 7 7,0::CT:14
-led 8 8,0::CT:14
-led 9 9,0::CT:14
-led 10 10,0::CT:14
-led 11 11,0::CT:14
-led 12 12,0::CT:14
-led 13 13,0::CT:14
-led 14 14,0::CT:14
-led 15 15,0::CT:14
-led 16 0,1::CT:14
-led 17 1,1::CT:14
-led 18 2,1::CT:14
-led 19 3,1::CT:14
-led 20 4,1::CT:14
-led 21 5,1::CT:14
-led 22 6,1::CT:14
-led 23 7,1::CT:14
-led 24 8,1::CT:14
+led 0 0,0::C:1
+led 1 1,0::C:1
+led 2 2,0::C:1
+led 3 3,0::C:1
+led 4 4,0::C:1
+led 5 5,0::C:1
+led 6 6,0::C:1
+led 7 7,0::C:1
+led 8 8,0::C:1
+led 9 9,0::C:1
+led 10 10,0::C:1
+led 11 11,0::C:1
+led 12 12,0::C:1
+led 13 13,0::C:1
+led 14 14,0::C:1
+led 15 15,0::C:1
+led 16 0,1::C:1
+led 17 1,1::C:1
+led 18 2,1::C:1
+led 19 3,1::C:1
+led 20 4,1::C:1
+led 21 5,1::C:1
+led 22 6,1::C:1
+led 23 7,1::C:1
+led 24 8,1::C:1
+led 25 9,1::C:1
+led 26 10,1::C:1
+led 27 11,1::C:1
+led 28 12,1::C:1
+led 29 13,1::C:1
+led 30 14,1::C:1
+led 31 15,1::C:1
 
 # color
-color 0 359,0,255
+color 0 0,0,255
 color 1 22,0,255
 color 2 45,0,255
 color 3 68,0,255
 color 4 90,0,255
-color 13 241,0,255
-color 14 292,0,255
-color 15 0,0,255
+color 5 112,0,255
+color 6 135,0,255
+color 7 158,0,255
+color 9 202,0,255
+color 10 225,0,255
+color 11 248,0,255
+color 12 270,0,255
+color 13 292,0,255
+color 14 315,0,255
+color 15 338,0,255
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -138,7 +152,7 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 2
+set vtx_power = 3
 set vtx_freq = 5658
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
