@@ -261,11 +261,11 @@ map AETR1234
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
-aux 2 2 1 1300 1700 0 0
+aux 2 2 1 1300 1925 0 0
 aux 3 13 2 1300 1700 0 0
 aux 4 26 0 1700 2100 0 0
 aux 5 35 2 1700 2100 0 0
-aux 6 0 0 900 900 0 0
+aux 6 35 5 1700 2100 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
 aux 9 0 0 900 900 0 0
@@ -679,11 +679,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 4
-set vtx_power = 3
+set vtx_channel = 1
+set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
