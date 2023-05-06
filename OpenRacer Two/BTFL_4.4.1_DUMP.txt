@@ -2,7 +2,7 @@
 # dump all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.1 Apr 28 2023 / 15:01:04 (e43d591b2) MSP API: 1.45
+# Betaflight / STM32F7X2 (S7X2) 4.4.1 May  6 2023 / 10:17:47 (e43d591b2) MSP API: 1.45
 
 # config: YES
 
@@ -26,6 +26,7 @@ resource MOTOR 5 C07
 resource MOTOR 6 C06
 resource MOTOR 7 B06
 resource MOTOR 8 B07
+resource LED_STRIP 1 A15
 resource SERIAL_TX 1 A09
 resource SERIAL_TX 2 A02
 resource SERIAL_TX 3 C10
@@ -194,6 +195,7 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
 feature TELEMETRY
+feature LED_STRIP
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -244,6 +246,108 @@ beacon RX_SET
 
 # map
 map AETR1234
+
+# led
+led 0 0,0::CT:0
+led 1 1,0::CT:0
+led 2 2,0::CT:0
+led 3 3,0::CT:1
+led 4 4,0::CT:2
+led 5 5,0::CT:3
+led 6 6,0::CT:14
+led 7 7,0::CT:14
+led 8 8,0::CT:14
+led 9 9,0::CT:14
+led 10 10,0::CT:14
+led 11 11,0::CT:14
+led 12 12,0::CT:14
+led 13 13,0::CT:14
+led 14 14,0::CT:14
+led 15 15,0::CT:14
+led 16 0,1::CT:14
+led 17 1,1::CT:14
+led 18 2,1::CT:14
+led 19 3,1::CT:14
+led 20 4,1::CT:14
+led 21 5,1::CT:14
+led 22 6,1::CT:14
+led 23 7,1::CT:14
+led 24 8,1::CT:14
+led 25 0,0::C:0
+led 26 0,0::C:0
+led 27 0,0::C:0
+led 28 0,0::C:0
+led 29 0,0::C:0
+led 30 0,0::C:0
+led 31 0,0::C:0
+
+# color
+color 0 359,0,255
+color 1 22,0,255
+color 2 45,0,255
+color 3 68,0,255
+color 4 90,0,255
+color 5 90,0,255
+color 6 120,0,255
+color 7 150,0,255
+color 8 180,0,255
+color 9 210,0,255
+color 10 240,0,255
+color 11 270,0,255
+color 12 300,0,255
+color 13 241,0,255
+color 14 292,0,255
+color 15 0,0,255
+
+# mode_color
+mode_color 0 0 1
+mode_color 0 1 11
+mode_color 0 2 2
+mode_color 0 3 13
+mode_color 0 4 10
+mode_color 0 5 3
+mode_color 1 0 5
+mode_color 1 1 11
+mode_color 1 2 3
+mode_color 1 3 13
+mode_color 1 4 10
+mode_color 1 5 3
+mode_color 2 0 10
+mode_color 2 1 11
+mode_color 2 2 4
+mode_color 2 3 13
+mode_color 2 4 10
+mode_color 2 5 3
+mode_color 3 0 8
+mode_color 3 1 11
+mode_color 3 2 4
+mode_color 3 3 13
+mode_color 3 4 10
+mode_color 3 5 3
+mode_color 4 0 7
+mode_color 4 1 11
+mode_color 4 2 3
+mode_color 4 3 13
+mode_color 4 4 10
+mode_color 4 5 3
+mode_color 5 0 0
+mode_color 5 1 0
+mode_color 5 2 0
+mode_color 5 3 0
+mode_color 5 4 0
+mode_color 5 5 0
+mode_color 6 0 6
+mode_color 6 1 10
+mode_color 6 2 1
+mode_color 6 3 0
+mode_color 6 4 0
+mode_color 6 5 2
+mode_color 6 6 3
+mode_color 6 7 6
+mode_color 6 8 0
+mode_color 6 9 0
+mode_color 6 10 0
+mode_color 7 0 3
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -542,6 +646,16 @@ set telemetry_disabled_esc_rpm = ON
 set telemetry_disabled_esc_temperature = ON
 set telemetry_disabled_temperature = OFF
 set telemetry_disabled_cap_used = ON
+set ledstrip_visual_beeper = OFF
+set ledstrip_visual_beeper_color = WHITE
+set ledstrip_grb_rgb = GRB
+set ledstrip_profile = STATUS
+set ledstrip_race_color = ORANGE
+set ledstrip_beacon_color = WHITE
+set ledstrip_beacon_period_ms = 500
+set ledstrip_beacon_percent = 50
+set ledstrip_beacon_armed_only = OFF
+set ledstrip_brightness = 100
 set osd_units = METRIC
 set osd_warn_bitmask = 8191
 set osd_rssi_alarm = 20

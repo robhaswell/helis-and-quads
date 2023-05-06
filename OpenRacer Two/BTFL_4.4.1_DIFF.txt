@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.1 Apr 28 2023 / 15:01:04 (e43d591b2) MSP API: 1.45
+# Betaflight / STM32F7X2 (S7X2) 4.4.1 May  6 2023 / 10:17:47 (e43d591b2) MSP API: 1.45
 
 # config: YES
 
@@ -19,7 +19,6 @@ signature
 # name: OpenRacer Two
 
 # feature
-feature -LED_STRIP
 feature -ESC_SENSOR
 
 # serial
@@ -29,6 +28,43 @@ serial 3 131073 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
+
+# led
+led 0 0,0::CT:0
+led 1 1,0::CT:0
+led 2 2,0::CT:0
+led 3 3,0::CT:1
+led 4 4,0::CT:2
+led 5 5,0::CT:3
+led 6 6,0::CT:14
+led 7 7,0::CT:14
+led 8 8,0::CT:14
+led 9 9,0::CT:14
+led 10 10,0::CT:14
+led 11 11,0::CT:14
+led 12 12,0::CT:14
+led 13 13,0::CT:14
+led 14 14,0::CT:14
+led 15 15,0::CT:14
+led 16 0,1::CT:14
+led 17 1,1::CT:14
+led 18 2,1::CT:14
+led 19 3,1::CT:14
+led 20 4,1::CT:14
+led 21 5,1::CT:14
+led 22 6,1::CT:14
+led 23 7,1::CT:14
+led 24 8,1::CT:14
+
+# color
+color 0 359,0,255
+color 1 22,0,255
+color 2 45,0,255
+color 3 68,0,255
+color 4 90,0,255
+color 13 241,0,255
+color 14 292,0,255
+color 15 0,0,255
 
 # aux
 aux 0 0 0 1700 2100 0 0
