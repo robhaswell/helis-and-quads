@@ -1,7 +1,7 @@
 # diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.4.1 Apr 11 2023 / 01:45:03 (e43d591b2) MSP API: 1.45
+# Betaflight / STM32F7X2 (S7X2) 4.4.1 Apr 28 2023 / 15:01:04 (e43d591b2) MSP API: 1.45
 
 # config: YES
 
@@ -77,7 +77,6 @@ set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
-set motor_output_reordering = 2,3,0,1,4,5,6,7
 set yaw_motors_reversed = ON
 set small_angle = 180
 set simplified_gyro_filter = OFF
@@ -104,7 +103,6 @@ set osd_canvas_height = 18
 set vtx_band = 5
 set vtx_channel = 1
 set vtx_power = 2
-set vtx_low_power_disarm = ON
 set vtx_freq = 5658
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
