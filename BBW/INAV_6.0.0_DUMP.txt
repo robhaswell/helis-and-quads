@@ -241,14 +241,14 @@ mode_color 6 7 6
 mode_color 6 8 1
 
 # Modes [aux]
-aux 0 0 0 900 900
-aux 1 0 0 900 900
-aux 2 0 0 900 900
-aux 3 0 0 900 900
-aux 4 0 0 900 900
-aux 5 0 0 900 900
-aux 6 0 0 900 900
-aux 7 0 0 900 900
+aux 0 0 0 1500 2100
+aux 1 1 4 1300 1700
+aux 2 12 4 900 1300
+aux 3 11 2 1300 1700
+aux 4 10 2 1700 2100
+aux 5 21 3 1700 2100
+aux 6 13 3 1300 1700
+aux 7 26 0 1700 2100
 aux 8 0 0 900 900
 aux 9 0 0 900 900
 aux 10 0 0 900 900
@@ -444,47 +444,47 @@ wp 118 0 0 0 0 0 0 0 0
 wp 119 0 0 0 0 0 0 0 0
 
 # OSD [osd_layout]
-osd_layout 0 0 23 0 V
-osd_layout 0 1 12 0 V
-osd_layout 0 2 0 0 H
+osd_layout 0 0 7 1 V
+osd_layout 0 1 12 0 H
+osd_layout 0 2 0 0 V
 osd_layout 0 3 8 6 H
-osd_layout 0 4 8 6 H
+osd_layout 0 4 8 6 V
 osd_layout 0 5 23 8 H
 osd_layout 0 6 23 9 H
-osd_layout 0 7 13 12 V
+osd_layout 0 7 46 0 V
 osd_layout 0 8 20 2 H
-osd_layout 0 9 1 2 V
+osd_layout 0 9 1 2 H
 osd_layout 0 10 8 6 H
-osd_layout 0 11 2 3 V
-osd_layout 0 12 1 4 V
-osd_layout 0 13 23 1 H
-osd_layout 0 14 0 11 V
-osd_layout 0 15 1 0 V
+osd_layout 0 11 10 15 V
+osd_layout 0 12 1 4 H
+osd_layout 0 13 36 16 V
+osd_layout 0 14 6 2 V
+osd_layout 0 15 40 1 V
 osd_layout 0 16 2 10 H
 osd_layout 0 17 2 11 H
 osd_layout 0 18 2 12 H
 osd_layout 0 19 15 1 H
 osd_layout 0 20 18 12 H
 osd_layout 0 21 0 12 H
-osd_layout 0 22 14 11 H
-osd_layout 0 23 1 1 H
+osd_layout 0 22 25 1 V
+osd_layout 0 23 40 2 V
 osd_layout 0 24 12 2 H
-osd_layout 0 25 23 5 H
+osd_layout 0 25 36 7 V
 osd_layout 0 26 24 7 H
 osd_layout 0 27 3 5 H
-osd_layout 0 28 23 11 V
+osd_layout 0 28 43 17 V
 osd_layout 0 29 23 12 H
-osd_layout 0 30 1 13 V
+osd_layout 0 30 11 13 V
 osd_layout 0 31 0 10 H
-osd_layout 0 32 12 1 H
-osd_layout 0 33 6 2 H
+osd_layout 0 32 10 16 V
+osd_layout 0 33 5 3 V
 osd_layout 0 34 18 2 H
 osd_layout 0 35 1 5 H
 osd_layout 0 36 1 5 H
 osd_layout 0 37 1 6 H
 osd_layout 0 38 1 7 H
 osd_layout 0 39 1 5 H
-osd_layout 0 40 1 2 H
+osd_layout 0 40 40 3 V
 osd_layout 0 41 1 8 H
 osd_layout 0 42 1 7 H
 osd_layout 0 43 0 0 H
@@ -529,7 +529,7 @@ osd_layout 0 81 2 12 H
 osd_layout 0 82 2 12 H
 osd_layout 0 83 2 12 H
 osd_layout 0 84 2 12 H
-osd_layout 0 85 23 1 H
+osd_layout 0 85 36 15 V
 osd_layout 0 86 19 2 H
 osd_layout 0 87 19 3 H
 osd_layout 0 88 19 4 H
@@ -541,7 +541,7 @@ osd_layout 0 93 19 9 H
 osd_layout 0 94 19 10 H
 osd_layout 0 95 19 11 H
 osd_layout 0 96 0 0 H
-osd_layout 0 97 0 12 H
+osd_layout 0 97 19 16 V
 osd_layout 0 98 0 0 H
 osd_layout 0 99 0 0 H
 osd_layout 0 100 12 4 H
@@ -1126,7 +1126,7 @@ set init_gyro_cal = ON
 set gyro_zero_x = -54
 set gyro_zero_y = -13
 set gyro_zero_z = -15
-set ins_gravity_cmss =  984.130
+set ins_gravity_cmss =  984.690
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1413,7 +1413,7 @@ set mavlink_extra3_rate = 1
 set mavlink_version = 2
 set ledstrip_visual_beeper = OFF
 set osd_telemetry = OFF
-set osd_video_system = AUTO
+set osd_video_system = HDZERO
 set osd_row_shiftdown = 0
 set osd_msp_displayport_fullframe_interval = 10
 set osd_units = METRIC

@@ -69,6 +69,14 @@ serial 5 33554432 115200 115200 0 115200
 # LED mode_color
 
 # Modes [aux]
+aux 0 0 0 1500 2100
+aux 1 1 4 1300 1700
+aux 2 12 4 900 1300
+aux 3 11 2 1300 1700
+aux 4 10 2 1700 2100
+aux 5 21 3 1700 2100
+aux 6 13 3 1300 1700
+aux 7 26 0 1700 2100
 
 # Adjustments [adjrange]
 
@@ -80,6 +88,27 @@ serial 5 33554432 115200 115200 0 115200
 #wp 0 invalid
 
 # OSD [osd_layout]
+osd_layout 0 0 7 1 V
+osd_layout 0 1 12 0 H
+osd_layout 0 2 0 0 V
+osd_layout 0 4 8 6 V
+osd_layout 0 7 46 0 V
+osd_layout 0 9 1 2 H
+osd_layout 0 11 10 15 V
+osd_layout 0 12 1 4 H
+osd_layout 0 13 36 16 V
+osd_layout 0 14 6 2 V
+osd_layout 0 15 40 1 V
+osd_layout 0 22 25 1 V
+osd_layout 0 23 40 2 V
+osd_layout 0 25 36 7 V
+osd_layout 0 28 43 17 V
+osd_layout 0 30 11 13 V
+osd_layout 0 32 10 16 V
+osd_layout 0 33 5 3 V
+osd_layout 0 40 40 3 V
+osd_layout 0 85 36 15 V
+osd_layout 0 97 19 16 V
 
 # Programming: logic
 
@@ -94,7 +123,7 @@ set dynamic_gyro_notch_min_hz = 30
 set gyro_zero_x = -54
 set gyro_zero_y = -13
 set gyro_zero_z = -15
-set ins_gravity_cmss =  984.130
+set ins_gravity_cmss =  984.690
 set acc_hardware = MPU6000
 set acczero_x = 35
 set acczero_y = -11
@@ -124,6 +153,7 @@ set nav_fw_launch_max_angle = 75
 set nav_fw_launch_motor_delay = 100
 set nav_fw_launch_max_altitude = 5000
 set nav_fw_launch_climb_angle = 25
+set osd_video_system = HDZERO
 set name = BBW
 set tz_automatic_dst = EU
 
