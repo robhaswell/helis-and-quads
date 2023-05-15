@@ -64,7 +64,7 @@ led 30 14,1::C:1
 led 31 15,1::C:1
 
 # color
-color 15 0,0,255
+color 0 338,0,255
 color 1 22,0,255
 color 2 45,0,255
 color 3 68,0,255
@@ -78,7 +78,7 @@ color 11 248,0,255
 color 12 270,0,255
 color 13 292,0,255
 color 14 315,0,255
-color 0 338,0,255
+color 15 0,0,255
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -114,22 +114,25 @@ rxfail 6 s 1500
 
 # master
 set gyro_lpf1_static_hz = 0
-set dyn_notch_count = 2
-set dyn_notch_q = 450
+set gyro_lpf2_static_hz = 600
+set dyn_notch_count = 1
 set dyn_notch_min_hz = 125
 set dyn_notch_max_hz = 650
-set gyro_lpf1_dyn_min_hz = 500
-set gyro_lpf1_dyn_max_hz = 1000
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 600
 set acc_lpf_hz = 10
 set acc_calibration = -34,109,-193,1
 set baro_hardware = NONE
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
+set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT600
+set vbat_min_cell_voltage = 320
+set vbat_warning_cell_voltage = 335
 set yaw_motors_reversed = ON
 set small_angle = 180
-set simplified_gyro_filter = OFF
+set simplified_gyro_filter_multiplier = 120
 set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
@@ -142,7 +145,7 @@ set osd_vtx_channel_pos = 3112
 set osd_crosshairs_pos = 2327
 set osd_craft_name_pos = 393
 set osd_pilot_name_pos = 2549
-set osd_warnings_pos = 14675
+set osd_warnings_pos = 14771
 set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
@@ -150,49 +153,46 @@ set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
+set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_freq = 5658
 set vcd_video_system = HD
-set rpm_filter_fade_range_hz = 100
+set rpm_filter_harmonics = 2
 set craft_name = OpenRacer Two
 set pilot_name = Mopatop
 
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_expo = 7
-set vbat_sag_compensation = 100
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set crash_recovery = ON
-set iterm_relax_cutoff = 20
-set iterm_limit = 500
+set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
-set throttle_boost = 2
-set p_pitch = 41
-set i_pitch = 89
-set d_pitch = 40
-set f_pitch = 137
-set p_roll = 38
-set i_roll = 81
-set d_roll = 35
-set f_roll = 125
-set d_min_roll = 21
-set d_min_pitch = 23
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
-set feedforward_max_rate_limit = 100
-set simplified_pids_mode = RP
-set simplified_i_gain = 120
-set simplified_d_gain = 70
-set simplified_pi_gain = 85
-set simplified_dmax_gain = 200
-set simplified_feedforward_gain = 105
-set simplified_pitch_pi_gain = 105
-set tpa_rate = 70
-set tpa_breakpoint = 1250
+set yaw_lowpass_hz = 0
+set p_pitch = 56
+set i_pitch = 100
+set d_pitch = 53
+set f_pitch = 162
+set p_roll = 53
+set i_roll = 95
+set d_roll = 46
+set f_roll = 156
+set p_yaw = 53
+set i_yaw = 95
+set f_yaw = 156
+set d_min_roll = 33
+set d_min_pitch = 37
+set dyn_idle_min_rpm = 20
+set simplified_d_gain = 110
+set simplified_pi_gain = 120
+set simplified_dmax_gain = 120
+set simplified_feedforward_gain = 130
+set simplified_dterm_filter_multiplier = 120
 
 profile 1
 
