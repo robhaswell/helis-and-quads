@@ -895,7 +895,7 @@ set iterm_windup = 85
 set iterm_limit = 400
 set pidsum_limit = 1000
 set pidsum_limit_yaw = 1000
-set yaw_lowpass_hz = 0
+set yaw_lowpass_hz = 100
 set throttle_boost = 5
 set throttle_boost_cutoff = 15
 set p_pitch = 56
@@ -960,8 +960,8 @@ set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 120
 set tpa_mode = D
-set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_rate = 70
+set tpa_breakpoint = 1250
 
 profile 1
 
