@@ -70,9 +70,12 @@ serial 3 2 115200 9600 0 115200
 
 # aux
 aux 0 0 0 1500 2100
-aux 1 1 1 1300 1700
-aux 2 12 1 900 1300
-aux 3 21 5 1300 1700
+aux 1 1 4 1300 1700
+aux 2 12 4 900 1300
+aux 3 11 2 1300 1700
+aux 4 10 2 1700 2100
+aux 5 21 3 1700 2100
+aux 6 13 3 1300 1700
 
 # adjrange
 
@@ -116,10 +119,10 @@ osd_layout 0 97 19 16 V
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -2
-set gyro_zero_y = 5
-set gyro_zero_z = 3
-set ins_gravity_cmss =  980.499
+set gyro_zero_x = -3
+set gyro_zero_y = 4
+set gyro_zero_z = 1
+set ins_gravity_cmss =  984.427
 set acc_hardware = ICM42605
 set acczero_x = -5
 set acczero_y = -8
@@ -248,7 +251,7 @@ battery_profile 3
 set throttle_idle =  5.000
 
 # restore original profile selection
-profile 1
+profile 3
 battery_profile 1
 
 # save configuration
