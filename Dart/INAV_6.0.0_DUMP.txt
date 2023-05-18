@@ -1009,8 +1009,8 @@ osd_layout 3 138 0 0 H
 osd_layout 3 139 0 0 H
 
 # logic
-logic 0 0 -1 0 0 0 0 0 0
-logic 1 0 -1 0 0 0 0 0 0
+logic 0 1 -1 2 2 9 0 600 0
+logic 1 1 0 22 0 0 0 0 0
 logic 2 0 -1 0 0 0 0 0 0
 logic 3 0 -1 0 0 0 0 0 0
 logic 4 0 -1 0 0 0 0 0 0
@@ -1110,10 +1110,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = -3
-set gyro_zero_y = 4
-set gyro_zero_z = 1
-set ins_gravity_cmss =  984.427
+set gyro_zero_x = -1
+set gyro_zero_y = 12
+set gyro_zero_z = 6
+set ins_gravity_cmss =  986.260
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1296,7 +1296,7 @@ set inav_baro_epv =  100.000
 set nav_disarm_on_landing = OFF
 set nav_land_detect_sensitivity = 5
 set nav_use_midthr_for_althold = OFF
-set nav_extra_arming_safety = ON
+set nav_extra_arming_safety = ALLOW_BYPASS
 set nav_user_control_mode = ATTI
 set nav_position_timeout = 5
 set nav_wp_load_on_boot = OFF
@@ -1358,7 +1358,7 @@ set nav_fw_climb_angle = 20
 set nav_fw_dive_angle = 15
 set nav_fw_pitch2thr_smoothing = 6
 set nav_fw_pitch2thr_threshold = 50
-set nav_fw_loiter_radius = 7500
+set nav_fw_loiter_radius = 5000
 set nav_fw_cruise_speed = 0
 set nav_fw_control_smoothness = 2
 set nav_fw_land_dive_angle = 2
@@ -1373,7 +1373,7 @@ set nav_fw_launch_end_time = 3000
 set nav_fw_launch_min_time = 0
 set nav_fw_launch_timeout = 5000
 set nav_fw_launch_max_altitude = 5000
-set nav_fw_launch_climb_angle = 25
+set nav_fw_launch_climb_angle = 30
 set nav_fw_launch_manual_throttle = OFF
 set nav_fw_launch_abort_deadband = 100
 set nav_fw_cruise_yaw_rate = 20
@@ -1864,7 +1864,7 @@ set antigravity_accelerator =  1.000
 set antigravity_cutoff_lpf_hz = 15
 set pid_type = AUTO
 set mc_cd_lpf_hz = 30
-set fw_level_pitch_trim =  0.000
+set fw_level_pitch_trim =  5.000
 set smith_predictor_strength =  0.500
 set smith_predictor_delay =  0.000
 set smith_predictor_lpf_hz = 50
@@ -1916,7 +1916,7 @@ set nav_fw_min_thr = 1200
 set nav_fw_max_thr = 1700
 set nav_fw_pitch2thr = 10
 set nav_fw_launch_thr = 2000
-set nav_fw_launch_idle_thr = 1000
+set nav_fw_launch_idle_thr = 1500
 set limit_cont_current = 0
 set limit_burst_current = 0
 set limit_burst_current_time = 0
@@ -1995,7 +1995,7 @@ set limit_burst_power_time = 0
 set limit_burst_power_falldown_time = 0
 
 # restore original profile selection
-profile 3
+profile 1
 battery_profile 1
 
 # save configuration

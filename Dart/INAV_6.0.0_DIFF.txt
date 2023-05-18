@@ -110,6 +110,8 @@ osd_layout 0 85 36 15 V
 osd_layout 0 97 19 16 V
 
 # logic
+logic 0 1 -1 2 2 9 0 600 0
+logic 1 1 0 22 0 0 0 0 0
 
 # global vars
 
@@ -119,10 +121,10 @@ osd_layout 0 97 19 16 V
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -3
-set gyro_zero_y = 4
-set gyro_zero_z = 1
-set ins_gravity_cmss =  984.427
+set gyro_zero_x = -1
+set gyro_zero_y = 12
+set gyro_zero_z = 6
+set ins_gravity_cmss =  986.260
 set acc_hardware = ICM42605
 set acczero_x = -5
 set acczero_y = -8
@@ -142,15 +144,17 @@ set imu_acc_ignore_slope = 10
 set imu_inertia_comp_method = ADAPTIVE
 set applied_defaults = 4
 set airmode_type = STICK_CENTER_ONCE
+set nav_extra_arming_safety = ALLOW_BYPASS
 set nav_wp_radius = 5000
 set nav_rth_allow_landing = FS_ONLY
 set nav_rth_altitude = 5000
 set nav_fw_bank_angle = 45
+set nav_fw_loiter_radius = 5000
 set nav_fw_control_smoothness = 2
 set nav_fw_launch_max_angle = 75
 set nav_fw_launch_motor_delay = 100
 set nav_fw_launch_max_altitude = 5000
-set nav_fw_launch_climb_angle = 25
+set nav_fw_launch_climb_angle = 30
 set osd_video_system = HDZERO
 set osd_sidebar_scroll_arrows = ON
 set name = Dart
@@ -228,6 +232,7 @@ set nav_fw_pos_z_p = 35
 set nav_fw_pos_xy_p = 70
 set d_boost_min =  1.000
 set d_boost_max =  1.000
+set fw_level_pitch_trim =  5.000
 set rc_expo = 30
 set rc_yaw_expo = 30
 set roll_rate = 18
@@ -239,6 +244,7 @@ battery_profile 1
 
 set throttle_idle =  5.000
 set nav_fw_launch_thr = 2000
+set nav_fw_launch_idle_thr = 1500
 
 # battery_profile
 battery_profile 2
@@ -251,7 +257,7 @@ battery_profile 3
 set throttle_idle =  5.000
 
 # restore original profile selection
-profile 3
+profile 1
 battery_profile 1
 
 # save configuration
