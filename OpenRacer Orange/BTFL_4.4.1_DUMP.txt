@@ -14,7 +14,7 @@ manufacturer_id RUSH
 mcu_id 001e00385931500420383539
 signature
 
-# name: OpenRacer Two
+# name: OpenRacer Orange
 
 # resources
 resource BEEPER 1 B02
@@ -847,7 +847,7 @@ set stats_min_armed_time_s = -1
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set craft_name = OpenRacer Two
+set craft_name = OpenRacer Orange
 set pilot_name = Mopatop
 set altitude_source = DEFAULT
 set altitude_prefer_baro = 100

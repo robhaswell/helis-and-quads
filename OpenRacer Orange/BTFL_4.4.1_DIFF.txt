@@ -16,7 +16,7 @@ manufacturer_id RUSH
 mcu_id 001e00385931500420383539
 signature
 
-# name: OpenRacer Two
+# name: OpenRacer Orange
 
 # feature
 feature -ESC_SENSOR
@@ -160,7 +160,7 @@ set vtx_power = 2
 set vtx_freq = 5658
 set vcd_video_system = HD
 set rpm_filter_harmonics = 2
-set craft_name = OpenRacer Two
+set craft_name = OpenRacer Orange
 set pilot_name = Mopatop
 
 profile 0
