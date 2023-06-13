@@ -1,0 +1,213 @@
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.4.2 Jun 13 2023 / 08:37:30 (23d066d08) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name BLADE_F7_HD
+manufacturer_id RUSH
+mcu_id 001e00385931500420383539
+signature
+
+# name: OpenRacer Orange
+
+# feature
+feature -ESC_SENSOR
+
+# serial
+serial 0 64 115200 57600 0 115200
+serial 1 0 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# led
+led 0 0,0::C:15
+led 1 1,0::C:15
+led 2 2,0::C:15
+led 3 3,0::C:15
+led 4 4,0::C:1
+led 5 5,0::C:2
+led 6 6,0::C:3
+led 7 7,0::C:4
+led 8 8,0::C:5
+led 9 9,0::C:6
+led 10 10,0::C:7
+led 11 11,0::C:8
+led 12 12,0::C:9
+led 13 13,0::C:10
+led 14 14,0::C:11
+led 15 15,0::C:12
+led 16 0,1::C:13
+led 17 1,1::C:14
+led 18 2,1::C:0
+led 19 3,1::C:0
+led 20 4,1::C:0
+led 21 5,1::C:0
+led 22 6,1::C:0
+led 23 7,1::C:0
+led 24 8,1::C:1
+led 25 9,1::C:1
+led 26 10,1::C:1
+led 27 11,1::C:1
+led 28 12,1::C:1
+led 29 13,1::C:1
+led 30 14,1::C:1
+led 31 15,1::C:1
+
+# color
+color 0 338,0,255
+color 1 22,0,255
+color 2 45,0,255
+color 3 68,0,255
+color 4 90,0,255
+color 5 112,0,255
+color 6 135,0,255
+color 7 158,0,255
+color 9 202,0,255
+color 10 225,0,255
+color 11 248,0,255
+color 12 270,0,255
+color 13 292,0,255
+color 14 315,0,255
+color 15 0,0,255
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
+
+# rxfail
+rxfail 6 s 1500
+
+# master
+set dyn_notch_count = 1
+set dyn_notch_q = 500
+set acc_calibration = -34,109,-193,1
+set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
+set yaw_motors_reversed = ON
+set small_angle = 180
+set pid_process_denom = 2
+set report_cell_voltage = ON
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2082
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
+set osd_flymode_pos = 374
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 2327
+set osd_craft_name_pos = 393
+set osd_pilot_name_pos = 2549
+set osd_warnings_pos = 14771
+set osd_avg_cell_voltage_pos = 2475
+set osd_disarmed_pos = 429
+set osd_flip_arrow_pos = 2264
+set osd_sys_goggle_voltage_pos = 3146
+set osd_sys_vtx_temp_pos = 2114
+set osd_stat_bitmask = 5092
+set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set debug_mode = DSHOT_RPM_TELEMETRY
+set vtx_power = 2
+set vcd_video_system = HD
+set craft_name = OpenRacer Orange
+set pilot_name = Mopatop
+
+profile 0
+
+# profile 0
+set crash_recovery = ON
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
+
+rateprofile 2
+
+# rateprofile 2
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 66
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
