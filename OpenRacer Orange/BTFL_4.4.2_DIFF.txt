@@ -116,6 +116,10 @@ rxfail 6 s 1500
 set dyn_notch_count = 1
 set dyn_notch_q = 500
 set acc_calibration = -34,109,-193,1
+set baro_hardware = NONE
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set vbat_min_cell_voltage = 320
@@ -144,8 +148,11 @@ set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
-set debug_mode = DSHOT_RPM_TELEMETRY
+set debug_mode = GYRO_SCALED
+set vtx_band = 5
+set vtx_channel = 7
 set vtx_power = 2
+set vtx_freq = 5880
 set vcd_video_system = HD
 set craft_name = OpenRacer Orange
 set pilot_name = Mopatop
@@ -154,6 +161,10 @@ profile 0
 
 # profile 0
 set crash_recovery = ON
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 65
+set feedforward_jitter_factor = 3
+set feedforward_boost = 18
 
 profile 1
 
