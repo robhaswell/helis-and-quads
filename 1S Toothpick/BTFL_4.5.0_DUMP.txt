@@ -2,8 +2,8 @@
 # dump all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 12 2023 / 10:19:59 (7b90def4e) MSP API: 1.46
-# config rev: b7569b0
+# Betaflight / AT32F435G (A435) 4.5.0 Jun 19 2023 / 13:43:40 (1a4de305a) MSP API: 1.46
+# config rev: e459f44
 
 # start the command batch
 batch start
@@ -25,7 +25,6 @@ resource MOTOR 5 C08
 resource MOTOR 6 A08
 resource MOTOR 7 NONE
 resource MOTOR 8 NONE
-resource LED_STRIP 1 B06
 resource SERIAL_TX 1 A09
 resource SERIAL_TX 2 NONE
 resource SERIAL_TX 3 B10
@@ -187,7 +186,6 @@ feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
 feature TELEMETRY
-feature LED_STRIP
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -238,108 +236,6 @@ beacon RX_SET
 
 # map
 map AETR1234
-
-# led
-led 0 0,0::C:0
-led 1 0,0::C:0
-led 2 0,0::C:0
-led 3 0,0::C:0
-led 4 0,0::C:0
-led 5 0,0::C:0
-led 6 0,0::C:0
-led 7 0,0::C:0
-led 8 0,0::C:0
-led 9 0,0::C:0
-led 10 0,0::C:0
-led 11 0,0::C:0
-led 12 0,0::C:0
-led 13 0,0::C:0
-led 14 0,0::C:0
-led 15 0,0::C:0
-led 16 0,0::C:0
-led 17 0,0::C:0
-led 18 0,0::C:0
-led 19 0,0::C:0
-led 20 0,0::C:0
-led 21 0,0::C:0
-led 22 0,0::C:0
-led 23 0,0::C:0
-led 24 0,0::C:0
-led 25 0,0::C:0
-led 26 0,0::C:0
-led 27 0,0::C:0
-led 28 0,0::C:0
-led 29 0,0::C:0
-led 30 0,0::C:0
-led 31 0,0::C:0
-
-# color
-color 0 0,0,0
-color 1 0,255,255
-color 2 0,0,255
-color 3 30,0,255
-color 4 60,0,255
-color 5 90,0,255
-color 6 120,0,255
-color 7 150,0,255
-color 8 180,0,255
-color 9 210,0,255
-color 10 240,0,255
-color 11 270,0,255
-color 12 300,0,255
-color 13 330,0,255
-color 14 0,0,0
-color 15 0,0,0
-
-# mode_color
-mode_color 0 0 1
-mode_color 0 1 11
-mode_color 0 2 2
-mode_color 0 3 13
-mode_color 0 4 10
-mode_color 0 5 3
-mode_color 1 0 5
-mode_color 1 1 11
-mode_color 1 2 3
-mode_color 1 3 13
-mode_color 1 4 10
-mode_color 1 5 3
-mode_color 2 0 10
-mode_color 2 1 11
-mode_color 2 2 4
-mode_color 2 3 13
-mode_color 2 4 10
-mode_color 2 5 3
-mode_color 3 0 8
-mode_color 3 1 11
-mode_color 3 2 4
-mode_color 3 3 13
-mode_color 3 4 10
-mode_color 3 5 3
-mode_color 4 0 7
-mode_color 4 1 11
-mode_color 4 2 3
-mode_color 4 3 13
-mode_color 4 4 10
-mode_color 4 5 3
-mode_color 5 0 0
-mode_color 5 1 0
-mode_color 5 2 0
-mode_color 5 3 0
-mode_color 5 4 0
-mode_color 5 5 0
-mode_color 6 0 6
-mode_color 6 1 10
-mode_color 6 2 1
-mode_color 6 3 0
-mode_color 6 4 0
-mode_color 6 5 2
-mode_color 6 6 3
-mode_color 6 7 6
-mode_color 6 8 0
-mode_color 6 9 0
-mode_color 6 10 0
-mode_color 7 0 3
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -457,7 +353,7 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
-set dyn_notch_count = 2
+set dyn_notch_count = 1
 set dyn_notch_q = 300
 set dyn_notch_min_hz = 100
 set dyn_notch_max_hz = 600
@@ -506,7 +402,7 @@ set adc_device = 2
 set adc_vrefint_calibration = 0
 set adc_tempsensor_calibration30 = 0
 set adc_tempsensor_calibration110 = 0
-set blackbox_sample_rate = 1/2
+set blackbox_sample_rate = 1/4
 set blackbox_device = SPIFLASH
 set blackbox_disable_pids = OFF
 set blackbox_disable_rc = OFF
@@ -632,18 +528,6 @@ set telemetry_disabled_esc_rpm = ON
 set telemetry_disabled_esc_temperature = ON
 set telemetry_disabled_temperature = OFF
 set telemetry_disabled_cap_used = ON
-set ledstrip_visual_beeper = OFF
-set ledstrip_visual_beeper_color = WHITE
-set ledstrip_grb_rgb = GRB
-set ledstrip_profile = STATUS
-set ledstrip_race_color = ORANGE
-set ledstrip_beacon_color = WHITE
-set ledstrip_beacon_period_ms = 500
-set ledstrip_beacon_percent = 50
-set ledstrip_beacon_armed_only = OFF
-set ledstrip_brightness = 100
-set ledstrip_rainbow_delta = 0
-set ledstrip_rainbow_freq = 120
 set osd_units = METRIC
 set osd_warn_bitmask = 8191
 set osd_rssi_alarm = 20
@@ -762,7 +646,7 @@ set osd_canvas_width = 30
 set osd_canvas_height = 13
 set osd_craftname_msgs = OFF
 set task_statistics = ON
-set debug_mode = GYRO_FILTERED
+set debug_mode = GYRO_SCALED
 set rate_6pos_switch = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
@@ -878,18 +762,18 @@ set pidsum_limit_yaw = 400
 set yaw_lowpass_hz = 100
 set throttle_boost = 5
 set throttle_boost_cutoff = 15
-set p_pitch = 56
-set i_pitch = 100
-set d_pitch = 69
-set f_pitch = 149
-set p_roll = 53
-set i_roll = 95
-set d_roll = 59
-set f_roll = 143
-set p_yaw = 53
-set i_yaw = 95
+set p_pitch = 116
+set i_pitch = 207
+set d_pitch = 124
+set f_pitch = 281
+set p_roll = 111
+set i_roll = 198
+set d_roll = 107
+set f_roll = 270
+set p_yaw = 111
+set i_yaw = 198
 set d_yaw = 0
-set f_yaw = 143
+set f_yaw = 270
 set angle_p_gain = 50
 set angle_feedforward = 50
 set angle_feedforward_smoothing_ms = 80
@@ -906,8 +790,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 35
-set d_min_pitch = 40
+set d_min_roll = 80
+set d_min_pitch = 91
 set d_min_yaw = 0
 set d_max_gain = 37
 set d_max_advance = 20
@@ -934,12 +818,12 @@ set dyn_idle_max_increase = 150
 set dyn_idle_start_increase = 50
 set level_race_mode = OFF
 set simplified_pids_mode = RPY
-set simplified_master_multiplier = 100
+set simplified_master_multiplier = 150
 set simplified_i_gain = 100
-set simplified_d_gain = 120
-set simplified_pi_gain = 120
-set simplified_dmax_gain = 200
-set simplified_feedforward_gain = 120
+set simplified_d_gain = 180
+set simplified_pi_gain = 165
+set simplified_dmax_gain = 100
+set simplified_feedforward_gain = 150
 set simplified_pitch_d_gain = 100
 set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
