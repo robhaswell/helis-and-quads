@@ -110,7 +110,7 @@ set vtx_power = 3
 set vtx_freq = 5658
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
-set craft_name = OpenRacer One
+set craft_name = OpenRacer Blue
 set pilot_name = Mopatop
 
 profile 0
