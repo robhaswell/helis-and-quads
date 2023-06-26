@@ -2,8 +2,8 @@
 # dump all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 19 2023 / 13:43:40 (1a4de305a) MSP API: 1.46
-# config rev: e459f44
+# Betaflight / AT32F435G (A435) 4.5.0 Jun 24 2023 / 14:26:38 (050331149) MSP API: 1.46
+# config rev: c3208a0
 
 # start the command batch
 batch start
@@ -35,6 +35,7 @@ resource SERIAL_TX 7 NONE
 resource SERIAL_TX 8 NONE
 resource SERIAL_TX 9 NONE
 resource SERIAL_TX 10 NONE
+resource SERIAL_TX 11 NONE
 resource SERIAL_RX 1 A10
 resource SERIAL_RX 2 NONE
 resource SERIAL_RX 3 B11
@@ -45,6 +46,7 @@ resource SERIAL_RX 7 NONE
 resource SERIAL_RX 8 NONE
 resource SERIAL_RX 9 NONE
 resource SERIAL_RX 10 NONE
+resource SERIAL_RX 11 NONE
 resource INVERTER 1 NONE
 resource INVERTER 2 NONE
 resource INVERTER 3 C09
@@ -55,6 +57,7 @@ resource INVERTER 7 NONE
 resource INVERTER 8 NONE
 resource INVERTER 9 NONE
 resource INVERTER 10 NONE
+resource INVERTER 11 NONE
 resource I2C_SCL 1 NONE
 resource I2C_SCL 2 NONE
 resource I2C_SCL 3 NONE
@@ -138,6 +141,9 @@ dma UART_TX 5 NONE
 dma UART_TX 6 NONE
 dma UART_TX 7 NONE
 dma UART_TX 8 NONE
+dma UART_TX 9 NONE
+dma UART_TX 10 NONE
+dma UART_TX 11 NONE
 dma UART_RX 1 NONE
 dma UART_RX 2 NONE
 dma UART_RX 3 NONE
@@ -146,6 +152,9 @@ dma UART_RX 5 NONE
 dma UART_RX 6 NONE
 dma UART_RX 7 NONE
 dma UART_RX 8 NONE
+dma UART_RX 9 NONE
+dma UART_RX 10 NONE
+dma UART_RX 11 NONE
 dma pin B00 1
 # pin B00: DMA1 Channel 0 Channel 63
 dma pin B01 2
@@ -192,7 +201,7 @@ feature ANTI_GRAVITY
 
 # serial
 serial 20 1 115200 57600 0 115200
-serial 0 131073 115200 57600 0 115200
+serial 0 1 115200 57600 0 115200
 serial 2 64 115200 57600 0 115200
 serial 3 0 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
@@ -414,6 +423,7 @@ set blackbox_disable_gyro = OFF
 set blackbox_disable_acc = OFF
 set blackbox_disable_debug = OFF
 set blackbox_disable_motors = OFF
+set blackbox_disable_rpm = OFF
 set blackbox_mode = NORMAL
 set blackbox_high_resolution = OFF
 set min_throttle = 1070
