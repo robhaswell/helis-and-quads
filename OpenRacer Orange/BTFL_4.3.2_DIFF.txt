@@ -1,0 +1,53 @@
+# diff all
+###WARNING: NO CUSTOM DEFAULTS FOUND###
+
+# version
+# Betaflight / NEUTRONRCF435SE (NERC) 4.3.2 Apr 14 2023 / 14:22:27 (b8d31f4) MSP API: 1.44
+
+# NO CUSTOM DEFAULTS FOUND
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name NEUTRONRCF435SE
+mcu_id 10153a22054740000d94870c
+signature
+
+# name: OpenRacer Orange
+
+# feature
+feature -SOFTSERIAL
+
+# master
+set acc_calibration = -25,-137,-2,1
+set name = OpenRacer Orange
+
+profile 0
+
+profile 1
+
+profile 2
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+rateprofile 4
+
+rateprofile 5
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
