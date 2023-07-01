@@ -1,0 +1,98 @@
+# diff all
+
+# version
+# Betaflight / AT32F435G (A435) 4.5.0 Jun 26 2023 / 17:20:59 (050331149) MSP API: 1.46
+# config rev: 7abe580
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name NEUTRONRCF435
+manufacturer_id NERC
+mcu_id 10153a22054740000d94870c
+signature
+
+# name: OpenRacer Orange
+
+# feature
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 0 131073 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# master
+set acc_calibration = -1,-97,34,1
+set vbat_min_cell_voltage = 320
+set yaw_motors_reversed = ON
+set small_angle = 180
+set report_cell_voltage = ON
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2082
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
+set osd_flymode_pos = 374
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 2327
+set osd_craft_name_pos = 393
+set osd_pilot_name_pos = 2549
+set osd_warnings_pos = 14771
+set osd_avg_cell_voltage_pos = 2475
+set osd_disarmed_pos = 429
+set osd_sys_vtx_temp_pos = 2114
+set osd_stat_bitmask = 5092
+set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set debug_mode = GYRO_SCALED
+set vtx_band = 5
+set vtx_channel = 4
+set vtx_power = 1
+set vtx_freq = 5769
+set vcd_video_system = HD
+set craft_name = OpenRacer Orange
+set pilot_name = Mopatop
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
