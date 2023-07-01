@@ -1,0 +1,42 @@
+# diff all defaults
+
+# version
+# Betaflight / STM32F405 (S405) 4.4.1 Apr 12 2023 / 15:08:39 (e43d591b2) MSP API: 1.45
+
+# config: YES
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name MAMBAF405US
+manufacturer_id DIAT
+mcu_id 003a00433252500720383856
+signature 
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
