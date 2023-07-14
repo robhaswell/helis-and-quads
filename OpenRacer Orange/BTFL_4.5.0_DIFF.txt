@@ -41,6 +41,7 @@ vtxtable powerlabels 25 200 0
 # master
 set acc_calibration = -1,-97,34,1
 set motor_output_reordering = 2,3,0,1,4,5,6,7
+set align_board_yaw = -90
 set vbat_min_cell_voltage = 320
 set yaw_motors_reversed = ON
 set small_angle = 180
