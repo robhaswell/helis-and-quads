@@ -250,12 +250,12 @@ beacon -RX_SET
 map AETR1234
 
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -272,7 +272,7 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 0 900 900 0 0 0 0
+adjrange 0 0 3 900 2100 12 3 0 0
 adjrange 1 0 0 900 900 0 0 0 0
 adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
@@ -341,7 +341,7 @@ rxfail 2 a
 rxfail 3 a
 rxfail 4 h
 rxfail 5 h
-rxfail 6 h
+rxfail 6 s 1500
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -400,8 +400,8 @@ set rssi_invert = OFF
 set rssi_src_frame_lpf_period = 30
 set rssi_smoothing = 125
 set rc_smoothing = ON
-set rc_smoothing_auto_factor = 30
-set rc_smoothing_auto_factor_throttle = 30
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
 set rc_smoothing_setpoint_cutoff = 0
 set rc_smoothing_feedforward_cutoff = 0
 set rc_smoothing_throttle_cutoff = 0
@@ -439,9 +439,9 @@ set blackbox_high_resolution = OFF
 set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
-set motor_kv = 1960
+set motor_kv = 2400
 set dshot_idle_value = 550
-set dshot_bidir = OFF
+set dshot_bidir = ON
 set dshot_edt = OFF
 set dshot_bitbang = AUTO
 set dshot_bitbang_timer = AUTO
@@ -468,7 +468,7 @@ set align_board_yaw = -90
 set bat_capacity = 0
 set vbat_max_cell_voltage = 430
 set vbat_full_cell_voltage = 410
-set vbat_min_cell_voltage = 320
+set vbat_min_cell_voltage = 340
 set vbat_warning_cell_voltage = 350
 set vbat_hysteresis = 1
 set current_meter = ADC
@@ -581,9 +581,9 @@ set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 234
+set osd_throttle_pos = 2614
 set osd_vtx_channel_pos = 3112
-set osd_crosshairs_pos = 2327
+set osd_crosshairs_pos = 280
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 234
@@ -607,7 +607,7 @@ set osd_pid_yaw_pos = 234
 set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
-set osd_warnings_pos = 14771
+set osd_warnings_pos = 14675
 set osd_avg_cell_voltage_pos = 2475
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
@@ -672,11 +672,11 @@ set rate_6pos_switch = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 2
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5769
+set vtx_freq = 5695
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
