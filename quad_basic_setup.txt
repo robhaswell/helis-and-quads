@@ -1,0 +1,47 @@
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# rxfail
+rxfail 6 s 1500
+
+# master
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set motor_kv = 2400
+set dshot_bidir = ON
+set vbat_min_cell_voltage = 340
+set yaw_motors_reversed = ON
+set small_angle = 180
+set report_cell_voltage = ON
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2082
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
+set osd_flymode_pos = 374
+set osd_throttle_pos = 2102
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 280
+set osd_craft_name_pos = 393
+set osd_pilot_name_pos = 2549
+set osd_warnings_pos = 14675
+set osd_avg_cell_voltage_pos = 2475
+set osd_disarmed_pos = 429
+set osd_sys_vtx_temp_pos = 2114
+set osd_stat_bitmask = 5092
+set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set debug_mode = GYRO_SCALED
+set vcd_video_system = HD
+set stats_min_armed_time_s = -1
+set pilot_name = Mopatop
