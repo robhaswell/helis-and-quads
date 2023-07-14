@@ -2,8 +2,8 @@
 # dump all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 26 2023 / 17:20:59 (050331149) MSP API: 1.46
-# config rev: 7abe580
+# Betaflight / AT32F435G (A435) 4.5.0 Jul 14 2023 / 15:02:10 (1485438c4) MSP API: 1.46
+# config rev: 9c4dd3b
 
 # start the command batch
 batch start
@@ -70,6 +70,7 @@ resource SPI_SDO 1 A07
 resource SPI_SDO 2 B15
 resource SPI_SDO 3 B05
 resource SPI_SDO 4 NONE
+resource CAMERA_CONTROL 1 A00
 resource ADC_BATT 1 C02
 resource ADC_RSSI 1 NONE
 resource ADC_CURR 1 C01
@@ -428,6 +429,7 @@ set blackbox_disable_bat = OFF
 set blackbox_disable_alt = OFF
 set blackbox_disable_rssi = OFF
 set blackbox_disable_gyro = OFF
+set blackbox_disable_gyrounfilt = OFF
 set blackbox_disable_acc = OFF
 set blackbox_disable_debug = OFF
 set blackbox_disable_motors = OFF
@@ -443,6 +445,7 @@ set dshot_bidir = OFF
 set dshot_edt = OFF
 set dshot_bitbang = AUTO
 set dshot_bitbang_timer = AUTO
+set dshot_telemetry_start_margin = 10
 set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT600
 set motor_pwm_rate = 480
@@ -694,6 +697,12 @@ set displayport_max7456_wht = 2
 set esc_sensor_halfduplex = OFF
 set esc_sensor_current_offset = 0
 set led_inversion = 0
+set camera_control_mode = HARDWARE_PWM
+set camera_control_ref_voltage = 330
+set camera_control_key_delay = 180
+set camera_control_internal_resistance = 470
+set camera_control_button_resistance = 450,270,150,68,0
+set camera_control_inverted = OFF
 set usb_msc_pin_pullup = ON
 set flash_spi_bus = 3
 set rcdevice_init_dev_attempts = 6

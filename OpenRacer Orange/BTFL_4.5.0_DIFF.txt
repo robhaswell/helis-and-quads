@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 26 2023 / 17:20:59 (050331149) MSP API: 1.46
-# config rev: 7abe580
+# Betaflight / AT32F435G (A435) 4.5.0 Jul 14 2023 / 15:02:10 (1485438c4) MSP API: 1.46
+# config rev: 9c4dd3b
 
 # start the command batch
 batch start
