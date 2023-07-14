@@ -24,7 +24,7 @@ feature -LED_STRIP
 
 # serial
 serial 0 64 115200 57600 0 115200
-serial 3 1 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
 
 # beacon
 beacon RX_SET
@@ -104,7 +104,8 @@ set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
+set vtx_freq = 5658
 set vcd_video_system = HD
 set craft_name = Tails
 set pilot_name = Mopatop
@@ -204,7 +205,7 @@ set pitch_srate = 70
 set yaw_srate = 70
 
 # restore original rateprofile selection
-rateprofile 0
+rateprofile 2
 
 # save configuration
 save

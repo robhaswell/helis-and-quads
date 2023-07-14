@@ -203,7 +203,7 @@ serial 20 1 115200 57600 0 115200
 serial 0 64 115200 57600 0 115200
 serial 1 0 115200 57600 0 115200
 serial 2 0 115200 57600 0 115200
-serial 3 1 115200 57600 0 115200
+serial 3 131073 115200 57600 0 115200
 serial 4 0 115200 57600 0 115200
 serial 5 0 115200 57600 0 115200
 
@@ -668,10 +668,10 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 0
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
