@@ -9,6 +9,11 @@ aux 5 35 2 1700 2100 0 0
 # adjrange
 adjrange 0 0 3 900 2100 12 3 0 0
 
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
+
 # rxfail
 rxfail 6 s 1500
 
