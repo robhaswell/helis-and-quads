@@ -22,6 +22,9 @@ signature
 serial 1 64 115200 57600 0 115200
 serial 4 131073 115200 57600 0 115200
 
+# beacon
+beacon RX_SET
+
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
@@ -61,8 +64,8 @@ set dyn_notch_count = 2
 set dyn_notch_q = 450
 set dyn_notch_min_hz = 125
 set dyn_notch_max_hz = 650
-set gyro_lpf1_dyn_min_hz = 500
-set gyro_lpf1_dyn_max_hz = 1000
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
 set acc_calibration = 95,-70,-77,1
 set rc_smoothing_auto_factor = 25
@@ -109,7 +112,11 @@ set pilot_name = Mopatop
 profile 0
 
 # profile 0
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_dyn_expo = 7
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
 set iterm_relax_cutoff = 20
 set iterm_limit = 500
 set pidsum_limit_yaw = 1000
@@ -136,6 +143,7 @@ set simplified_pi_gain = 85
 set simplified_dmax_gain = 200
 set simplified_feedforward_gain = 105
 set simplified_pitch_pi_gain = 105
+set simplified_dterm_filter_multiplier = 120
 set tpa_rate = 70
 set tpa_breakpoint = 1250
 
