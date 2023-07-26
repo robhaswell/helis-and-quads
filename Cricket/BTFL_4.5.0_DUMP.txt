@@ -2,8 +2,8 @@
 # dump all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 24 2023 / 14:26:38 (050331149) MSP API: 1.46
-# config rev: c3208a0
+# Betaflight / AT32F435G (A435) 4.5.0 Jun 28 2023 / 12:07:50 (63ca42fa5) MSP API: 1.46
+# config rev: 7abe580
 
 # start the command batch
 batch start
@@ -13,7 +13,7 @@ manufacturer_id BEFH
 mcu_id 00a12a0a1dc580000dc0070f
 signature
 
-# name: 1S Toothpick
+# name: Cricket
 
 # resources
 resource BEEPER 1 B04
@@ -350,7 +350,7 @@ set gyro_hardware_lpf = NORMAL
 set gyro_lpf1_type = PT1
 set gyro_lpf1_static_hz = 0
 set gyro_lpf2_type = PT1
-set gyro_lpf2_static_hz = 600
+set gyro_lpf2_static_hz = 500
 set gyro_notch1_hz = 0
 set gyro_notch1_cutoff = 0
 set gyro_notch2_hz = 0
@@ -362,8 +362,8 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
-set dyn_notch_count = 1
-set dyn_notch_q = 300
+set dyn_notch_count = 2
+set dyn_notch_q = 450
 set dyn_notch_min_hz = 100
 set dyn_notch_max_hz = 600
 set gyro_lpf1_dyn_min_hz = 0
@@ -371,7 +371,7 @@ set gyro_lpf1_dyn_max_hz = 500
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
-set acc_lpf_hz = 25
+set acc_lpf_hz = 10
 set acc_trim_pitch = 0
 set acc_trim_roll = 0
 set acc_calibration = -50,-1,15,1
@@ -430,7 +430,7 @@ set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
 set motor_kv = 1960
-set dshot_idle_value = 1400
+set dshot_idle_value = 600
 set dshot_bidir = ON
 set dshot_edt = OFF
 set dshot_bitbang = AUTO
@@ -458,7 +458,7 @@ set bat_capacity = 0
 set vbat_max_cell_voltage = 436
 set vbat_full_cell_voltage = 410
 set vbat_min_cell_voltage = 290
-set vbat_warning_cell_voltage = 330
+set vbat_warning_cell_voltage = 350
 set vbat_hysteresis = 1
 set current_meter = ADC
 set battery_meter = ADC
@@ -511,7 +511,7 @@ set runaway_takeoff_prevention = ON
 set runaway_takeoff_deactivate_delay = 500
 set runaway_takeoff_deactivate_throttle_percent = 20
 set simplified_gyro_filter = ON
-set simplified_gyro_filter_multiplier = 120
+set simplified_gyro_filter_multiplier = 100
 set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set hott_alarm_int = 5
@@ -721,7 +721,7 @@ set stats_min_armed_time_s = -1
 set stats_total_flights = 0
 set stats_total_time_s = 0
 set stats_total_dist_m = 0
-set craft_name = 1S Toothpick
+set craft_name = Cricket
 set pilot_name = Mopatop
 set altitude_source = DEFAULT
 set altitude_prefer_baro = 100
@@ -736,13 +736,13 @@ profile 0
 
 # profile 0
 set profile_name = -
-set dterm_lpf1_dyn_min_hz = 90
-set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_dyn_min_hz = 75
+set dterm_lpf1_dyn_max_hz = 150
 set dterm_lpf1_dyn_expo = 5
 set dterm_lpf1_type = PT1
-set dterm_lpf1_static_hz = 90
+set dterm_lpf1_static_hz = 75
 set dterm_lpf2_type = PT1
-set dterm_lpf2_static_hz = 180
+set dterm_lpf2_static_hz = 150
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
 set vbat_sag_compensation = 0
@@ -764,7 +764,7 @@ set crash_recovery = OFF
 set iterm_rotation = OFF
 set iterm_relax = RP
 set iterm_relax_type = SETPOINT
-set iterm_relax_cutoff = 15
+set iterm_relax_cutoff = 20
 set iterm_windup = 85
 set iterm_limit = 400
 set pidsum_limit = 500
@@ -772,24 +772,24 @@ set pidsum_limit_yaw = 400
 set yaw_lowpass_hz = 100
 set throttle_boost = 5
 set throttle_boost_cutoff = 15
-set p_pitch = 116
-set i_pitch = 207
-set d_pitch = 124
-set f_pitch = 281
-set p_roll = 111
-set i_roll = 198
-set d_roll = 107
-set f_roll = 270
-set p_yaw = 111
-set i_yaw = 198
+set p_pitch = 77
+set i_pitch = 69
+set d_pitch = 74
+set f_pitch = 261
+set p_roll = 74
+set i_roll = 66
+set d_roll = 66
+set f_roll = 250
+set p_yaw = 74
+set i_yaw = 66
 set d_yaw = 0
-set f_yaw = 270
+set f_yaw = 250
 set angle_p_gain = 50
 set angle_feedforward = 50
 set angle_feedforward_smoothing_ms = 80
 set angle_limit = 60
 set angle_earth_ref = 100
-set horizon_level_strength = 75
+set horizon_level_strength = 50
 set horizon_limit_sticks = 75
 set horizon_limit_degrees = 135
 set horizon_ignore_sticks = OFF
@@ -800,11 +800,11 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 80
-set d_min_pitch = 91
+set d_min_roll = 66
+set d_min_pitch = 74
 set d_min_yaw = 0
 set d_max_gain = 37
-set d_max_advance = 20
+set d_max_advance = 0
 set motor_output_limit = 100
 set auto_profile_cell_count = 0
 set launch_control_mode = NORMAL
@@ -816,11 +816,11 @@ set thrust_linear = 0
 set transient_throttle_limit = 0
 set feedforward_transition = 0
 set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 45
-set feedforward_jitter_factor = 6
-set feedforward_boost = 15
-set feedforward_max_rate_limit = 90
-set dyn_idle_min_rpm = 200
+set feedforward_smooth_factor = 35
+set feedforward_jitter_factor = 4
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 95
+set dyn_idle_min_rpm = 50
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
@@ -828,19 +828,19 @@ set dyn_idle_max_increase = 150
 set dyn_idle_start_increase = 50
 set level_race_mode = OFF
 set simplified_pids_mode = RPY
-set simplified_master_multiplier = 150
-set simplified_i_gain = 100
-set simplified_d_gain = 180
-set simplified_pi_gain = 165
-set simplified_dmax_gain = 100
-set simplified_feedforward_gain = 150
+set simplified_master_multiplier = 110
+set simplified_i_gain = 50
+set simplified_d_gain = 200
+set simplified_pi_gain = 150
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 190
 set simplified_pitch_d_gain = 100
 set simplified_pitch_pi_gain = 100
 set simplified_dterm_filter = ON
-set simplified_dterm_filter_multiplier = 120
+set simplified_dterm_filter_multiplier = 100
 set tpa_mode = D
 set tpa_rate = 65
-set tpa_breakpoint = 1350
+set tpa_breakpoint = 1250
 
 profile 1
 

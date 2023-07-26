@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 24 2023 / 14:26:38 (050331149) MSP API: 1.46
-# config rev: c3208a0
+# Betaflight / AT32F435G (A435) 4.5.0 Jun 28 2023 / 12:07:50 (63ca42fa5) MSP API: 1.46
+# config rev: 7abe580
 
 # start the command batch
 batch start
@@ -15,7 +15,7 @@ manufacturer_id BEFH
 mcu_id 00a12a0a1dc580000dc0070f
 signature
 
-# name: 1S Toothpick
+# name: Cricket
 
 # feature
 feature TELEMETRY
@@ -40,20 +40,19 @@ adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
 set gyro_lpf1_static_hz = 0
-set gyro_lpf2_static_hz = 600
-set dyn_notch_count = 1
+set dyn_notch_count = 2
+set dyn_notch_q = 450
 set gyro_lpf1_dyn_min_hz = 0
+set acc_lpf_hz = 10
 set acc_calibration = -50,-1,15,1
-set dshot_idle_value = 1400
+set dshot_idle_value = 600
 set dshot_bidir = ON
 set motor_poles = 12
 set vbat_max_cell_voltage = 436
 set vbat_min_cell_voltage = 290
-set vbat_warning_cell_voltage = 330
 set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 2
-set simplified_gyro_filter_multiplier = 120
 set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
@@ -67,38 +66,41 @@ set osd_avg_cell_voltage_pos = 2445
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
-set craft_name = 1S Toothpick
+set craft_name = Cricket
 set pilot_name = Mopatop
 
 profile 0
 
 # profile 0
-set dterm_lpf1_dyn_min_hz = 90
-set dterm_lpf1_dyn_max_hz = 180
-set dterm_lpf1_static_hz = 90
-set dterm_lpf2_static_hz = 180
-set p_pitch = 116
-set i_pitch = 207
-set d_pitch = 124
-set f_pitch = 281
-set p_roll = 111
-set i_roll = 198
-set d_roll = 107
-set f_roll = 270
-set p_yaw = 111
-set i_yaw = 198
-set f_yaw = 270
-set d_min_roll = 80
-set d_min_pitch = 91
+set iterm_relax_cutoff = 20
+set p_pitch = 77
+set i_pitch = 69
+set d_pitch = 74
+set f_pitch = 261
+set p_roll = 74
+set i_roll = 66
+set d_roll = 66
+set f_roll = 250
+set p_yaw = 74
+set i_yaw = 66
+set f_yaw = 250
+set horizon_level_strength = 50
+set d_min_roll = 66
+set d_min_pitch = 74
+set d_max_advance = 0
 set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 45
-set feedforward_jitter_factor = 6
-set dyn_idle_min_rpm = 200
-set simplified_master_multiplier = 150
-set simplified_d_gain = 180
-set simplified_pi_gain = 165
-set simplified_feedforward_gain = 150
-set simplified_dterm_filter_multiplier = 120
+set feedforward_smooth_factor = 35
+set feedforward_jitter_factor = 4
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 95
+set dyn_idle_min_rpm = 50
+set simplified_master_multiplier = 110
+set simplified_i_gain = 50
+set simplified_d_gain = 200
+set simplified_pi_gain = 150
+set simplified_dmax_gain = 0
+set simplified_feedforward_gain = 190
+set tpa_breakpoint = 1250
 
 profile 1
 
