@@ -503,11 +503,11 @@ set yaw_motors_reversed = ON
 set mixer_type = LEGACY
 set crashflip_motor_percent = 0
 set crashflip_expo = 35
-set rpm_limit = OFF
+set rpm_limit = ON
 set rpm_limit_p = 25
 set rpm_limit_i = 10
 set rpm_limit_d = 8
-set rpm_limit_value = 22000
+set rpm_limit_value = 23000
 set 3d_deadband_low = 1406
 set 3d_deadband_high = 1514
 set 3d_neutral = 1460
@@ -774,11 +774,11 @@ profile 0
 
 # profile 0
 set profile_name = -
-set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_min_hz = 0
 set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_dyn_expo = 7
 set dterm_lpf1_type = PT1
-set dterm_lpf1_static_hz = 90
+set dterm_lpf1_static_hz = 0
 set dterm_lpf2_type = PT1
 set dterm_lpf2_static_hz = 180
 set dterm_notch_hz = 0
@@ -869,7 +869,7 @@ set simplified_dmax_gain = 200
 set simplified_feedforward_gain = 105
 set simplified_pitch_d_gain = 100
 set simplified_pitch_pi_gain = 105
-set simplified_dterm_filter = ON
+set simplified_dterm_filter = OFF
 set simplified_dterm_filter_multiplier = 120
 set tpa_mode = D
 set tpa_rate = 70
