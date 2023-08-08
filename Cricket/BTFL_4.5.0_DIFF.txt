@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jun 28 2023 / 12:07:50 (63ca42fa5) MSP API: 1.46
-# config rev: 7abe580
+# Betaflight / AT32F435G (A435) 4.5.0 Jul 26 2023 / 16:47:00 (0d96c7ec7) MSP API: 1.46
+# config rev: 379149a
 
 # start the command batch
 batch start
@@ -39,20 +39,25 @@ aux 5 35 2 1700 2100 0 0
 adjrange 0 0 3 900 2100 12 3 0 0
 
 # master
-set gyro_lpf1_static_hz = 0
+set gyro_lpf1_static_hz = 300
+set gyro_lpf2_static_hz = 600
 set dyn_notch_count = 2
-set dyn_notch_q = 450
-set gyro_lpf1_dyn_min_hz = 0
+set dyn_notch_min_hz = 125
+set dyn_notch_max_hz = 700
+set gyro_lpf1_dyn_min_hz = 300
+set gyro_lpf1_dyn_max_hz = 600
 set acc_lpf_hz = 10
 set acc_calibration = -50,-1,15,1
-set dshot_idle_value = 600
+set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set vbat_max_cell_voltage = 436
 set vbat_min_cell_voltage = 290
 set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 2
+set simplified_gyro_filter_multiplier = 120
 set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
@@ -66,41 +71,46 @@ set osd_avg_cell_voltage_pos = 2445
 set osd_displayport_device = MSP
 set debug_mode = GYRO_SCALED
 set vcd_video_system = HD
+set rpm_filter_harmonics = 2
 set craft_name = Cricket
 set pilot_name = Mopatop
 
 profile 0
 
 # profile 0
-set iterm_relax_cutoff = 20
-set p_pitch = 77
-set i_pitch = 69
-set d_pitch = 74
-set f_pitch = 261
-set p_roll = 74
-set i_roll = 66
-set d_roll = 66
-set f_roll = 250
-set p_yaw = 74
-set i_yaw = 66
-set f_yaw = 250
+set dterm_lpf1_dyn_min_hz = 90
+set dterm_lpf1_dyn_max_hz = 180
+set dterm_lpf1_static_hz = 90
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
+set anti_gravity_gain = 90
+set iterm_relax_cutoff = 5
+set pidsum_limit = 1000
+set pidsum_limit_yaw = 1000
+set yaw_lowpass_hz = 0
+set p_pitch = 75
+set i_pitch = 134
+set d_pitch = 76
+set f_pitch = 199
+set p_roll = 71
+set i_roll = 127
+set d_roll = 67
+set f_roll = 191
+set p_yaw = 71
+set i_yaw = 127
+set f_yaw = 191
 set horizon_level_strength = 50
-set d_min_roll = 66
-set d_min_pitch = 74
-set d_max_advance = 0
+set d_min_roll = 67
+set d_min_pitch = 76
+set thrust_linear = 20
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 35
 set feedforward_jitter_factor = 4
 set feedforward_boost = 18
-set feedforward_max_rate_limit = 95
-set dyn_idle_min_rpm = 50
-set simplified_master_multiplier = 110
-set simplified_i_gain = 50
-set simplified_d_gain = 200
-set simplified_pi_gain = 150
+set simplified_master_multiplier = 160
+set simplified_d_gain = 140
 set simplified_dmax_gain = 0
-set simplified_feedforward_gain = 190
-set tpa_breakpoint = 1250
+set simplified_dterm_filter_multiplier = 120
 
 profile 1
 
