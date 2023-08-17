@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jul 26 2023 / 16:47:00 (0d96c7ec7) MSP API: 1.46
-# config rev: 379149a
+# Betaflight / AT32F435G (A435) 4.5.0 Aug 17 2023 / 09:53:44 (5f2d8da3b) MSP API: 1.46
+# config rev: 61adea6
 
 # start the command batch
 batch start
@@ -16,6 +16,10 @@ mcu_id 00a12a0a1dc580000dc0070f
 signature
 
 # name: Cricket
+
+# dma
+dma ADC 1 11
+# ADC 1: DMA2 Channel 0 Channel 5
 
 # feature
 feature TELEMETRY
@@ -48,12 +52,13 @@ set gyro_lpf1_dyn_min_hz = 300
 set gyro_lpf1_dyn_max_hz = 600
 set acc_lpf_hz = 10
 set acc_calibration = -50,-1,15,1
+set adc_device = 1
 set blackbox_sample_rate = 1/2
 set dshot_bidir = ON
-set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set vbat_max_cell_voltage = 436
 set vbat_min_cell_voltage = 290
+set vbat_scale = 104
 set yaw_motors_reversed = ON
 set small_angle = 180
 set pid_process_denom = 2
@@ -82,7 +87,6 @@ set dterm_lpf1_dyn_min_hz = 90
 set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_static_hz = 90
 set dterm_lpf2_static_hz = 180
-set vbat_sag_compensation = 100
 set anti_gravity_gain = 90
 set iterm_relax_cutoff = 5
 set pidsum_limit = 1000
@@ -107,6 +111,7 @@ set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 35
 set feedforward_jitter_factor = 4
 set feedforward_boost = 18
+set dyn_idle_min_rpm = 200
 set simplified_master_multiplier = 160
 set simplified_d_gain = 140
 set simplified_dmax_gain = 0

@@ -2,8 +2,8 @@
 # dump all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jul 26 2023 / 16:47:00 (0d96c7ec7) MSP API: 1.46
-# config rev: 379149a
+# Betaflight / AT32F435G (A435) 4.5.0 Aug 17 2023 / 09:53:44 (5f2d8da3b) MSP API: 1.46
+# config rev: 61adea6
 
 # start the command batch
 batch start
@@ -130,7 +130,8 @@ dma SPI_RX 1 NONE
 dma SPI_RX 2 NONE
 dma SPI_RX 3 NONE
 dma SPI_RX 4 NONE
-dma ADC 1 NONE
+dma ADC 1 11
+# ADC 1: DMA2 Channel 0 Channel 5
 dma ADC 2 11
 # ADC 2: DMA2 Channel 0 Channel 36
 dma ADC 3 NONE
@@ -408,7 +409,7 @@ set rx_min_usec = 885
 set rx_max_usec = 2115
 set serialrx_halfduplex = OFF
 set msp_override_channels_mask = 0
-set adc_device = 2
+set adc_device = 1
 set adc_vrefint_calibration = 0
 set adc_tempsensor_calibration30 = 0
 set adc_tempsensor_calibration110 = 0
@@ -439,7 +440,7 @@ set dshot_bitbang = AUTO
 set dshot_bitbang_timer = AUTO
 set dshot_telemetry_start_margin = 10
 set use_unsynced_pwm = OFF
-set motor_pwm_protocol = DSHOT300
+set motor_pwm_protocol = DSHOT600
 set motor_pwm_rate = 480
 set motor_pwm_inversion = OFF
 set motor_poles = 12
@@ -476,7 +477,7 @@ set vbat_sag_lpf_period = 2
 set ibat_lpf_period = 10
 set vbat_duration_for_warning = 0
 set vbat_duration_for_critical = 0
-set vbat_scale = 110
+set vbat_scale = 104
 set vbat_divider = 10
 set vbat_multiplier = 1
 set ibata_scale = 400
@@ -679,7 +680,7 @@ set max7456_spi_bus = 3
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
-set displayport_msp_fonts = 0,0,0,0
+set displayport_msp_fonts = 0,1,2,3
 set displayport_msp_use_device_blink = OFF
 set displayport_max7456_col_adjust = 0
 set displayport_max7456_row_adjust = 0
@@ -748,7 +749,7 @@ set dterm_lpf2_type = PT1
 set dterm_lpf2_static_hz = 180
 set dterm_notch_hz = 0
 set dterm_notch_cutoff = 0
-set vbat_sag_compensation = 100
+set vbat_sag_compensation = 0
 set pid_at_min_throttle = ON
 set anti_gravity_gain = 90
 set anti_gravity_cutoff_hz = 5
@@ -823,7 +824,7 @@ set feedforward_smooth_factor = 35
 set feedforward_jitter_factor = 4
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 90
-set dyn_idle_min_rpm = 0
+set dyn_idle_min_rpm = 200
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
