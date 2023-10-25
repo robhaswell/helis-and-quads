@@ -3,7 +3,7 @@ header:
    name: "Freestyle"
    modelId: 
       0:
-         val: 2
+         val: 1
       1:
          val: 1
 timers: 
@@ -390,9 +390,9 @@ moduleData:
          crsf: 
             telemetryBaudrate: 0
 trainerData: 
-   mode: OFF
+   mode: SLAVE
    channelsStart: 0
-   channelsCount: -8
+   channelsCount: -4
    frameLength: 0
    delay: 0
    pulsePol: 0
@@ -599,82 +599,6 @@ telemetrySensors:
             offset: 0
    10:
       id1: 
-         id: 8
-      id2: 
-         instance: 0
-      label: "RxBt"
-      subId: 0
-      type: TYPE_CUSTOM
-      unit: 1
-      prec: 1
-      autoOffset: 0
-      filter: 0
-      logs: 1
-      persistent: 0
-      onlyPositive: 0
-      cfg: 
-         custom: 
-            ratio: 0
-            offset: 0
-   11:
-      id1: 
-         id: 8
-      id2: 
-         instance: 1
-      label: "Curr"
-      subId: 0
-      type: TYPE_CUSTOM
-      unit: 2
-      prec: 1
-      autoOffset: 0
-      filter: 0
-      logs: 1
-      persistent: 0
-      onlyPositive: 0
-      cfg: 
-         custom: 
-            ratio: 0
-            offset: 0
-   12:
-      id1: 
-         id: 8
-      id2: 
-         instance: 2
-      label: "Capa"
-      subId: 0
-      type: TYPE_CUSTOM
-      unit: 14
-      prec: 0
-      autoOffset: 0
-      filter: 0
-      logs: 1
-      persistent: 0
-      onlyPositive: 0
-      cfg: 
-         custom: 
-            ratio: 0
-            offset: 0
-   13:
-      id1: 
-         id: 8
-      id2: 
-         instance: 3
-      label: "Bat%"
-      subId: 0
-      type: TYPE_CUSTOM
-      unit: 13
-      prec: 0
-      autoOffset: 0
-      filter: 0
-      logs: 1
-      persistent: 0
-      onlyPositive: 0
-      cfg: 
-         custom: 
-            ratio: 0
-            offset: 0
-   14:
-      id1: 
          id: 30
       id2: 
          instance: 0
@@ -692,7 +616,7 @@ telemetrySensors:
          custom: 
             ratio: 0
             offset: 0
-   15:
+   11:
       id1: 
          id: 30
       id2: 
@@ -711,7 +635,7 @@ telemetrySensors:
          custom: 
             ratio: 0
             offset: 0
-   16:
+   12:
       id1: 
          id: 30
       id2: 
@@ -730,7 +654,7 @@ telemetrySensors:
          custom: 
             ratio: 0
             offset: 0
-   17:
+   13:
       id1: 
          id: 33
       id2: 
@@ -747,6 +671,82 @@ telemetrySensors:
       onlyPositive: 0
       cfg: 
          param: 0
+   14:
+      id1: 
+         id: 8
+      id2: 
+         instance: 0
+      label: "RxBt"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 1
+      prec: 1
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   15:
+      id1: 
+         id: 8
+      id2: 
+         instance: 1
+      label: "Curr"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 2
+      prec: 1
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   16:
+      id1: 
+         id: 8
+      id2: 
+         instance: 2
+      label: "Capa"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 14
+      prec: 0
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
+   17:
+      id1: 
+         id: 8
+      id2: 
+         instance: 3
+      label: "Bat%"
+      subId: 0
+      type: TYPE_CUSTOM
+      unit: 13
+      prec: 0
+      autoOffset: 0
+      filter: 0
+      logs: 1
+      persistent: 0
+      onlyPositive: 0
+      cfg: 
+         custom: 
+            ratio: 0
+            offset: 0
 screens: 
    0:
       type: VALUES
@@ -756,19 +756,9 @@ screens:
                sources: 
                   0:
                      val: tele(6)
-                  1:
-                     val: tele(10)
             1:
                sources: 
                   0:
-                     val: tele(17)
-                  1:
-                     val: tele(16)
-            2:
-               sources: 
-                  0:
-                     val: tele(-16)
-                  1:
-                     val: tele(+16)
+                     val: tele(14)
 view: 0
 modelRegistrationID: " 38CTVP-"

@@ -2,8 +2,6 @@ semver: 2.8.0
 header: 
    name: "Racing"
    modelId: 
-      0:
-         val: 1
       1:
          val: 1
 timers: 
@@ -132,6 +130,21 @@ mixData:
    speedDown: 0
    name: "Arm"
  -
+   weight: 100
+   destCh: 4
+   srcRaw: SF
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: REPL
+   offset: 0
+   swtch: "SF2"
+   flightModes: 000000000
+   delayUp: 1
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
    weight: -100
    destCh: 4
    srcRaw: MAX
@@ -147,9 +160,9 @@ mixData:
    speedDown: 0
    name: "Safe"
  -
-   weight: 100
+   weight: -100
    destCh: 5
-   srcRaw: SD
+   srcRaw: MAX
    carryTrim: 0
    mixWarn: 0
    mltpx: REPL
@@ -161,36 +174,6 @@ mixData:
    speedUp: 0
    speedDown: 0
    name: "Mode"
- -
-   weight: -100
-   destCh: 5
-   srcRaw: MAX
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: REPL
-   offset: 0
-   swtch: "!6P20"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "Race"
- -
-   weight: 100
-   destCh: 5
-   srcRaw: MAX
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: REPL
-   offset: 0
-   swtch: "SF2"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "Rescue"
  -
    weight: 100
    destCh: 6
@@ -208,8 +191,23 @@ mixData:
    name: "Util"
  -
    weight: 100
+   destCh: 6
+   srcRaw: MAX
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: REPL
+   offset: 0
+   swtch: "SF2"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: ""
+ -
+   weight: -100
    destCh: 7
-   srcRaw: SC
+   srcRaw: MAX
    carryTrim: 0
    mixWarn: 0
    mltpx: REPL
@@ -221,36 +219,6 @@ mixData:
    speedUp: 0
    speedDown: 0
    name: "Rates"
- -
-   weight: -100
-   destCh: 7
-   srcRaw: MAX
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: REPL
-   offset: 0
-   swtch: "6P21"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "Race"
- -
-   weight: 100
-   destCh: 7
-   srcRaw: MAX
-   carryTrim: 0
-   mixWarn: 0
-   mltpx: REPL
-   offset: 0
-   swtch: "6P22"
-   flightModes: 000000000
-   delayUp: 0
-   delayDown: 0
-   speedUp: 0
-   speedDown: 0
-   name: "Texas"
  -
    weight: 100
    destCh: 8
@@ -266,6 +234,21 @@ mixData:
    speedUp: 0
    speedDown: 0
    name: "VTX"
+ -
+   weight: 100
+   destCh: 9
+   srcRaw: SF
+   carryTrim: 0
+   mixWarn: 0
+   mltpx: REPL
+   offset: 0
+   swtch: "NONE"
+   flightModes: 000000000
+   delayUp: 0
+   delayDown: 0
+   speedUp: 0
+   speedDown: 0
+   name: "Turtle"
 expoData: 
  -
    mode: 3
@@ -386,7 +369,7 @@ flightModeData:
          8:
             val: 0
 thrTraceSrc: Thr
-switchWarningState: BuCuDuEuFu
+switchWarningState: Fu
 rssiSource: none
 rfAlarms: 
    warning: 45

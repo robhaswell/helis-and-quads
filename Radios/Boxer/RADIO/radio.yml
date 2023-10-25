@@ -1,4 +1,4 @@
-checksum: 7369
+checksum: 29690
 manuallyEdited: 0
 semver: 2.8.0
 board: boxer
@@ -31,7 +31,7 @@ calib:
       mid: 1285
       spanNeg: 5645
       spanPos: 10271
-currModel: 1
+currModel: 0
 contrast: 18
 vBatWarn: 66
 txVoltageCalibration: -6
@@ -84,7 +84,7 @@ speakerVolume: 23
 vBatMin: 64
 vBatMax: 84
 backlightBright: 0
-globalTimer: 89364
+globalTimer: 366796
 bluetoothBaudrate: 0
 bluetoothMode: OFF
 countryCode: 0
