@@ -71,6 +71,7 @@ set acc_calibration = -45,32,-8,1
 set baro_hardware = NONE
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
+set blackbox_sample_rate = 1/2
 set motor_kv = 2400
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
@@ -139,7 +140,6 @@ set d_roll = 35
 set f_roll = 125
 set d_min_roll = 21
 set d_min_pitch = 23
-set auto_profile_cell_count = 4
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
@@ -158,53 +158,13 @@ set tpa_rate = 70
 set tpa_breakpoint = 1250
 
 profile 1
-
-# profile 1
-set dterm_lpf1_dyn_min_hz = 0
-set dterm_lpf1_dyn_max_hz = 180
-set dterm_lpf1_dyn_expo = 7
-set dterm_lpf1_static_hz = 0
-set vbat_sag_compensation = 100
-set crash_recovery = ON
-set iterm_relax_cutoff = 20
-set iterm_limit = 500
-set pidsum_limit_yaw = 1000
-set throttle_boost = 2
-set p_pitch = 41
-set i_pitch = 89
-set d_pitch = 40
-set f_pitch = 137
-set p_roll = 38
-set i_roll = 81
-set d_roll = 35
-set f_roll = 125
-set d_min_roll = 21
-set d_min_pitch = 23
-set motor_output_limit = 66
-set auto_profile_cell_count = 6
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
-set feedforward_max_rate_limit = 100
-set simplified_pids_mode = RP
-set simplified_i_gain = 120
-set simplified_d_gain = 70
-set simplified_pi_gain = 85
-set simplified_dmax_gain = 200
-set simplified_feedforward_gain = 105
-set simplified_pitch_pi_gain = 105
-set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
-set tpa_rate = 70
-set tpa_breakpoint = 1250
 
 profile 2
 
 profile 3
 
 # restore original profile selection
-profile 1
+profile 0
 
 rateprofile 0
 
@@ -218,6 +178,7 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
+set throttle_limit_percent = 80
 
 rateprofile 1
 
