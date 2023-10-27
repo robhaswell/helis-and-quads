@@ -39,12 +39,12 @@ adjrange 0 0 3 900 2100 12 3 0 0
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
-vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
@@ -76,7 +76,6 @@ set motor_output_reordering = 1,0,3,2,4,5,6,7
 set align_board_yaw = 180
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
-set rpm_limit = ON
 set rpm_limit_value = 23000
 set small_angle = 180
 set simplified_gyro_filter = OFF
@@ -99,8 +98,6 @@ set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
-set osd_canvas_width = 50
-set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 4
@@ -173,6 +170,7 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
+set throttle_limit_type = SCALE
 set throttle_limit_percent = 80
 
 rateprofile 1
