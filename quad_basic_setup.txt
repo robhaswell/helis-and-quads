@@ -23,7 +23,7 @@ rxfail 6 s 1500
 # master
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
-set motor_kv = 2400
+set motor_kv = 1900
 set dshot_bidir = ON
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON

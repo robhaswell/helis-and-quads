@@ -321,9 +321,9 @@ vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
 
 # vtx
-vtx 0 0 0 0 0 900 900
-vtx 1 0 0 0 0 900 900
-vtx 2 0 0 0 0 900 900
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 vtx 3 0 0 0 0 900 900
 vtx 4 0 0 0 0 900 900
 vtx 5 0 0 0 0 900 900
@@ -393,8 +393,8 @@ set rssi_invert = OFF
 set rssi_src_frame_lpf_period = 30
 set rssi_smoothing = 125
 set rc_smoothing = ON
-set rc_smoothing_auto_factor = 30
-set rc_smoothing_auto_factor_throttle = 30
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
 set rc_smoothing_setpoint_cutoff = 0
 set rc_smoothing_feedforward_cutoff = 0
 set rc_smoothing_throttle_cutoff = 0
@@ -434,7 +434,7 @@ set blackbox_high_resolution = OFF
 set min_throttle = 1070
 set max_throttle = 2000
 set min_command = 1000
-set motor_kv = 1960
+set motor_kv = 19000
 set dshot_idle_value = 600
 set dshot_burst = OFF
 set dshot_bidir = ON
@@ -576,9 +576,9 @@ set osd_remaining_time_estimate_pos = 234
 set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 65
-set osd_throttle_pos = 442
+set osd_throttle_pos = 2614
 set osd_vtx_channel_pos = 3112
-set osd_crosshairs_pos = 2327
+set osd_crosshairs_pos = 280
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 417
@@ -639,7 +639,7 @@ set osd_sys_lq_pos = 234
 set osd_sys_goggle_dvr_pos = 234
 set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
-set osd_sys_vtx_temp_pos = 234
+set osd_sys_vtx_temp_pos = 2114
 set osd_sys_fan_speed_pos = 234
 set osd_stat_bitmask = 5092
 set osd_profile = 1
@@ -662,7 +662,7 @@ set osd_canvas_height = 20
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
-set debug_mode = NONE
+set debug_mode = GYRO_SCALED
 set rate_6pos_switch = OFF
 set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
