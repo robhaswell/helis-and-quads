@@ -199,6 +199,7 @@ feature -AIRMODE
 feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
+feature OSD
 feature AIRMODE
 feature RX_SPI
 feature ANTI_GRAVITY
@@ -657,8 +658,8 @@ set osd_menu_background = TRANSPARENT
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 53
-set osd_canvas_height = 20
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
@@ -668,11 +669,11 @@ set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 1
 set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD

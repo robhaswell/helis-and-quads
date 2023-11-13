@@ -17,6 +17,9 @@ signature
 
 # name: M6 HDZero
 
+# feature
+feature OSD
+
 # serial
 serial 1 131073 115200 57600 0 115200
 
@@ -99,11 +102,13 @@ set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 1
 set vtx_power = 2
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vcd_video_system = HD
 set gyro_1_sensor_align = CW0
 set gyro_1_align_yaw = 0
