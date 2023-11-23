@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jul 14 2023 / 15:02:10 (1485438c4) MSP API: 1.46
-# config rev: 9c4dd3b
+# Betaflight / STM32F7X2 (S7X2) 4.5.0.RPM_KAACK_V1 Nov 23 2023 / 16:35:34 (55a297db9) MSP API: 1.46
+# config rev: 0546d25
 
 # start the command batch
 batch start
@@ -10,20 +10,56 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name NEUTRONRCF435
-manufacturer_id NERC
-mcu_id 10153a22054740000d94870c
+board_name CLRACINGF7
+manufacturer_id CLRA
+mcu_id 001500184353500120383248
 signature
 
 # name: OpenRacer Orange
 
 # feature
-feature TELEMETRY
-feature OSD
+feature LED_STRIP
 
 # serial
-serial 0 131073 115200 57600 0 115200
 serial 1 64 115200 57600 0 115200
+serial 4 131073 115200 57600 0 115200
+
+# beacon
+beacon RX_SET
+
+# led
+led 0 0,0::CY:0
+led 1 1,0::CY:0
+led 2 2,0::CY:0
+led 3 3,0::CY:0
+led 4 4,0::CY:0
+led 5 5,0::CY:0
+led 6 6,0::CY:0
+led 7 7,0::CY:0
+led 8 8,0::CY:0
+led 9 9,0::CY:0
+led 10 10,0::CY:0
+led 11 11,0::CY:0
+led 12 12,0::CY:0
+led 13 13,0::CY:0
+led 14 14,0::CY:0
+led 15 15,0::CY:0
+led 16 0,1::CY:0
+led 17 1,1::CY:0
+led 18 2,1::CY:0
+led 19 3,1::CY:0
+led 20 4,1::CY:0
+led 21 5,1::CY:0
+led 22 6,1::CY:0
+led 23 7,1::CY:0
+led 24 8,1::CY:0
+led 25 9,1::CY:0
+led 26 10,1::CY:0
+led 27 11,1::CY:0
+led 28 12,1::CY:0
+led 29 13,1::CY:0
+led 30 14,1::CY:0
+led 31 15,1::CY:0
 
 # aux
 aux 0 0 0 1700 2100 0 0
@@ -39,21 +75,27 @@ adjrange 0 0 3 900 2100 12 3 0 0
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
-vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
+
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
 
 # rxfail
 rxfail 6 s 1500
 
 # master
 set gyro_lpf1_static_hz = 0
+set gyro_to_use = FIRST
 set dyn_notch_count = 2
 set dyn_notch_q = 450
 set dyn_notch_min_hz = 125
@@ -61,18 +103,21 @@ set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
 set acc_lpf_hz = 10
-set acc_calibration = -1,-97,34,1
+set acc_calibration = 95,-70,-77,1
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
-set motor_kv = 2400
+set motor_kv = 1900
 set dshot_bidir = ON
-set motor_output_reordering = 2,3,0,1,4,5,6,7
+set motor_output_reordering = 1,0,3,2,4,5,6,7
+set align_board_yaw = 180
 set vbat_min_cell_voltage = 340
-set vbat_scale = 111
 set yaw_motors_reversed = ON
+set rpm_limit_value = 23000
 set small_angle = 180
 set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
+set ledstrip_rainbow_delta = 10
+set ledstrip_rainbow_freq = 200
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2082
@@ -95,20 +140,24 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 2
+set vtx_channel = 1
 set vtx_power = 1
-set vtx_freq = 5695
+set vtx_freq = 5658
 set vcd_video_system = HD
-set gyro_1_sensor_align = CW180
-set gyro_1_align_yaw = 1800
 set rpm_filter_fade_range_hz = 100
+set stats_min_armed_time_s = -1
 set craft_name = OpenRacer Orange
 set pilot_name = Mopatop
 
 profile 0
 
 # profile 0
+set dterm_lpf1_dyn_min_hz = 0
+set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_dyn_expo = 7
+set dterm_lpf1_static_hz = 0
+set dterm_lpf2_static_hz = 180
+set vbat_sag_compensation = 100
 set iterm_relax_cutoff = 20
 set iterm_limit = 500
 set pidsum_limit_yaw = 1000
@@ -121,7 +170,6 @@ set p_roll = 38
 set i_roll = 81
 set d_roll = 35
 set f_roll = 125
-set horizon_level_strength = 50
 set d_min_roll = 21
 set d_min_pitch = 23
 set feedforward_averaging = 2_POINT
@@ -129,6 +177,7 @@ set feedforward_smooth_factor = 87
 set feedforward_jitter_factor = 2
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 100
+set dyn_idle_min_rpm = 20
 set simplified_pids_mode = RP
 set simplified_i_gain = 120
 set simplified_d_gain = 70
@@ -136,6 +185,8 @@ set simplified_pi_gain = 85
 set simplified_dmax_gain = 200
 set simplified_feedforward_gain = 105
 set simplified_pitch_pi_gain = 105
+set simplified_dterm_filter = OFF
+set simplified_dterm_filter_multiplier = 120
 set tpa_rate = 70
 set tpa_breakpoint = 1250
 
@@ -160,6 +211,8 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 80
 
 rateprofile 1
 
