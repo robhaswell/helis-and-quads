@@ -1,4 +1,3 @@
-
 # dump all
 
 # version
@@ -12,7 +11,7 @@ batch start
 board_name AIKONF4
 manufacturer_id AIKO
 mcu_id 0034005a324d501820303256
-signature
+signature 
 
 # name: OpenRacer Blue
 
@@ -506,7 +505,7 @@ set yaw_motors_reversed = ON
 set mixer_type = LEGACY
 set crashflip_motor_percent = 0
 set crashflip_expo = 35
-set rpm_limit = ON
+set rpm_limit = OFF
 set rpm_limit_p = 25
 set rpm_limit_i = 10
 set rpm_limit_d = 8
@@ -676,8 +675,8 @@ set osd_menu_background = BLACK
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 53
-set osd_canvas_height = 20
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
@@ -687,11 +686,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 4
+set vtx_channel = 1
 set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5769
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
@@ -858,7 +857,7 @@ set feedforward_smooth_factor = 65
 set feedforward_jitter_factor = 3
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 100
-set dyn_idle_min_rpm = 0
+set dyn_idle_min_rpm = 20
 set dyn_idle_p_gain = 50
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
@@ -1214,8 +1213,8 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
-set throttle_limit_type = OFF
-set throttle_limit_percent = 80
+set throttle_limit_type = SCALE
+set throttle_limit_percent = 58
 set roll_rate_limit = 1998
 set pitch_rate_limit = 1998
 set yaw_rate_limit = 1998
