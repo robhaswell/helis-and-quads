@@ -1,4 +1,3 @@
-
 # dump all
 
 # version
@@ -11,7 +10,7 @@ batch start
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
 mcu_id 002800325047500520333539
-signature
+signature 
 
 # name: M6 HDZero
 
@@ -579,7 +578,7 @@ set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 65
 set osd_throttle_pos = 2614
 set osd_vtx_channel_pos = 3112
-set osd_crosshairs_pos = 280
+set osd_crosshairs_pos = 2328
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 417

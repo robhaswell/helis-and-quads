@@ -13,7 +13,7 @@ defaults nosave
 board_name CRAZYBEEF4SX1280
 manufacturer_id HAMO
 mcu_id 002800325047500520333539
-signature
+signature 
 
 # name: M6 HDZero
 
@@ -91,7 +91,7 @@ set osd_flymode_pos = 374
 set osd_g_force_pos = 65
 set osd_throttle_pos = 2614
 set osd_vtx_channel_pos = 3112
-set osd_crosshairs_pos = 280
+set osd_crosshairs_pos = 2328
 set osd_current_pos = 417
 set osd_mah_drawn_pos = 448
 set osd_craft_name_pos = 393
