@@ -1039,10 +1039,10 @@ osd_layout 3 146 20 3 H
 # Programming: logic
 logic 0 1 -1 2 2 9 0 600 0
 logic 1 1 0 22 0 0 0 0 0
-logic 2 1 -1 4 1 6 0 0 0
-logic 3 1 -1 6 1 6 0 0 0
-logic 4 1 2 25 0 4 0 0 0
-logic 5 1 3 25 0 0 0 0 0
+logic 2 0 -1 4 1 6 0 0 0
+logic 3 0 -1 6 1 6 0 0 0
+logic 4 0 2 25 0 4 0 0 0
+logic 5 0 3 25 0 0 0 0 0
 logic 6 0 -1 0 0 0 0 0 0
 logic 7 0 -1 0 0 0 0 0 0
 logic 8 0 -1 0 0 0 0 0 0
@@ -1140,7 +1140,7 @@ set init_gyro_cal = ON
 set gyro_zero_x = -2
 set gyro_zero_y = 8
 set gyro_zero_z = 3
-set ins_gravity_cmss =  978.426
+set ins_gravity_cmss =  978.380
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1222,7 +1222,7 @@ set align_board_pitch = 0
 set align_board_yaw = 0
 set vbat_meter_type = ADC
 set vbat_scale = 2100
-set current_meter_scale = 150
+set current_meter_scale = 250
 set current_meter_offset = 0
 set current_meter_type = ADC
 set bat_voltage_src = RAW
@@ -1530,9 +1530,9 @@ set vtx_smartaudio_early_akk_workaround = ON
 set vtx_smartaudio_alternate_softserial_method = ON
 set vtx_softserial_shortstop = OFF
 set vtx_smartaudio_stopbits = 2
-set vtx_band = 1
+set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 4
+set vtx_power = 3
 set vtx_low_power_disarm = OFF
 set vtx_pit_mode_chan = 1
 set vtx_max_power_override = 0
@@ -1977,12 +1977,12 @@ set throttle_idle =  5.000
 set turtle_mode_power_factor = 55
 set failsafe_throttle = 1000
 set nav_mc_hover_thr = 1300
-set nav_fw_cruise_thr = 1400
+set nav_fw_cruise_thr = 1600
 set nav_fw_min_thr = 1200
-set nav_fw_max_thr = 1700
+set nav_fw_max_thr = 2000
 set nav_fw_pitch2thr = 10
 set nav_fw_launch_thr = 2000
-set nav_fw_launch_idle_thr = 1500
+set nav_fw_launch_idle_thr = 1200
 set limit_cont_current = 0
 set limit_burst_current = 0
 set limit_burst_current_time = 0
@@ -2006,16 +2006,16 @@ set battery_capacity_critical = 0
 set battery_capacity_unit = MAH
 set controlrate_profile = 0
 set throttle_scale =  1.000
-set throttle_idle =  5.000
+set throttle_idle =  15.000
 set turtle_mode_power_factor = 55
 set failsafe_throttle = 1000
 set nav_mc_hover_thr = 1300
-set nav_fw_cruise_thr = 1600
+set nav_fw_cruise_thr = 1400
 set nav_fw_min_thr = 1200
-set nav_fw_max_thr = 2000
+set nav_fw_max_thr = 1700
 set nav_fw_pitch2thr = 10
-set nav_fw_launch_thr = 2000
-set nav_fw_launch_idle_thr = 1200
+set nav_fw_launch_thr = 1700
+set nav_fw_launch_idle_thr = 1000
 set limit_cont_current = 0
 set limit_burst_current = 0
 set limit_burst_current_time = 0
@@ -2061,7 +2061,7 @@ set limit_burst_power_falldown_time = 0
 # restore original profile selection
 mixer_profile 1
 profile 1
-battery_profile 2
+battery_profile 1
 
 # save configuration
 save
