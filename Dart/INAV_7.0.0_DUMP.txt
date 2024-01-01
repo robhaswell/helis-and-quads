@@ -314,14 +314,14 @@ rxrange 2 1000 2000
 rxrange 3 1000 2000
 
 # temp_sensor
-temp_sensor 0 0 0 0 0 0 
-temp_sensor 1 0 0 0 0 0 
-temp_sensor 2 0 0 0 0 0 
-temp_sensor 3 0 0 0 0 0 
-temp_sensor 4 0 0 0 0 0 
-temp_sensor 5 0 0 0 0 0 
-temp_sensor 6 0 0 0 0 0 
-temp_sensor 7 0 0 0 0 0 
+temp_sensor 0 0 0 0 0 0
+temp_sensor 1 0 0 0 0 0
+temp_sensor 2 0 0 0 0 0
+temp_sensor 3 0 0 0 0 0
+temp_sensor 4 0 0 0 0 0
+temp_sensor 5 0 0 0 0 0
+temp_sensor 6 0 0 0 0 0
+temp_sensor 7 0 0 0 0 0
 
 # Mission Control Waypoints [wp]
 #wp 0 invalid
@@ -1039,10 +1039,10 @@ osd_layout 3 146 20 3 H
 # Programming: logic
 logic 0 1 -1 2 2 9 0 600 0
 logic 1 1 0 22 0 0 0 0 0
-logic 2 0 -1 0 0 0 0 0 0
-logic 3 0 -1 0 0 0 0 0 0
-logic 4 0 -1 0 0 0 0 0 0
-logic 5 0 -1 0 0 0 0 0 0
+logic 2 1 -1 4 1 6 0 0 0
+logic 3 1 -1 6 1 6 0 0 0
+logic 4 1 2 25 0 4 0 0 0
+logic 5 1 3 25 0 0 0 0 0
 logic 6 0 -1 0 0 0 0 0 0
 logic 7 0 -1 0 0 0 0 0 0
 logic 8 0 -1 0 0 0 0 0 0
@@ -1137,10 +1137,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = 0
-set gyro_zero_y = 9
+set gyro_zero_x = -2
+set gyro_zero_y = 8
 set gyro_zero_z = 3
-set ins_gravity_cmss =  977.493
+set ins_gravity_cmss =  978.426
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1405,7 +1405,7 @@ set telemetry_halfduplex = ON
 set smartport_fuel_unit = MAH
 set ibus_telemetry_type = 0
 set ltm_update_rate = NORMAL
-set sim_ground_station_number = 
+set sim_ground_station_number =
 set sim_pin = 0000
 set sim_transmit_interval = 60
 set sim_transmit_flags = 2
@@ -1516,7 +1516,7 @@ set i2c_speed = 400KHZ
 set debug_mode = NONE
 set throttle_tilt_comp_str = 0
 set name = DART
-set pilot_name = 
+set pilot_name =
 set mode_range_logic_operator = OR
 set stats = OFF
 set stats_total_time = 0
@@ -1532,7 +1532,7 @@ set vtx_softserial_shortstop = OFF
 set vtx_smartaudio_stopbits = 2
 set vtx_band = 1
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 4
 set vtx_low_power_disarm = OFF
 set vtx_pit_mode_chan = 1
 set vtx_max_power_override = 0
