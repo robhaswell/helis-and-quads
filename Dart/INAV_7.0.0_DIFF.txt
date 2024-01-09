@@ -148,8 +148,6 @@ set osd_video_system = HDZERO
 set osd_sidebar_scroll_arrows = ON
 set name = DART
 set tz_automatic_dst = EU
-set vtx_band = 5
-set vtx_power = 3
 
 # mixer_profile
 mixer_profile 1
@@ -167,9 +165,9 @@ mmix 0  1.000  0.000  0.000  0.000
 smix reset
 
 smix 0 1 0 50 0 -1
-smix 1 1 1 100 0 -1
+smix 1 1 1 50 0 -1
 smix 2 2 0 -50 0 -1
-smix 3 2 1 100 0 -1
+smix 3 2 1 50 0 -1
 
 # mixer_profile
 mixer_profile 2
