@@ -76,6 +76,7 @@ set motor_kv = 2400
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
 set align_board_yaw = 180
+set vbat_max_cell_voltage = 440
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
 set rpm_limit_value = 23000
@@ -107,9 +108,9 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 4
 set vtx_power = 2
-set vtx_freq = 5658
+set vtx_freq = 5769
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
 set stats_min_armed_time_s = -1
@@ -169,9 +170,9 @@ profile 0
 rateprofile 0
 
 # rateprofile 0
-set roll_rc_rate = 15
-set pitch_rc_rate = 15
-set yaw_rc_rate = 15
+set roll_rc_rate = 30
+set pitch_rc_rate = 30
+set yaw_rc_rate = 30
 set roll_expo = 50
 set pitch_expo = 50
 set yaw_expo = 50
@@ -179,7 +180,7 @@ set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
 set throttle_limit_type = SCALE
-set throttle_limit_percent = 58
+set throttle_limit_percent = 80
 
 rateprofile 1
 
