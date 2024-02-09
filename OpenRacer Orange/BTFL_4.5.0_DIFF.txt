@@ -13,12 +13,13 @@ defaults nosave
 board_name CLRACINGF7
 manufacturer_id CLRA
 mcu_id 001500184353500120383248
-signature
+signature 
 
 # name: OpenRacer Orange
 
 # feature
-feature LED_STRIP
+feature TELEMETRY
+feature OSD
 
 # serial
 serial 1 64 115200 57600 0 115200
@@ -110,6 +111,7 @@ set motor_kv = 1900
 set dshot_bidir = ON
 set motor_output_reordering = 1,0,3,2,4,5,6,7
 set align_board_yaw = 180
+set vbat_max_cell_voltage = 440
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
 set rpm_limit_value = 23000
@@ -136,12 +138,10 @@ set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
-set osd_canvas_width = 50
-set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_freq = 5658
 set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
@@ -158,6 +158,7 @@ set dterm_lpf1_dyn_expo = 7
 set dterm_lpf1_static_hz = 0
 set dterm_lpf2_static_hz = 180
 set vbat_sag_compensation = 100
+set crash_recovery = ON
 set iterm_relax_cutoff = 20
 set iterm_limit = 500
 set pidsum_limit_yaw = 1000

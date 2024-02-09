@@ -1,4 +1,3 @@
-
 # dump all
 
 # version
@@ -11,7 +10,7 @@ batch start
 board_name CLRACINGF7
 manufacturer_id CLRA
 mcu_id 001500184353500120383248
-signature
+signature 
 
 # name: OpenRacer Orange
 
@@ -218,7 +217,8 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
-feature LED_STRIP
+feature TELEMETRY
+feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
 
@@ -583,7 +583,7 @@ set align_board_roll = 0
 set align_board_pitch = 0
 set align_board_yaw = 180
 set bat_capacity = 0
-set vbat_max_cell_voltage = 430
+set vbat_max_cell_voltage = 440
 set vbat_full_cell_voltage = 410
 set vbat_min_cell_voltage = 340
 set vbat_warning_cell_voltage = 350
@@ -799,8 +799,8 @@ set osd_menu_background = BLACK
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 50
-set osd_canvas_height = 18
+set osd_canvas_width = 53
+set osd_canvas_height = 20
 set osd_craftname_msgs = OFF
 set task_statistics = ON
 set debug_mode = GYRO_SCALED
@@ -810,7 +810,7 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5658
@@ -929,7 +929,7 @@ set crash_delay = 0
 set crash_recovery_angle = 10
 set crash_recovery_rate = 100
 set crash_limit_yaw = 200
-set crash_recovery = OFF
+set crash_recovery = ON
 set iterm_rotation = OFF
 set iterm_relax = RP
 set iterm_relax_type = SETPOINT
