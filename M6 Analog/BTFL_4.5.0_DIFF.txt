@@ -24,6 +24,7 @@ resource MOTOR 3 B06
 resource MOTOR 4 B10
 
 # feature
+feature TELEMETRY
 feature OSD
 
 # serial
@@ -100,8 +101,8 @@ set vtx_freq = 5658
 set vcd_video_system = PAL
 set gyro_1_sensor_align = CW180
 set gyro_1_align_yaw = 1800
-set expresslrs_uid = 254,203,179,9,87,168
-set expresslrs_rate_index = 2
+set expresslrs_uid = 41,188,192,48,108,4
+set expresslrs_switch_mode = HYBRID
 set craft_name = M6 Analog
 set pilot_name = Mopatop
 
@@ -126,8 +127,7 @@ set d_min_pitch = 67
 set d_max_advance = 0
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
+set feedforward_jitter_factor = 5
 set feedforward_max_rate_limit = 95
 set dyn_idle_min_rpm = 40
 set simplified_master_multiplier = 105

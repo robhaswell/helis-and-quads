@@ -211,6 +211,7 @@ feature -AIRMODE
 feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature RX_SPI
@@ -852,10 +853,10 @@ set i2c2_clockspeed_khz = 800
 set i2c3_pullup = OFF
 set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
-set expresslrs_uid = 254,203,179,9,87,168
+set expresslrs_uid = 41,188,192,48,108,4
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 2
-set expresslrs_switch_mode = WIDE
+set expresslrs_rate_index = 0
+set expresslrs_switch_mode = HYBRID
 set expresslrs_model_id = 255
 set scheduler_relax_rx = 1
 set scheduler_relax_osd = 1
@@ -968,8 +969,8 @@ set transient_throttle_limit = 0
 set feedforward_transition = 0
 set feedforward_averaging = 2_POINT
 set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
-set feedforward_boost = 18
+set feedforward_jitter_factor = 5
+set feedforward_boost = 15
 set feedforward_max_rate_limit = 95
 set dyn_idle_min_rpm = 40
 set dyn_idle_p_gain = 50
