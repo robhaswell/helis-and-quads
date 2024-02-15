@@ -363,12 +363,12 @@ mode_color 6 10 0
 mode_color 7 0 3
 
 # aux
-aux 0 0 0 900 900 0 0
-aux 1 0 0 900 900 0 0
-aux 2 0 0 900 900 0 0
-aux 3 0 0 900 900 0 0
-aux 4 0 0 900 900 0 0
-aux 5 0 0 900 900 0 0
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
 aux 6 0 0 900 900 0 0
 aux 7 0 0 900 900 0 0
 aux 8 0 0 900 900 0 0
@@ -385,7 +385,7 @@ aux 18 0 0 900 900 0 0
 aux 19 0 0 900 900 0 0
 
 # adjrange
-adjrange 0 0 0 900 900 0 0 0 0
+adjrange 0 0 3 900 2100 12 3 0 0
 adjrange 1 0 0 900 900 0 0 0 0
 adjrange 2 0 0 900 900 0 0 0 0
 adjrange 3 0 0 900 900 0 0 0 0
@@ -454,7 +454,7 @@ rxfail 2 a
 rxfail 3 a
 rxfail 4 h
 rxfail 5 h
-rxfail 6 h
+rxfail 6 s 1500
 rxfail 7 h
 rxfail 8 h
 rxfail 9 h
@@ -637,7 +637,7 @@ set tlm_inverted = OFF
 set tlm_halfduplex = ON
 set hott_alarm_int = 5
 set pid_in_tlm = OFF
-set report_cell_voltage = OFF
+set report_cell_voltage = ON
 set telemetry_disabled_voltage = OFF
 set telemetry_disabled_current = OFF
 set telemetry_disabled_fuel = OFF
@@ -691,29 +691,29 @@ set osd_logo_on_arming = OFF
 set osd_logo_on_arming_duration = 5
 set osd_tim1 = 2560
 set osd_tim2 = 2561
-set osd_vbat_pos = 2282
-set osd_rssi_pos = 234
-set osd_link_quality_pos = 234
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2048
 set osd_link_tx_power_pos = 234
-set osd_rssi_dbm_pos = 234
+set osd_rssi_dbm_pos = 377
 set osd_rsnr_pos = 234
-set osd_tim_1_pos = 234
-set osd_tim_2_pos = 234
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 2455
 set osd_remaining_time_estimate_pos = 234
-set osd_flymode_pos = 234
+set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 234
 set osd_g_force_pos = 234
-set osd_throttle_pos = 234
-set osd_vtx_channel_pos = 234
-set osd_crosshairs_pos = 205
+set osd_throttle_pos = 406
+set osd_vtx_channel_pos = 2069
+set osd_crosshairs_pos = 280
 set osd_ah_sbar_pos = 206
 set osd_ah_pos = 78
 set osd_current_pos = 234
 set osd_mah_drawn_pos = 234
 set osd_wh_drawn_pos = 234
 set osd_motor_diag_pos = 234
-set osd_craft_name_pos = 234
-set osd_pilot_name_pos = 234
+set osd_craft_name_pos = 2442
+set osd_pilot_name_pos = 2058
 set osd_gps_speed_pos = 234
 set osd_gps_lon_pos = 234
 set osd_gps_lat_pos = 234
@@ -730,11 +730,11 @@ set osd_debug_pos = 234
 set osd_power_pos = 234
 set osd_pidrate_profile_pos = 234
 set osd_warnings_pos = 14665
-set osd_avg_cell_voltage_pos = 234
+set osd_avg_cell_voltage_pos = 2432
 set osd_pit_ang_pos = 234
 set osd_rol_ang_pos = 234
 set osd_battery_usage_pos = 234
-set osd_disarmed_pos = 234
+set osd_disarmed_pos = 397
 set osd_nheading_pos = 234
 set osd_up_down_reference_pos = 205
 set osd_ready_mode_pos = 234
@@ -766,9 +766,9 @@ set osd_sys_lq_pos = 234
 set osd_sys_goggle_dvr_pos = 234
 set osd_sys_vtx_dvr_pos = 234
 set osd_sys_warnings_pos = 234
-set osd_sys_vtx_temp_pos = 234
+set osd_sys_vtx_temp_pos = 66
 set osd_sys_fan_speed_pos = 234
-set osd_stat_bitmask = 14124
+set osd_stat_bitmask = 5092
 set osd_profile = 1
 set osd_profile_1_name = -
 set osd_profile_2_name = -
@@ -785,7 +785,7 @@ set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
 set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_height = 16
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
@@ -796,13 +796,13 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = ON
 set vtx_softserial_alt = OFF
 set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
-set vcd_video_system = AUTO
+set vcd_video_system = PAL
 set vcd_h_offset = 0
 set vcd_v_offset = 0
 set max7456_clock = NOMINAL
@@ -1354,15 +1354,15 @@ set thr_mid = 50
 set thr_expo = 0
 set rates_type = ACTUAL
 set quickrates_rc_expo = OFF
-set roll_rc_rate = 7
-set pitch_rc_rate = 7
-set yaw_rc_rate = 7
-set roll_expo = 0
-set pitch_expo = 0
-set yaw_expo = 0
-set roll_srate = 67
-set pitch_srate = 67
-set yaw_srate = 67
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
 set throttle_limit_type = OFF
 set throttle_limit_percent = 100
 set roll_rate_limit = 1998
