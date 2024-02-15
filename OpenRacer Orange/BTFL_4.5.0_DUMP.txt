@@ -435,12 +435,12 @@ rxrange 3 1000 2000
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
-vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
-vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
-vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
-vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
@@ -809,11 +809,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 6
 set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5658
+set vtx_freq = 5843
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
@@ -824,7 +824,7 @@ set max7456_spi_bus = 3
 set max7456_preinit_opu = OFF
 set displayport_msp_col_adjust = 0
 set displayport_msp_row_adjust = 0
-set displayport_msp_fonts = 0,1,2,3
+set displayport_msp_fonts = 0,0,0,0
 set displayport_msp_use_device_blink = OFF
 set displayport_max7456_col_adjust = 0
 set displayport_max7456_row_adjust = 0
