@@ -365,7 +365,7 @@ mode_color 7 0 3
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 1700 2100 0 0
+aux 1 1 1 900 1300 0 0
 aux 2 2 1 1300 1700 0 0
 aux 3 13 2 1300 1700 0 0
 aux 4 26 0 1700 2100 0 0
@@ -495,8 +495,8 @@ set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
 set acc_lpf_hz = 10
-set acc_trim_pitch = 0
-set acc_trim_roll = 0
+set acc_trim_pitch = -45
+set acc_trim_roll = 18
 set acc_calibration = -304,-58,-200,1
 set mid_rc = 1500
 set min_check = 1050
@@ -797,8 +797,8 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 2
-set vtx_low_power_disarm = ON
+set vtx_power = 3
+set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5658
 set vtx_pit_mode_freq = 0

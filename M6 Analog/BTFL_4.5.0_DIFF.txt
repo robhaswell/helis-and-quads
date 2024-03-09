@@ -35,7 +35,7 @@ beacon RX_SET
 
 # aux
 aux 0 0 0 1700 2100 0 0
-aux 1 1 1 1700 2100 0 0
+aux 1 1 1 900 1300 0 0
 aux 2 2 1 1300 1700 0 0
 aux 3 13 2 1300 1700 0 0
 aux 4 26 0 1700 2100 0 0
@@ -66,6 +66,8 @@ set dyn_notch_count = 2
 set dyn_notch_q = 450
 set gyro_lpf1_dyn_min_hz = 0
 set acc_lpf_hz = 10
+set acc_trim_pitch = -45
+set acc_trim_roll = 18
 set acc_calibration = -304,-58,-200,1
 set dshot_idle_value = 600
 set dshot_bidir = ON
@@ -95,8 +97,7 @@ set osd_sys_vtx_temp_pos = 66
 set osd_stat_bitmask = 5092
 set vtx_band = 5
 set vtx_channel = 1
-set vtx_power = 2
-set vtx_low_power_disarm = ON
+set vtx_power = 3
 set vtx_freq = 5658
 set vcd_video_system = PAL
 set gyro_1_sensor_align = CW180
