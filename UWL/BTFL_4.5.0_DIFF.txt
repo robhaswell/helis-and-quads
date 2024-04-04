@@ -25,6 +25,16 @@ feature OSD
 # serial
 serial 0 131073 115200 57600 0 115200
 
+# led
+led 0 0,0::CY:0
+led 1 1,0::CY:0
+led 2 2,0::CY:0
+led 3 3,0::CY:0
+led 4 4,0::CY:0
+led 5 5,0::CY:0
+led 6 6,0::CY:0
+led 7 7,0::CY:0
+
 # aux
 aux 0 0 0 1700 2100 0 0
 aux 1 1 1 1700 2100 0 0
@@ -35,6 +45,19 @@ aux 5 35 2 1700 2100 0 0
 
 # adjrange
 adjrange 0 0 3 900 2100 12 3 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # rxfail
 rxfail 6 s 1500
@@ -59,6 +82,7 @@ set rpm_limit = ON
 set rpm_limit_value = 31500
 set pid_process_denom = 2
 set report_cell_voltage = ON
+set ledstrip_rainbow_delta = 20
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2082
@@ -77,9 +101,13 @@ set osd_disarmed_pos = 397
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_displayport_device = MSP
-set osd_canvas_width = 30
-set osd_canvas_height = 13
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
+set vtx_freq = 5658
 set vcd_video_system = HD
+set expresslrs_uid = 254,203,179,9,87,168
+set expresslrs_rate_index = 1
 set craft_name = UWL
 set pilot_name = Mopatop
 

@@ -251,14 +251,14 @@ beacon RX_SET
 map AETR1234
 
 # led
-led 0 0,0::C:0
-led 1 0,0::C:0
-led 2 0,0::C:0
-led 3 0,0::C:0
-led 4 0,0::C:0
-led 5 0,0::C:0
-led 6 0,0::C:0
-led 7 0,0::C:0
+led 0 0,0::CY:0
+led 1 1,0::CY:0
+led 2 2,0::CY:0
+led 3 3,0::CY:0
+led 4 4,0::CY:0
+led 5 5,0::CY:0
+led 6 6,0::CY:0
+led 7 7,0::CY:0
 led 8 0,0::C:0
 led 9 0,0::C:0
 led 10 0,0::C:0
@@ -413,11 +413,17 @@ rxrange 2 1000 2000
 rxrange 3 1000 2000
 
 # vtxtable
-vtxtable bands 0
-vtxtable channels 0
-vtxtable powerlevels 0
-vtxtable powervalues
-vtxtable powerlabels
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
 
 # vtx
 vtx 0 0 0 0 0 900 900
@@ -658,7 +664,7 @@ set ledstrip_beacon_period_ms = 500
 set ledstrip_beacon_percent = 50
 set ledstrip_beacon_armed_only = OFF
 set ledstrip_brightness = 100
-set ledstrip_rainbow_delta = 0
+set ledstrip_rainbow_delta = 20
 set ledstrip_rainbow_freq = 120
 set extra_ledstrip_blinkmask = 32773
 set osd_units = METRIC
@@ -776,8 +782,8 @@ set osd_menu_background = BLACK
 set osd_aux_channel = 1
 set osd_aux_scale = 200
 set osd_aux_symbol = 65
-set osd_canvas_width = 30
-set osd_canvas_height = 13
+set osd_canvas_width = 53
+set osd_canvas_height = 20
 set osd_craftname_msgs = OFF
 set system_hse_mhz = 8
 set task_statistics = ON
@@ -786,12 +792,12 @@ set rate_6pos_switch = OFF
 set cpu_overclock = 108MHZ
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
-set vtx_band = 0
-set vtx_channel = 0
-set vtx_power = 0
+set vtx_band = 5
+set vtx_channel = 1
+set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 0
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
@@ -842,9 +848,9 @@ set i2c2_clockspeed_khz = 800
 set i2c3_pullup = OFF
 set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
-set expresslrs_uid = 0,0,0,0,0,0
+set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 0
+set expresslrs_rate_index = 1
 set expresslrs_switch_mode = WIDE
 set expresslrs_model_id = 255
 set scheduler_relax_rx = 1
