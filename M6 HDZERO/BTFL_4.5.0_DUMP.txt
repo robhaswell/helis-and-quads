@@ -310,12 +310,12 @@ rxrange 3 1000 2000
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
-vtxtable band 1 BOSCAM_A A FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
-vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
-vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM  5705    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM  5740 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
@@ -725,7 +725,7 @@ set i2c3_clockspeed_khz = 800
 set mco2_on_pc9 = OFF
 set expresslrs_uid = 254,203,179,9,87,168
 set expresslrs_domain = ISM2400
-set expresslrs_rate_index = 1
+set expresslrs_rate_index = 0
 set expresslrs_switch_mode = WIDE
 set expresslrs_model_id = 255
 set scheduler_relax_rx = 1
