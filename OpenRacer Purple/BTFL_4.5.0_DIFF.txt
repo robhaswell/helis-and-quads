@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 Jan  4 2024 / 19:46:15 (7cb07d8e8) MSP API: 1.46
-# config rev: 7b934c5
+# Betaflight / AT32F435G (A435) 4.5.0 May  1 2024 / 14:13:02 (c155f5830) MSP API: 1.46
+# config rev: cdb9e49
 
 # start the command batch
 batch start
@@ -95,12 +95,16 @@ set acc_calibration = -57,-44,0,1
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set blackbox_sample_rate = 1/2
+set blackbox_disable_alt = ON
+set blackbox_disable_rssi = ON
+set blackbox_disable_gyro = ON
+set blackbox_disable_acc = ON
+set blackbox_disable_debug = ON
 set motor_kv = 1900
 set dshot_bidir = ON
 set vbat_max_cell_voltage = 440
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
-set small_angle = 180
 set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
 set ledstrip_rainbow_delta = 6
@@ -122,7 +126,6 @@ set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
-set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = DSHOT_RPM_TELEMETRY
@@ -130,7 +133,6 @@ set vtx_band = 5
 set vtx_channel = 1
 set vtx_power = 2
 set vtx_freq = 5658
-set vcd_video_system = HD
 set rpm_filter_fade_range_hz = 100
 set craft_name = OpenRacer Purple
 set pilot_name = Mopatop
@@ -170,6 +172,7 @@ set simplified_feedforward_gain = 105
 set simplified_pitch_pi_gain = 105
 set tpa_rate = 70
 set tpa_breakpoint = 1250
+set ez_landing_limit = 5
 
 profile 1
 
