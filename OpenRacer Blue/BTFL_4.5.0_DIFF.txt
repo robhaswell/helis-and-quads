@@ -61,16 +61,20 @@ rxfail 6 s 1500
 set gyro_lpf1_static_hz = 0
 set dyn_notch_count = 2
 set dyn_notch_q = 450
-set dyn_notch_min_hz = 200
+set dyn_notch_min_hz = 125
 set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
 set gyro_lpf1_dyn_max_hz = 0
-set acc_lpf_hz = 10
 set acc_calibration = -45,32,-8,1
 set baro_hardware = NONE
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
 set blackbox_sample_rate = 1/2
+set blackbox_disable_alt = ON
+set blackbox_disable_rssi = ON
+set blackbox_disable_gyro = ON
+set blackbox_disable_acc = ON
+set blackbox_disable_debug = ON
 set motor_kv = 1900
 set dshot_bidir = ON
 set motor_pwm_protocol = DSHOT300
@@ -104,7 +108,7 @@ set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_canvas_width = 50
 set osd_canvas_height = 18
-set debug_mode = GYRO_SCALED
+set debug_mode = RPM_FILTER
 set vtx_band = 5
 set vtx_channel = 7
 set vtx_power = 2
@@ -117,7 +121,6 @@ profile 0
 
 # profile 0
 set dterm_lpf1_dyn_min_hz = 0
-set dterm_lpf1_dyn_max_hz = 180
 set dterm_lpf1_dyn_expo = 7
 set dterm_lpf1_static_hz = 0
 set vbat_sag_compensation = 100
@@ -137,11 +140,12 @@ set f_roll = 125
 set d_min_roll = 21
 set d_min_pitch = 23
 set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 65
-set feedforward_jitter_factor = 3
+set feedforward_smooth_factor = 87
+set feedforward_jitter_factor = 2
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 100
-set dyn_idle_min_rpm = 20
+set dyn_idle_min_rpm = 40
+set dyn_idle_p_gain = 35
 set simplified_pids_mode = RP
 set simplified_i_gain = 120
 set simplified_d_gain = 70
@@ -150,9 +154,9 @@ set simplified_dmax_gain = 200
 set simplified_feedforward_gain = 105
 set simplified_pitch_pi_gain = 105
 set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
 set tpa_rate = 70
 set tpa_breakpoint = 1250
+set ez_landing_limit = 5
 
 profile 1
 
