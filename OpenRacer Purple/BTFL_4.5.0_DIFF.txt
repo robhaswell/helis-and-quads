@@ -105,6 +105,8 @@ set dshot_bidir = ON
 set vbat_max_cell_voltage = 440
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
+set rpm_limit = ON
+set rpm_limit_value = 26000
 set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
 set ledstrip_rainbow_delta = 6
@@ -195,7 +197,6 @@ set yaw_expo = 50
 set roll_srate = 53
 set pitch_srate = 53
 set yaw_srate = 53
-set throttle_limit_type = SCALE
 set throttle_limit_percent = 80
 
 rateprofile 1
