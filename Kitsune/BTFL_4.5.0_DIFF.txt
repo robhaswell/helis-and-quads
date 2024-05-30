@@ -94,9 +94,9 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = RPM_FILTER
 set vtx_band = 5
-set vtx_channel = 8
+set vtx_channel = 1
 set vtx_power = 2
-set vtx_freq = 5917
+set vtx_freq = 5658
 set displayport_msp_fonts = 0,0,0,0
 set craft_name = Kitsune
 set pilot_name = Mopatop
@@ -105,6 +105,11 @@ profile 0
 
 # profile 0
 set auto_profile_cell_count = 4
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 87
+set feedforward_jitter_factor = 2
+set feedforward_boost = 18
+set dyn_idle_min_rpm = 40
 set ez_landing_limit = 5
 
 profile 1
