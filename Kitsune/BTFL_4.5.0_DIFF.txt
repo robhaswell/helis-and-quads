@@ -25,6 +25,17 @@ feature OSD
 serial 0 64 115200 57600 0 115200
 serial 1 131073 115200 57600 0 115200
 
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
 # vtxtable
 vtxtable bands 6
 vtxtable channels 8
@@ -33,7 +44,7 @@ vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
 vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
@@ -43,10 +54,15 @@ vtx 0 4 0 0 1 900 1300
 vtx 1 4 0 0 2 1300 1700
 vtx 2 4 0 0 3 1700 2100
 
+# rxfail
+rxfail 6 s 1500
+
 # master
 set dyn_notch_count = 1
 set dyn_notch_q = 500
 set acc_calibration = -39,-33,0,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
 set blackbox_sample_rate = 1/1
 set motor_kv = 4600
 set dshot_bidir = ON
@@ -74,8 +90,13 @@ set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
+set osd_canvas_width = 50
+set osd_canvas_height = 18
 set debug_mode = RPM_FILTER
+set vtx_band = 5
+set vtx_channel = 8
 set vtx_power = 2
+set vtx_freq = 5917
 set displayport_msp_fonts = 0,0,0,0
 set craft_name = Kitsune
 set pilot_name = Mopatop
