@@ -211,6 +211,7 @@ feature -RX_SPI
 feature -ESC_SENSOR
 feature -ANTI_GRAVITY
 feature RX_SERIAL
+feature TELEMETRY
 feature OSD
 feature AIRMODE
 feature ANTI_GRAVITY
@@ -716,7 +717,7 @@ set osd_flymode_pos = 374
 set osd_anti_gravity_pos = 341
 set osd_g_force_pos = 341
 set osd_throttle_pos = 2614
-set osd_vtx_channel_pos = 3112
+set osd_vtx_channel_pos = 3106
 set osd_crosshairs_pos = 280
 set osd_ah_sbar_pos = 313
 set osd_ah_pos = 185
@@ -808,15 +809,15 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 7
+set vtx_channel = 1
 set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5880
+set vtx_freq = 5658
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
-set displayport_msp_col_adjust = 0
+set displayport_msp_col_adjust = -4
 set displayport_msp_row_adjust = 0
 set displayport_msp_fonts = 0,1,2,3
 set displayport_msp_use_device_blink = OFF
@@ -973,7 +974,7 @@ set feedforward_smooth_factor = 87
 set feedforward_jitter_factor = 2
 set feedforward_boost = 18
 set feedforward_max_rate_limit = 100
-set dyn_idle_min_rpm = 40
+set dyn_idle_min_rpm = 20
 set dyn_idle_p_gain = 35
 set dyn_idle_i_gain = 50
 set dyn_idle_d_gain = 50
