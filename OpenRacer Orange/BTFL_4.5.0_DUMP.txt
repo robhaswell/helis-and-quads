@@ -449,7 +449,7 @@ vtxtable band 2 BOSCAM_B B FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 3 BOSCAM_E E FACTORY    0    0    0    0    0    0    0    0
 vtxtable band 4 FATSHARK F FACTORY    0 5760    0 5800    0    0    0    0
 vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 IMD6     I CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 6 IMD6     I FACTORY    0    0    0    0    0    0    0    0
 vtxtable powerlevels 3
 vtxtable powervalues 14 23 0
 vtxtable powerlabels 25 200 0
@@ -503,12 +503,12 @@ set gyro_overflow_detect = ALL
 set yaw_spin_recovery = AUTO
 set yaw_spin_threshold = 1950
 set gyro_to_use = FIRST
-set dyn_notch_count = 2
-set dyn_notch_q = 500
+set dyn_notch_count = 1
+set dyn_notch_q = 600
 set dyn_notch_min_hz = 200
-set dyn_notch_max_hz = 600
+set dyn_notch_max_hz = 650
 set gyro_lpf1_dyn_min_hz = 0
-set gyro_lpf1_dyn_max_hz = 500
+set gyro_lpf1_dyn_max_hz = 1000
 set gyro_lpf1_dyn_expo = 5
 set gyro_filter_debug_axis = ROLL
 set acc_hardware = AUTO
@@ -824,7 +824,7 @@ set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
 set vtx_channel = 3
-set vtx_power = 1
+set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
 set vtx_freq = 5732
@@ -881,8 +881,8 @@ set scheduler_relax_osd = 25
 set cpu_late_limit_permille = 10
 set serialmsp_halfduplex = OFF
 set timezone_offset_minutes = 0
-set rpm_filter_harmonics = 2
-set rpm_filter_weights = 100,100,100
+set rpm_filter_harmonics = 3
+set rpm_filter_weights = 100,50,100
 set rpm_filter_q = 500
 set rpm_filter_min_hz = 150
 set rpm_filter_fade_range_hz = 100
@@ -917,7 +917,7 @@ profile 0
 set profile_name = -
 set dterm_lpf1_dyn_min_hz = 75
 set dterm_lpf1_dyn_max_hz = 150
-set dterm_lpf1_dyn_expo = 7
+set dterm_lpf1_dyn_expo = 10
 set dterm_lpf1_type = PT1
 set dterm_lpf1_static_hz = 75
 set dterm_lpf2_type = PT1
@@ -952,12 +952,12 @@ set yaw_lowpass_hz = 100
 set throttle_boost = 2
 set throttle_boost_cutoff = 15
 set p_pitch = 41
-set i_pitch = 89
-set d_pitch = 40
+set i_pitch = 86
+set d_pitch = 41
 set f_pitch = 137
 set p_roll = 38
-set i_roll = 81
-set d_roll = 35
+set i_roll = 78
+set d_roll = 37
 set f_roll = 125
 set p_yaw = 45
 set i_yaw = 80
@@ -979,8 +979,8 @@ set abs_control_error_limit = 20
 set abs_control_cutoff = 11
 set use_integrated_yaw = OFF
 set integrated_yaw_relax = 200
-set d_min_roll = 21
-set d_min_pitch = 23
+set d_min_roll = 25
+set d_min_pitch = 27
 set d_min_yaw = 0
 set d_max_gain = 37
 set d_max_advance = 20
@@ -1008,12 +1008,12 @@ set dyn_idle_start_increase = 50
 set level_race_mode = OFF
 set simplified_pids_mode = RP
 set simplified_master_multiplier = 100
-set simplified_i_gain = 120
-set simplified_d_gain = 70
+set simplified_i_gain = 115
+set simplified_d_gain = 85
 set simplified_pi_gain = 85
-set simplified_dmax_gain = 200
+set simplified_dmax_gain = 140
 set simplified_feedforward_gain = 105
-set simplified_pitch_d_gain = 100
+set simplified_pitch_d_gain = 95
 set simplified_pitch_pi_gain = 105
 set simplified_dterm_filter = ON
 set simplified_dterm_filter_multiplier = 100
