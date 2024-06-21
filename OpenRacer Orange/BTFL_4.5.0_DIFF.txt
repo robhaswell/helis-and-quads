@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / STM32F7X2 (S7X2) 4.5.0.RPM_KAACK_V1 Nov 23 2023 / 16:35:34 (55a297db9) MSP API: 1.46
-# config rev: 0546d25
+# Betaflight / STM32F7X2 (S7X2) 4.5.0.KAACK_V12 Jun 21 2024 / 20:18:19 (cd18bed46) MSP API: 1.46
+# config rev: 140b82d
 
 # start the command batch
 batch start
@@ -24,9 +24,6 @@ feature OSD
 # serial
 serial 1 64 115200 57600 0 115200
 serial 4 131073 115200 57600 0 115200
-
-# beacon
-beacon RX_SET
 
 # led
 led 0 0,0::CY:0
@@ -95,16 +92,8 @@ vtx 2 4 0 0 3 1700 2100
 rxfail 6 s 1500
 
 # master
-set gyro_lpf1_static_hz = 0
 set gyro_to_use = FIRST
-set dyn_notch_count = 2
-set dyn_notch_q = 450
-set dyn_notch_min_hz = 125
-set dyn_notch_max_hz = 650
-set acc_lpf_hz = 10
 set acc_calibration = 95,-70,-77,1
-set rc_smoothing_auto_factor = 25
-set rc_smoothing_auto_factor_throttle = 25
 set motor_kv = 1800
 set dshot_bidir = ON
 set motor_output_reordering = 1,0,3,2,4,5,6,7
@@ -113,11 +102,7 @@ set vbat_max_cell_voltage = 440
 set yaw_motors_reversed = ON
 set rpm_limit = ON
 set rpm_limit_value = 26000
-set small_angle = 180
-set simplified_gyro_filter = OFF
 set report_cell_voltage = ON
-set ledstrip_rainbow_delta = 10
-set ledstrip_rainbow_freq = 200
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
 set osd_link_quality_pos = 2082
@@ -133,9 +118,9 @@ set osd_pilot_name_pos = 2549
 set osd_warnings_pos = 14675
 set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
+set osd_spec_logo_pos = 14401
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
-set osd_displayport_device = MSP
 set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
@@ -143,54 +128,11 @@ set vtx_band = 5
 set vtx_channel = 1
 set vtx_power = 2
 set vtx_freq = 5658
-set vcd_video_system = HD
 set displayport_msp_fonts = 0,0,0,0
-set rpm_filter_fade_range_hz = 100
-set stats_min_armed_time_s = -1
 set craft_name = OpenRacer Orange
 set pilot_name = Mopatop
 
 profile 0
-
-# profile 0
-set dterm_lpf1_dyn_max_hz = 180
-set dterm_lpf1_dyn_expo = 7
-set dterm_lpf1_static_hz = 0
-set dterm_lpf2_static_hz = 180
-set vbat_sag_compensation = 100
-set crash_recovery = ON
-set iterm_relax_cutoff = 20
-set iterm_limit = 500
-set pidsum_limit_yaw = 1000
-set throttle_boost = 2
-set p_pitch = 41
-set i_pitch = 89
-set d_pitch = 40
-set f_pitch = 137
-set p_roll = 38
-set i_roll = 81
-set d_roll = 35
-set f_roll = 125
-set d_min_roll = 21
-set d_min_pitch = 23
-set auto_profile_cell_count = 6
-set feedforward_averaging = 2_POINT
-set feedforward_smooth_factor = 87
-set feedforward_jitter_factor = 2
-set feedforward_boost = 18
-set feedforward_max_rate_limit = 100
-set dyn_idle_min_rpm = 20
-set simplified_pids_mode = RP
-set simplified_i_gain = 120
-set simplified_d_gain = 70
-set simplified_pi_gain = 85
-set simplified_dmax_gain = 200
-set simplified_feedforward_gain = 105
-set simplified_pitch_pi_gain = 105
-set simplified_dterm_filter = OFF
-set simplified_dterm_filter_multiplier = 120
-set tpa_rate = 70
-set tpa_breakpoint = 1250
 
 profile 1
 
@@ -199,7 +141,7 @@ profile 2
 profile 3
 
 # restore original profile selection
-profile 1
+profile 0
 
 rateprofile 0
 
