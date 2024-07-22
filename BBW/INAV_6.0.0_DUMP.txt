@@ -243,7 +243,7 @@ mode_color 6 8 1
 # Modes [aux]
 aux 0 0 0 1500 2100
 aux 1 1 4 1300 1700
-aux 2 12 4 900 1300
+aux 2 12 4 1700 2100
 aux 3 11 2 1300 1700
 aux 4 10 2 1700 2100
 aux 5 21 3 1700 2100
@@ -311,14 +311,14 @@ rxrange 2 1000 2000
 rxrange 3 1000 2000
 
 # temp_sensor
-temp_sensor 0 0 0 0 0 0
-temp_sensor 1 0 0 0 0 0
-temp_sensor 2 0 0 0 0 0
-temp_sensor 3 0 0 0 0 0
-temp_sensor 4 0 0 0 0 0
-temp_sensor 5 0 0 0 0 0
-temp_sensor 6 0 0 0 0 0
-temp_sensor 7 0 0 0 0 0
+temp_sensor 0 0 0 0 0 0 
+temp_sensor 1 0 0 0 0 0 
+temp_sensor 2 0 0 0 0 0 
+temp_sensor 3 0 0 0 0 0 
+temp_sensor 4 0 0 0 0 0 
+temp_sensor 5 0 0 0 0 0 
+temp_sensor 6 0 0 0 0 0 
+temp_sensor 7 0 0 0 0 0 
 
 # Mission Control Waypoints [wp]
 #wp 0 invalid
@@ -1123,10 +1123,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = -57
-set gyro_zero_y = -9
-set gyro_zero_z = -6
-set ins_gravity_cmss =  981.053
+set gyro_zero_x = -53
+set gyro_zero_y = -14
+set gyro_zero_z = -7
+set ins_gravity_cmss =  978.801
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1375,7 +1375,7 @@ set nav_fw_launch_end_time = 3000
 set nav_fw_launch_min_time = 0
 set nav_fw_launch_timeout = 5000
 set nav_fw_launch_max_altitude = 5000
-set nav_fw_launch_climb_angle = 25
+set nav_fw_launch_climb_angle = 30
 set nav_fw_launch_manual_throttle = OFF
 set nav_fw_launch_abort_deadband = 100
 set nav_fw_cruise_yaw_rate = 20
@@ -1396,7 +1396,7 @@ set telemetry_halfduplex = ON
 set smartport_fuel_unit = MAH
 set ibus_telemetry_type = 0
 set ltm_update_rate = NORMAL
-set sim_ground_station_number =
+set sim_ground_station_number = 
 set sim_pin = 0000
 set sim_transmit_interval = 60
 set sim_transmit_flags = 2
@@ -1504,7 +1504,7 @@ set i2c_speed = 400KHZ
 set debug_mode = NONE
 set throttle_tilt_comp_str = 0
 set name = BBW
-set pilot_name =
+set pilot_name = 
 set mode_range_logic_operator = OR
 set stats = OFF
 set stats_total_time = 0
