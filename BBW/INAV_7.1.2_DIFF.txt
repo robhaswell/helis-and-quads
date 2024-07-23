@@ -15,8 +15,8 @@ defaults noreboot
 # Timer overrides
 
 # Outputs [servo]
-servo 1 1000 2000 1500 -100
-servo 2 1000 2000 1496 100
+servo 1 1000 2000 1462 -100
+servo 2 1000 2000 1462 100
 
 # safehome
 
@@ -61,12 +61,11 @@ serial 4 33554432 115200 115200 0 115200
 
 # Modes [aux]
 aux 0 0 0 1500 2100
-aux 1 1 4 1300 1700
-aux 2 12 4 1700 2100
-aux 3 11 2 1300 1700
-aux 4 10 2 1700 2100
-aux 5 21 3 1700 2100
-aux 6 13 3 1300 1700
+aux 1 1 4 1700 2100
+aux 2 11 2 1300 1700
+aux 3 10 2 1700 2100
+aux 4 21 3 1700 2100
+aux 5 13 3 1300 1700
 
 # Adjustments [adjrange]
 
@@ -115,10 +114,10 @@ logic 1 1 0 22 0 0 0 0 0
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -55
-set gyro_zero_y = -13
-set gyro_zero_z = -17
-set ins_gravity_cmss =  976.539
+set gyro_zero_x = -49
+set gyro_zero_y = -8
+set gyro_zero_z = -13
+set ins_gravity_cmss =  964.681
 set acc_hardware = MPU6000
 set acczero_x = 35
 set acczero_y = -11
@@ -190,11 +189,11 @@ profile 1
 set fw_p_pitch = 15
 set fw_i_pitch = 5
 set fw_d_pitch = 5
-set fw_ff_pitch = 156
+set fw_ff_pitch = 140
 set fw_p_roll = 15
 set fw_i_roll = 3
 set fw_d_roll = 7
-set fw_ff_roll = 41
+set fw_ff_roll = 53
 set fw_p_yaw = 20
 set fw_i_yaw = 0
 set fw_ff_yaw = 100
@@ -207,8 +206,8 @@ set d_boost_min =  1.000
 set d_boost_max =  1.000
 set rc_expo = 30
 set rc_yaw_expo = 30
-set roll_rate = 30
-set pitch_rate = 8
+set roll_rate = 23
+set pitch_rate = 9
 set yaw_rate = 3
 
 # profile
