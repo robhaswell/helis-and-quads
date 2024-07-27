@@ -1,8 +1,8 @@
 # diff all
 
 # version
-# Betaflight / AT32F435G (A435) 4.5.0 May  1 2024 / 14:13:02 (c155f5830) MSP API: 1.46
-# config rev: cdb9e49
+# Betaflight / STM32F405 (S405) 4.5.0.KAACK_V14 Jul 27 2024 / 19:09:08 (6fcb1c635) MSP API: 1.46
+# config rev: 6440ad8
 
 # start the command batch
 batch start
@@ -10,15 +10,16 @@ batch start
 # reset configuration to default settings
 defaults nosave
 
-board_name NEUTRONRCF435MINI
-manufacturer_id NERC
-mcu_id c00dc87b04f5c0000da41717
+board_name FLYWOOF405S_AIO
+manufacturer_id FLWO
+mcu_id 002f00203436511130393731
 signature 
 
 # name: Kitsune
 
 # feature
 feature TELEMETRY
+feature LED_STRIP
 feature OSD
 
 # serial
@@ -63,15 +64,18 @@ set dyn_notch_q = 500
 set acc_calibration = -39,-33,0,1
 set rc_smoothing_auto_factor = 25
 set rc_smoothing_auto_factor_throttle = 25
-set blackbox_sample_rate = 1/1
+set blackbox_sample_rate = 1/2
 set motor_kv = 4600
 set dshot_bidir = ON
+set motor_pwm_protocol = DSHOT300
 set motor_poles = 12
 set motor_output_reordering = 2,0,3,1,4,5,6,7
-set align_board_yaw = -90
+set align_board_yaw = -45
+set vbat_max_cell_voltage = 435
 set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
 set auto_disarm_delay = 0
+set pid_process_denom = 2
 set report_cell_voltage = ON
 set osd_vbat_pos = 385
 set osd_rssi_pos = 353
@@ -88,15 +92,16 @@ set osd_pilot_name_pos = 2549
 set osd_warnings_pos = 14675
 set osd_avg_cell_voltage_pos = 2475
 set osd_disarmed_pos = 429
+set osd_spec_logo_pos = 14403
 set osd_sys_vtx_temp_pos = 2114
 set osd_stat_bitmask = 5092
 set osd_canvas_width = 50
 set osd_canvas_height = 18
-set debug_mode = RPM_FILTER
+set debug_mode = RPM_LIMIT
 set vtx_band = 5
-set vtx_channel = 1
-set vtx_power = 2
-set vtx_freq = 5658
+set vtx_channel = 8
+set vtx_power = 1
+set vtx_freq = 5917
 set displayport_msp_fonts = 0,0,0,0
 set craft_name = Kitsune
 set pilot_name = Mopatop

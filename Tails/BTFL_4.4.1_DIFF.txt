@@ -103,9 +103,9 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = GYRO_SCALED
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 8
 set vtx_power = 2
-set vtx_freq = 5658
+set vtx_freq = 5917
 set vcd_video_system = HD
 set craft_name = Tails
 set pilot_name = Mopatop
@@ -205,7 +205,7 @@ set pitch_srate = 70
 set yaw_srate = 70
 
 # restore original rateprofile selection
-rateprofile 2
+rateprofile 0
 
 # save configuration
 save
