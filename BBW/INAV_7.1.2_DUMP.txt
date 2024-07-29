@@ -28,8 +28,8 @@ timer_output_mode 13 AUTO
 
 # Outputs [servo]
 servo 0 1000 2000 1500 100
-servo 1 1000 2000 1462 -100
-servo 2 1000 2000 1462 100
+servo 1 1000 2000 1516 -100
+servo 2 1000 2000 1516 100
 servo 3 1000 2000 1500 100
 servo 4 1000 2000 1500 100
 servo 5 1000 2000 1500 100
@@ -1268,10 +1268,10 @@ set dynamic_gyro_notch_3d_q = 200
 set setpoint_kalman_enabled = ON
 set setpoint_kalman_q = 100
 set init_gyro_cal = ON
-set gyro_zero_x = -49
-set gyro_zero_y = -8
-set gyro_zero_z = -13
-set ins_gravity_cmss =  964.681
+set gyro_zero_x = -53
+set gyro_zero_y = -12
+set gyro_zero_z = -11
+set ins_gravity_cmss =  980.011
 set vbat_adc_channel = 1
 set rssi_adc_channel = 3
 set current_adc_channel = 2
@@ -1475,13 +1475,13 @@ set nav_rth_climb_ignore_emerg = OFF
 set nav_rth_tail_first = OFF
 set nav_rth_allow_landing = FS_ONLY
 set nav_rth_fs_landing_delay = 0
-set nav_rth_alt_mode = AT_LEAST
+set nav_rth_alt_mode = FIXED
 set nav_rth_alt_control_override = OFF
 set nav_rth_abort_threshold = 50000
 set nav_max_terrain_follow_alt = 100
 set nav_max_altitude = 0
-set nav_rth_altitude = 5000
-set nav_rth_home_altitude = 0
+set nav_rth_altitude = 10000
+set nav_rth_home_altitude = 10000
 set nav_rth_linear_descent_start_distance = 0
 set nav_rth_use_linear_descent = OFF
 set nav_rth_trackback_mode = OFF
@@ -1666,7 +1666,7 @@ set vtx_smartaudio_alternate_softserial_method = ON
 set vtx_softserial_shortstop = OFF
 set vtx_smartaudio_stopbits = 2
 set vtx_band = 5
-set vtx_channel = 8
+set vtx_channel = 1
 set vtx_power = 1
 set vtx_low_power_disarm = OFF
 set vtx_pit_mode_chan = 1

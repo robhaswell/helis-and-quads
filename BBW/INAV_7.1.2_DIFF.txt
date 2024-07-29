@@ -15,8 +15,8 @@ defaults noreboot
 # Timer overrides
 
 # Outputs [servo]
-servo 1 1000 2000 1462 -100
-servo 2 1000 2000 1462 100
+servo 1 1000 2000 1516 -100
+servo 2 1000 2000 1516 100
 
 # safehome
 
@@ -114,10 +114,10 @@ logic 1 1 0 22 0 0 0 0 0
 set gyro_main_lpf_hz = 25
 set dynamic_gyro_notch_q = 250
 set dynamic_gyro_notch_min_hz = 30
-set gyro_zero_x = -49
-set gyro_zero_y = -8
-set gyro_zero_z = -13
-set ins_gravity_cmss =  964.681
+set gyro_zero_x = -53
+set gyro_zero_y = -12
+set gyro_zero_z = -11
+set ins_gravity_cmss =  980.011
 set acc_hardware = MPU6000
 set acczero_x = 35
 set acczero_y = -11
@@ -142,7 +142,9 @@ set airmode_type = STICK_CENTER_ONCE
 set nav_wp_radius = 5000
 set nav_wp_max_safe_distance = 500
 set nav_rth_allow_landing = FS_ONLY
-set nav_rth_altitude = 5000
+set nav_rth_alt_mode = FIXED
+set nav_rth_altitude = 10000
+set nav_rth_home_altitude = 10000
 set nav_fw_bank_angle = 45
 set nav_fw_loiter_radius = 5000
 set nav_fw_control_smoothness = 2
@@ -154,7 +156,6 @@ set osd_video_system = HDZERO
 set name = BBW
 set tz_automatic_dst = EU
 set vtx_band = 5
-set vtx_channel = 8
 
 # mixer_profile
 mixer_profile 1
