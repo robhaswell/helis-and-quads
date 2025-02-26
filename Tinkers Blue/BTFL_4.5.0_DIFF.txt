@@ -1,0 +1,240 @@
+# diff all
+
+# version
+# Betaflight / STM32F7X2 (S7X2) 4.5.0.KAACK_V12 Jun 21 2024 / 20:18:19 (cd18bed46) MSP API: 1.46
+# config rev: 140b82d
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name CLRACINGF7
+manufacturer_id CLRA
+mcu_id 001500184353500120383248
+signature
+
+# name: Tinker's Blue
+
+# feature
+feature TELEMETRY
+feature OSD
+
+# serial
+serial 1 64 115200 57600 0 115200
+serial 4 131073 115200 57600 0 115200
+
+# led
+led 0 0,0::CY:0
+led 1 1,0::CY:0
+led 2 2,0::CY:0
+led 3 3,0::CY:0
+led 4 4,0::CY:0
+led 5 5,0::CY:0
+led 6 6,0::CY:0
+led 7 7,0::CY:0
+led 8 8,0::CY:0
+led 9 9,0::CY:0
+led 10 10,0::CY:0
+led 11 11,0::CY:0
+led 12 12,0::CY:0
+led 13 13,0::CY:0
+led 14 14,0::CY:0
+led 15 15,0::CY:0
+led 16 0,1::CY:0
+led 17 1,1::CY:0
+led 18 2,1::CY:0
+led 19 3,1::CY:0
+led 20 4,1::CY:0
+led 21 5,1::CY:0
+led 22 6,1::CY:0
+led 23 7,1::CY:0
+led 24 8,1::CY:0
+led 25 9,1::CY:0
+led 26 10,1::CY:0
+led 27 11,1::CY:0
+led 28 12,1::CY:0
+led 29 13,1::CY:0
+led 30 14,1::CY:0
+led 31 15,1::CY:0
+
+# aux
+aux 0 0 0 1700 2100 0 0
+aux 1 1 1 1700 2100 0 0
+aux 2 2 1 1300 1700 0 0
+aux 3 13 2 1300 1700 0 0
+aux 4 26 0 1700 2100 0 0
+aux 5 35 2 1700 2100 0 0
+
+# adjrange
+adjrange 0 0 3 900 2100 12 3 0 0
+
+# vtxtable
+vtxtable bands 6
+vtxtable channels 8
+vtxtable band 1 BOSCAM_A A CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 2 BOSCAM_B B CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 3 BOSCAM_E E CUSTOM     0    0    0    0    0    0    0    0
+vtxtable band 4 FATSHARK F CUSTOM     0 5760    0 5800    0    0    0    0
+vtxtable band 5 RACEBAND R CUSTOM  5658 5695 5732 5769 5806 5843 5880 5917
+vtxtable band 6 LOWBAND  L CUSTOM     0    0    0    0    0    0    0    0
+vtxtable powerlevels 3
+vtxtable powervalues 14 23 0
+vtxtable powerlabels 25 200 0
+
+# vtx
+vtx 0 4 0 0 1 900 1300
+vtx 1 4 0 0 2 1300 1700
+vtx 2 4 0 0 3 1700 2100
+
+# rxfail
+rxfail 6 s 1500
+
+# master
+set gyro_lpf1_static_hz = 0
+set gyro_to_use = FIRST
+set dyn_notch_count = 1
+set dyn_notch_q = 600
+set dyn_notch_min_hz = 200
+set dyn_notch_max_hz = 650
+set gyro_lpf1_dyn_min_hz = 0
+set gyro_lpf1_dyn_max_hz = 1000
+set acc_calibration = 95,-70,-77,1
+set rc_smoothing_auto_factor = 25
+set rc_smoothing_auto_factor_throttle = 25
+set motor_kv = 1800
+set dshot_bidir = ON
+set motor_output_reordering = 3,2,1,0,4,5,6,7
+set align_board_yaw = 180
+set vbat_max_cell_voltage = 440
+set yaw_motors_reversed = ON
+set rpm_limit = ON
+set rpm_limit_value = 26000
+set simplified_gyro_filter = OFF
+set report_cell_voltage = ON
+set osd_vbat_pos = 385
+set osd_rssi_pos = 353
+set osd_link_quality_pos = 2082
+set osd_rssi_dbm_pos = 377
+set osd_tim_1_pos = 54
+set osd_tim_2_pos = 3489
+set osd_flymode_pos = 374
+set osd_throttle_pos = 2614
+set osd_vtx_channel_pos = 3112
+set osd_crosshairs_pos = 280
+set osd_craft_name_pos = 393
+set osd_pilot_name_pos = 2549
+set osd_warnings_pos = 14675
+set osd_avg_cell_voltage_pos = 2475
+set osd_disarmed_pos = 429
+set osd_spec_logo_pos = 14401
+set osd_sys_vtx_temp_pos = 2114
+set osd_stat_bitmask = 5092
+set osd_canvas_width = 50
+set osd_canvas_height = 18
+set debug_mode = RPM_LIMIT
+set vtx_band = 5
+set vtx_channel = 2
+set vtx_power = 1
+set vtx_freq = 5695
+set displayport_msp_fonts = 0,0,0,0
+set rpm_filter_weights = 100,20,100
+set rpm_filter_min_hz = 150
+set rpm_filter_fade_range_hz = 100
+set craft_name = Tinker's Blue
+set pilot_name = Mopatop
+
+profile 0
+
+# profile 0
+set dterm_lpf1_dyn_expo = 10
+set iterm_relax_cutoff = 45
+set iterm_limit = 500
+set pidsum_limit_yaw = 1000
+set throttle_boost = 2
+set p_pitch = 41
+set i_pitch = 86
+set d_pitch = 41
+set f_pitch = 137
+set p_roll = 38
+set i_roll = 78
+set d_roll = 37
+set f_roll = 125
+set d_min_roll = 25
+set d_min_pitch = 27
+set feedforward_averaging = 2_POINT
+set feedforward_smooth_factor = 87
+set feedforward_jitter_factor = 2
+set feedforward_boost = 18
+set feedforward_max_rate_limit = 100
+set dyn_idle_min_rpm = 20
+set dyn_idle_p_gain = 35
+set simplified_pids_mode = RP
+set simplified_i_gain = 115
+set simplified_d_gain = 85
+set simplified_pi_gain = 85
+set simplified_dmax_gain = 140
+set simplified_feedforward_gain = 105
+set simplified_pitch_d_gain = 95
+set simplified_pitch_pi_gain = 105
+set tpa_rate = 70
+set tpa_breakpoint = 1250
+set ez_landing_limit = 5
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+# rateprofile 0
+set roll_rc_rate = 30
+set pitch_rc_rate = 30
+set yaw_rc_rate = 30
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+set throttle_limit_percent = 56
+
+rateprofile 1
+
+# rateprofile 1
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 100
+set pitch_srate = 100
+set yaw_srate = 100
+
+rateprofile 2
+
+# rateprofile 2
+set roll_rc_rate = 15
+set pitch_rc_rate = 15
+set yaw_rc_rate = 15
+set roll_expo = 50
+set pitch_expo = 50
+set yaw_expo = 50
+set roll_srate = 53
+set pitch_srate = 53
+set yaw_srate = 53
+
+rateprofile 3
+
+# restore original rateprofile selection
+rateprofile 0
+
+# save configuration
+save
