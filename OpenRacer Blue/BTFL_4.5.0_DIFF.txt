@@ -13,7 +13,7 @@ defaults nosave
 board_name AIKONF4
 manufacturer_id AIKO
 mcu_id 0034005a324d501820303256
-signature 
+signature
 
 # name: OpenRacer Blue
 
@@ -111,9 +111,9 @@ set osd_canvas_width = 50
 set osd_canvas_height = 18
 set debug_mode = RPM_FILTER
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 4
 set vtx_power = 2
-set vtx_freq = 5658
+set vtx_freq = 5769
 set displayport_msp_col_adjust = -4
 set rpm_filter_fade_range_hz = 100
 set craft_name = OpenRacer Blue

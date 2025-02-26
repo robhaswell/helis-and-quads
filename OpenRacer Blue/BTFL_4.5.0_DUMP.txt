@@ -1,3 +1,4 @@
+
 # dump all
 
 # version
@@ -10,7 +11,7 @@ batch start
 board_name AIKONF4
 manufacturer_id AIKO
 mcu_id 0034005a324d501820303256
-signature 
+signature
 
 # name: OpenRacer Blue
 
@@ -809,11 +810,11 @@ set cpu_overclock = OFF
 set pwr_on_arm_grace = 5
 set enable_stick_arming = OFF
 set vtx_band = 5
-set vtx_channel = 1
+set vtx_channel = 4
 set vtx_power = 2
 set vtx_low_power_disarm = OFF
 set vtx_softserial_alt = OFF
-set vtx_freq = 5658
+set vtx_freq = 5769
 set vtx_pit_mode_freq = 0
 set vtx_halfduplex = ON
 set vcd_video_system = HD
