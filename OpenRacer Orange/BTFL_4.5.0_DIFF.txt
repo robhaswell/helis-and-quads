@@ -72,7 +72,6 @@ set rc_smoothing_auto_factor_throttle = 25
 set motor_kv = 1800
 set dshot_bidir = ON
 set vbat_max_cell_voltage = 440
-set vbat_min_cell_voltage = 340
 set yaw_motors_reversed = ON
 set rpm_limit = ON
 set rpm_limit_value = 26000
