@@ -1,0 +1,31 @@
+Entering CLI Mode, type 'exit' to return, or 'help'
+
+# 
+# Building AutoComplete Cache ... Done!
+# 
+# status
+MCU F722 Clock=216MHz, Vref=3.30V, Core temp=44degC
+Stack size: 2048, Stack address: 0x20010000
+Configuration: CONFIGURED, size: 3831, max available: 16384
+Devices detected: SPI:1, I2C:0
+Gyros detected: gyro 1 locked dma
+GYRO=MPU6000, ACC=MPU6000
+OSD: MSP (50 x 18)
+BUILD KEY: fa2900b1db06a9c0776a0b5b292f33ae (4.5.0-KAACK)
+System Uptime: 27 seconds, Current Time: 2025-02-26T16:49:58.603+00:00
+CPU:64%, cycle time: 125, GYRO rate: 8000, RX rate: 15, System rate: 9
+Voltage: 2260 * 0.01V (6S battery - OK)
+I2C Errors: 0
+Arming disable flags: RXLOSS CLI MSP
+
+# get cavas
+###ERROR IN get: INVALID NAME: cavas###
+
+# get canvas
+osd_canvas_width = 50
+Allowed range: 0 - 63
+Default value: 53
+
+osd_canvas_height = 18
+Allowed range: 0 - 31
+Default value: 20
